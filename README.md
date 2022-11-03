@@ -17,8 +17,7 @@
 * https://github.com/vprabhu28/16-Bit-CPU-using-Verilog
 * https://www.european-processor-initiative.eu/general-purpose-processor/
 * https://www.quora.com/What-is-a-difference-between-general-purpose-processor-and-single-purpose-processor
-* https://en.wikipedia.org/wiki/History_of_general-purpose_CPUs![image](https://user-images.githubusercontent.com/33669868/199694239-ca9ce195-0a42-4aad-9bd2-5ba93496ff03.png)
-
+* https://en.wikipedia.org/wiki/History_of_general-purpose_CPUs
 
 ### Other useful links:
 * https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables
