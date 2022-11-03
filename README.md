@@ -9,13 +9,28 @@
 * Pop Tudor-Antoniu
 ![0xcHa0s - Chart](https://user-images.githubusercontent.com/33669868/196945744-92fc6371-6e7e-41b3-879b-69a125951664.png)
 
+## References:
+### Project topic related:
+* https://www.sciencedirect.com/topics/computer-science/general-purpose-processor
+* https://en.wikibooks.org/wiki/Embedded_Control_Systems_Design/Processors
+* https://www.fpga4student.com/2017/04/verilog-code-for-16-bit-risc-processor.html
+* https://github.com/vprabhu28/16-Bit-CPU-using-Verilog
+* https://www.european-processor-initiative.eu/general-purpose-processor/
+* https://www.quora.com/What-is-a-difference-between-general-purpose-processor-and-single-purpose-processor
+* https://en.wikipedia.org/wiki/History_of_general-purpose_CPUs![image](https://user-images.githubusercontent.com/33669868/199694239-ca9ce195-0a42-4aad-9bd2-5ba93496ff03.png)
+
+
+### Other useful links:
+* https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables
+* https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+
 ## Milestones:
 Sesiunea 3 - S6 (2p):
 - [X] Alegerea temei de proiect / set de instructiuni
 - [X] Specificarea echipei
 - [X] Impartirea rolurilor in echipa
 - [X] Nume echipa
-- [ ] Bibliografie
+- [X] Bibliografie
 
 Sesiunea 6 - S12 (maxim nota 7):
 - [ ] Design Hardware & Documentatie GP (2p)
@@ -27,7 +42,7 @@ Sesiunea 7 - S14 (maxim nota 10):
 - [ ] Testare ASIP (1p)
 - [ ] Prezentarea finala a proiectului - prezentare, documentatie (1p)
 
-## Important general aspects
+## Important general aspects:
 Registers:
 * 16-bit Accumulator;
 * 2 16-bit general purpose (GP) registers: X and Y;
