@@ -1,0 +1,7 @@
+verilog work "SignExtend.v"
+verilog work "reg4.v"
+verilog work "reg16.v"
+verilog work "reg10.v"
+verilog work "controlUnit.v"
+verilog work "ALU.v"
+verilog work "cpu.v"

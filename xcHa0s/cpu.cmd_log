@@ -1,0 +1,32 @@
+xst -intstyle ise -ifn "E:/faculta/FIC/xcHa0s/cpu.xst" -ofn "E:/faculta/FIC/xcHa0s/cpu.syr" 
+xst -intstyle ise -ifn "E:/faculta/FIC/xcHa0s/cpu.xst" -ofn "E:/faculta/FIC/xcHa0s/cpu.syr" 
+xst -intstyle ise -ifn "E:/faculta/FIC/xcHa0s/cpu.xst" -ofn "E:/faculta/FIC/xcHa0s/cpu.syr" 
+xst -intstyle ise -ifn "E:/faculta/FIC/xcHa0s/cpu.xst" -ofn "E:/faculta/FIC/xcHa0s/cpu.syr" 
+xst -intstyle ise -ifn "E:/faculta/FIC/xcHa0s/cpu.xst" -ofn "E:/faculta/FIC/xcHa0s/cpu.syr" 
+xst -intstyle ise -ifn "E:/faculta/FIC/xcHa0s/cpu.xst" -ofn "E:/faculta/FIC/xcHa0s/cpu.syr" 
+xst -intstyle ise -ifn "E:/faculta/FIC/xcHa0s/cpu.xst" -ofn "E:/faculta/FIC/xcHa0s/cpu.syr" 
+xst -intstyle ise -ifn "E:/faculta/FIC/xcHa0s/cpu.xst" -ofn "E:/faculta/FIC/xcHa0s/cpu.syr" 
+xst -intstyle ise -ifn "E:/faculta/FIC/xcHa0s/cpu.xst" -ofn "E:/faculta/FIC/xcHa0s/cpu.syr" 
+xst -intstyle ise -ifn "E:/faculta/FIC/xcHa0s/cpu.xst" -ofn "E:/faculta/FIC/xcHa0s/cpu.syr" 
+xst -intstyle ise -ifn "E:/faculta/FIC/xcHa0s/cpu.xst" -ofn "E:/faculta/FIC/xcHa0s/cpu.syr" 
+xst -intstyle ise -ifn "E:/faculta/FIC/xcHa0s/cpu.xst" -ofn "E:/faculta/FIC/xcHa0s/cpu.syr" 
+xst -intstyle ise -ifn "E:/faculta/FIC/xcHa0s/cpu.xst" -ofn "E:/faculta/FIC/xcHa0s/cpu.syr" 
+xst -intstyle ise -ifn "E:/faculta/FIC/xcHa0s/cpu.xst" -ofn "E:/faculta/FIC/xcHa0s/cpu.syr" 
+xst -intstyle ise -ifn "E:/faculta/FIC/xcHa0s/cpu.xst" -ofn "E:/faculta/FIC/xcHa0s/cpu.syr" 
+xst -intstyle ise -ifn "E:/faculta/FIC/xcHa0s/cpu.xst" -ofn "E:/faculta/FIC/xcHa0s/cpu.syr" 
+xst -intstyle ise -ifn "E:/faculta/FIC/xcHa0s/cpu.xst" -ofn "E:/faculta/FIC/xcHa0s/cpu.syr" 
+xst -intstyle ise -ifn "E:/faculta/FIC/xcHa0s/cpu.xst" -ofn "E:/faculta/FIC/xcHa0s/cpu.syr" 
+xst -intstyle ise -ifn "E:/faculta/FIC/xcHa0s/cpu.xst" -ofn "E:/faculta/FIC/xcHa0s/cpu.syr" 
+xst -intstyle ise -ifn "E:/faculta/FIC/xcHa0s/cpu.xst" -ofn "E:/faculta/FIC/xcHa0s/cpu.syr" 
+xst -intstyle ise -ifn "E:/faculta/FIC/xcHa0s/cpu.xst" -ofn "E:/faculta/FIC/xcHa0s/cpu.syr" 
+xst -intstyle ise -ifn "E:/faculta/FIC/xcHa0s/cpu.xst" -ofn "E:/faculta/FIC/xcHa0s/cpu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 cpu.ngc cpu.ngd  
+xst -intstyle ise -ifn "E:/faculta/FIC/xcHa0s/cpu.xst" -ofn "E:/faculta/FIC/xcHa0s/cpu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 cpu.ngc cpu.ngd  
+xst -intstyle ise -ifn "E:/faculta/FIC/xcHa0s/cpu.xst" -ofn "E:/faculta/FIC/xcHa0s/cpu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 cpu.ngc cpu.ngd  
+xst -intstyle ise -ifn "E:/faculta/FIC/xcHa0s/cpu.xst" -ofn "E:/faculta/FIC/xcHa0s/cpu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 cpu.ngc cpu.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 cpu.ngc cpu.ngd  
+xst -intstyle ise -ifn "E:/faculta/FIC/0xcHa0s/xcHa0s/cpu.xst" -ofn "E:/faculta/FIC/0xcHa0s/xcHa0s/cpu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 cpu.ngc cpu.ngd  

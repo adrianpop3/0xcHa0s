@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">controlUnit.v</arg>&quot; line <arg fmt="%d" index="2">62</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">controlUnit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">ALU.v</arg>&quot; line <arg fmt="%d" index="2">136</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">ALU</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="old" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">write_enable</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">controlUnit</arg>&gt;. Possible simulation mismatch.
+</msg>
+
+</messages>
+
