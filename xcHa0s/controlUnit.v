@@ -21,6 +21,7 @@ module controlUnit(
 	
 	output [1:0] data_addr_sel,
 	output wr_to_data_mem,
+	output mem_data_wr_sel,
 	
 	output wr_from_mem,
 	output wr_X,

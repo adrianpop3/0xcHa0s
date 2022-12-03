@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: cpu.prj
 
@@ -141,7 +141,7 @@ Analyzing hierarchy for module <reg10> in library <work>.
 =========================================================================
 Analyzing top module <cpu>.
 WARNING:Xst:2211 - "controlUnit.v" line 62: Instantiating black box module <controlUnit>.
-WARNING:Xst:2211 - "ALU.v" line 136: Instantiating black box module <ALU>.
+WARNING:Xst:2211 - "ALU.v" line 137: Instantiating black box module <ALU>.
 Module <cpu> is correct for synthesis.
  
 Analyzing module <SignExtend> in library <work>.
@@ -195,13 +195,14 @@ Unit <reg10> synthesized.
 Synthesizing Unit <cpu>.
     Related source file is "cpu.v".
     Found 16-bit 4-to-1 multiplexer for signal <data_Addr>.
-    Found 10-bit adder for signal <PC_next$addsub0000> created at line 123.
+    Found 16-bit 4-to-1 multiplexer for signal <write_data>.
+    Found 10-bit adder for signal <PC_next$addsub0000> created at line 124.
     Found 16-bit addsub for signal <SP_next>.
     Found 16-bit 4-to-1 multiplexer for signal <srcA>.
     Found 16-bit 4-to-1 multiplexer for signal <srcB>.
     Summary:
 	inferred   2 Adder/Subtractor(s).
-	inferred  48 Multiplexer(s).
+	inferred  64 Multiplexer(s).
 Unit <cpu> synthesized.
 
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -217,8 +218,8 @@ Macro Statistics
  10-bit register                                       : 1
  16-bit register                                       : 4
  4-bit register                                        : 1
-# Multiplexers                                         : 3
- 16-bit 4-to-1 multiplexer                             : 3
+# Multiplexers                                         : 4
+ 16-bit 4-to-1 multiplexer                             : 4
 
 =========================================================================
 
@@ -236,8 +237,8 @@ Macro Statistics
  16-bit addsub                                         : 1
 # Registers                                            : 78
  Flip-Flops                                            : 78
-# Multiplexers                                         : 3
- 16-bit 4-to-1 multiplexer                             : 3
+# Multiplexers                                         : 4
+ 16-bit 4-to-1 multiplexer                             : 4
 
 =========================================================================
 
@@ -254,7 +255,7 @@ Optimizing unit <reg10> ...
 Mapping all equations...
 WARNING:Xst:2036 - Inserting OBUF on port <write_enable> driven by black box <controlUnit>. Possible simulation mismatch.
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block cpu, actual ratio is 1.
+Found area constraint ratio of 100 (+ 5) on block cpu, actual ratio is 2.
 
 Final Macro Processing ...
 
@@ -292,12 +293,12 @@ Design Statistics
 # IOs                              : 77
 
 Cell Usage :
-# BELS                             : 268
+# BELS                             : 284
 #      GND                         : 1
 #      INV                         : 1
 #      LUT1                        : 9
 #      LUT2                        : 16
-#      LUT3                        : 107
+#      LUT3                        : 123
 #      LUT4                        : 34
 #      MUXCY                       : 24
 #      MUXF5                       : 49
@@ -322,7 +323,7 @@ Selected Device : 3s500efg320-4
 
  Number of Slices:                       97  out of   4656     2%  
  Number of Slice Flip Flops:             78  out of   9312     0%  
- Number of 4 input LUTs:                167  out of   9312     1%  
+ Number of 4 input LUTs:                183  out of   9312     1%  
  Number of IOs:                          77
  Number of bonded IOBs:                  77  out of    232    33%  
  Number of GCLKs:                         1  out of     24     4%  
@@ -423,7 +424,7 @@ Offset:              4.693ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 441 / 82
+  Total number of paths / destination ports: 425 / 82
 -------------------------------------------------------------------------
 Offset:              8.793ns (Levels of Logic = 19)
   Source:            SP/q_0 (FF)
@@ -460,7 +461,7 @@ Offset:              8.793ns (Levels of Logic = 19)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 458 / 91
+  Total number of paths / destination ports: 410 / 91
 -------------------------------------------------------------------------
 Delay:               8.902ns (Levels of Logic = 19)
   Source:            cu:push (PAD)
@@ -498,13 +499,13 @@ Delay:               8.902ns (Levels of Logic = 19)
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.44 secs
+Total CPU time to Xst completion: 5.05 secs
  
 --> 
 
-Total memory usage is 4508148 kilobytes
+Total memory usage is 4508340 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    3 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 

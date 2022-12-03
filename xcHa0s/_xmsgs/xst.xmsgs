@@ -5,16 +5,19 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">controlUnit.v</arg>&quot; line <arg fmt="%d" index="2">62</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">controlUnit</arg>&gt;.
+<msg type="warning" file="HDLCompilers" num="261" delta="new" ><arg fmt="%s" index="1">&quot;cpu.v&quot; line 81 </arg>Connection to output port &apos;<arg fmt="%s" index="2">mem_data_wr_sel</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">ALU.v</arg>&quot; line <arg fmt="%d" index="2">136</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">ALU</arg>&gt;.
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">controlUnit.v</arg>&quot; line <arg fmt="%d" index="2">62</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">controlUnit</arg>&gt;.
 </msg>
 
-<msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">ALU.v</arg>&quot; line <arg fmt="%d" index="2">137</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">ALU</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2036" delta="old" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">write_enable</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">controlUnit</arg>&gt;. Possible simulation mismatch.
+<msg type="info" file="Xst" num="1767" delta="new" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="warning" file="Xst" num="2036" delta="new" >Inserting OBUF on port &lt;<arg fmt="%s" index="1">write_enable</arg>&gt; driven by black box &lt;<arg fmt="%s" index="2">controlUnit</arg>&gt;. Possible simulation mismatch.
 </msg>
 
 </messages>

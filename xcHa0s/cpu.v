@@ -5,7 +5,7 @@ module cpu(
 	output [9:0] instr_Addr,
 	input [15:0] instr,
 	output reg [15:0] data_Addr,
-	output [15:0] write_data,
+	output reg [15:0] write_data,
 	input [15:0] read_data,
 	output write_enable
     );
@@ -53,7 +53,7 @@ wire [15:0] SP_reg;
 
 wire branch,ret,loadPC,wr_from_mem;
 wire push,op_stack,wr_X,wr_Y,wr_ACC;
-wire [1:0] sel_srcA,sel_srcB,data_addr_sel;
+wire [1:0] sel_srcA,sel_srcB,data_addr_sel,mem_data_wr_sel;
 
 wire [4:0] opsel;
 wire ready;
@@ -78,6 +78,7 @@ controlUnit cu(
 	
 	.data_addr_sel(data_addr_sel),
 	.wr_to_data_mem(write_enable),
+	.mem_data_wr_sel(mem_data_wr_sel),
 	
 	.wr_from_mem(wr_from_mem),
 	.wr_X(wr_X),
@@ -167,9 +168,14 @@ end
 
 /////////////// DATA MEMORY + STACK POINTER ///////////////
 
-assign write_data = srcB;
-
 always @(*) begin
+
+	case(mem_data_wr_sel)
+		0: write_data = X_reg;
+		1: write_data = Y_reg;
+		2: write_data = ACC_reg;
+		3: write_data = sign_Imm;
+	endcase
 
 	case(data_addr_sel)
 		0: data_Addr = res;

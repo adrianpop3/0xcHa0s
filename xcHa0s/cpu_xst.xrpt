@@ -5,14 +5,14 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Fri Dec 02 20:47:21 2022">
+  <application stringID="Xst" timeStamp="Sat Dec 03 12:10:29 2022">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="E:\faculta\ISE14.7-Xilinx\14.7\ISE_DS\ISE\\lib\nt64;E:\faculta\ISE14.7-Xilinx\14.7\ISE_DS\ISE\\bin\nt64;E:\faculta\ISE14.7-Xilinx\14.7\ISE_DS\ISE\bin\nt64;E:\faculta\ISE14.7-Xilinx\14.7\ISE_DS\ISE\lib\nt64;E:\faculta\ISE14.7-Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;E:\faculta\ISE14.7-Xilinx\14.7\ISE_DS\PlanAhead\bin;E:\faculta\ISE14.7-Xilinx\14.7\ISE_DS\EDK\bin\nt64;E:\faculta\ISE14.7-Xilinx\14.7\ISE_DS\EDK\lib\nt64;E:\faculta\ISE14.7-Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;E:\faculta\ISE14.7-Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;E:\faculta\ISE14.7-Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;E:\faculta\ISE14.7-Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;E:\faculta\ISE14.7-Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;E:\faculta\ISE14.7-Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;E:\faculta\ISE14.7-Xilinx\14.7\ISE_DS\common\bin\nt64;E:\faculta\ISE14.7-Xilinx\14.7\ISE_DS\common\lib\nt64;C:\Program Files\Java\jdk-17\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\PROGRA~2\TABLEC~1.01;E:\faculta\fizica\TableCurve2Dv5.01;C:\Program Files (x86)\Wiimm\SZS;E:\faculta\Matlab\bin;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Users\Dutu\IdeaProjects\apache-maven-3.8.5\bin;C:\Program Files (x86)\dBI\QDD\Drivers;E:\Atmel Studio\Comp-istall\bin;E:\faculta\CFLP\ocaml\Objective Caml\bin;C:\Program Files (x86)\dotnet\;C:\Program Files\CMake\bin;C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;E:\faculta\WINCUPL\EXE;E:\faculta\WINCUPL\FITTERS;C:\Users\Dutu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Dutu\.dotnet\tools;E:\faculta\CFLP\Lisp\clisp-2.48;E:\PhoenixSuit_V1.10\;E:\CodeBlocks\MinGW\bin;C:\Users\Dutu\AppData\Local\GitHubDesktop\bin"/>
+          <item stringID="value" value="E:\faculta\ISE14.7-Xilinx\14.7\ISE_DS\ISE\\lib\nt64;E:\faculta\ISE14.7-Xilinx\14.7\ISE_DS\ISE\\bin\nt64;C:\Program Files\Java\jdk-17\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\PROGRA~2\TABLEC~1.01;E:\faculta\fizica\TableCurve2Dv5.01;C:\Program Files (x86)\Wiimm\SZS;E:\faculta\Matlab\bin;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Users\Dutu\IdeaProjects\apache-maven-3.8.5\bin;C:\Program Files (x86)\dBI\QDD\Drivers;E:\Atmel Studio\Comp-istall\bin;E:\faculta\CFLP\ocaml\Objective Caml\bin;C:\Program Files (x86)\dotnet\;C:\Program Files\CMake\bin;C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;E:\faculta\WINCUPL\EXE;E:\faculta\WINCUPL\FITTERS;C:\Users\Dutu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Dutu\.dotnet\tools;E:\faculta\CFLP\Lisp\clisp-2.48;E:\PhoenixSuit_V1.10\;E:\CodeBlocks\MinGW\bin;C:\Users\Dutu\AppData\Local\GitHubDesktop\bin"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -21,18 +21,6 @@
         <row stringID="row" value="2">
           <item stringID="variable" value="XILINX"/>
           <item stringID="value" value="E:\faculta\ISE14.7-Xilinx\14.7\ISE_DS\ISE\"/>
-        </row>
-        <row stringID="row" value="3">
-          <item stringID="variable" value="XILINX_DSP"/>
-          <item stringID="value" value="E:\faculta\ISE14.7-Xilinx\14.7\ISE_DS\ISE"/>
-        </row>
-        <row stringID="row" value="4">
-          <item stringID="variable" value="XILINX_EDK"/>
-          <item stringID="value" value="E:\faculta\ISE14.7-Xilinx\14.7\ISE_DS\EDK"/>
-        </row>
-        <row stringID="row" value="5">
-          <item stringID="variable" value="XILINX_PLANAHEAD"/>
-          <item stringID="value" value="E:\faculta\ISE14.7-Xilinx\14.7\ISE_DS\PlanAhead"/>
         </row>
       </table>
       <item stringID="User_EnvOs" value="OS Information">
@@ -114,8 +102,8 @@
         <item dataType="int" stringID="XST_16BIT_REGISTER" value="4"/>
         <item dataType="int" stringID="XST_4BIT_REGISTER" value="1"/>
       </item>
-      <item dataType="int" stringID="XST_MULTIPLEXERS" value="3">
-        <item dataType="int" stringID="XST_16BIT_4TO1_MULTIPLEXER" value="3"/>
+      <item dataType="int" stringID="XST_MULTIPLEXERS" value="4">
+        <item dataType="int" stringID="XST_16BIT_4TO1_MULTIPLEXER" value="4"/>
       </item>
     </section>
     <section stringID="XST_ADVANCED_HDL_SYNTHESIS_REPORT">
@@ -125,8 +113,8 @@
       <item dataType="int" stringID="XST_REGISTERS" value="78">
         <item dataType="int" stringID="XST_FLIPFLOPS" value="78"/>
       </item>
-      <item dataType="int" stringID="XST_MULTIPLEXERS" value="3">
-        <item dataType="int" stringID="XST_16BIT_4TO1_MULTIPLEXER" value="3"/>
+      <item dataType="int" stringID="XST_MULTIPLEXERS" value="4">
+        <item dataType="int" stringID="XST_16BIT_4TO1_MULTIPLEXER" value="4"/>
       </item>
     </section>
     <section stringID="XST_FINAL_REGISTER_REPORT">
@@ -151,12 +139,12 @@
         <item stringID="XST_IOS" value="77"/>
       </section>
       <section stringID="XST_CELL_USAGE">
-        <item dataType="int" stringID="XST_BELS" value="268">
+        <item dataType="int" stringID="XST_BELS" value="284">
           <item dataType="int" stringID="XST_GND" value="1"/>
           <item dataType="int" stringID="XST_INV" value="1"/>
           <item dataType="int" stringID="XST_LUT1" value="9"/>
           <item dataType="int" stringID="XST_LUT2" value="16"/>
-          <item dataType="int" stringID="XST_LUT3" value="107"/>
+          <item dataType="int" stringID="XST_LUT3" value="123"/>
           <item dataType="int" stringID="XST_LUT4" value="34"/>
           <item dataType="int" stringID="XST_MUXCY" value="24"/>
           <item dataType="int" stringID="XST_MUXF5" value="49"/>
@@ -180,7 +168,7 @@
       <item stringID="XST_SELECTED_DEVICE" value="3s500efg320-4"/>
       <item AVAILABLE="4656" dataType="int" label="Number of Slices" stringID="XST_NUMBER_OF_SLICES" value="97"/>
       <item AVAILABLE="9312" dataType="int" label="Number of Slice Flip Flops" stringID="XST_NUMBER_OF_SLICE_FLIP_FLOPS" value="78"/>
-      <item AVAILABLE="9312" dataType="int" label="Number of 4 input LUTs" stringID="XST_NUMBER_OF_4_INPUT_LUTS" value="167"/>
+      <item AVAILABLE="9312" dataType="int" label="Number of 4 input LUTs" stringID="XST_NUMBER_OF_4_INPUT_LUTS" value="183"/>
       <item dataType="int" label="Number of IOs" stringID="XST_NUMBER_OF_IOS" value="77"/>
       <item AVAILABLE="232" dataType="int" label="Number of bonded IOBs" stringID="XST_NUMBER_OF_BONDED_IOBS" value="77"/>
       <item AVAILABLE="24" dataType="int" label="Number of GCLKs" stringID="XST_NUMBER_OF_GCLKS" value="1"/>
@@ -190,7 +178,7 @@
     </section>
     <section stringID="XST_ERRORS_STATISTICS">
       <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_ERRORS" value="0"/>
-      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="3"/>
+      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="4"/>
       <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="1"/>
     </section>
   </application>
