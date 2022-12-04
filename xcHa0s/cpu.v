@@ -51,7 +51,7 @@ wire [15:0] SP_reg;
 
 /////////////// CONTROL UNIT ///////////////
 
-wire branch,ret,loadPC,wr_from_mem;
+wire branch,ret,loadPC,reg_from_mem;
 wire push,op_stack,wr_X,wr_Y,wr_ACC;
 wire [1:0] sel_srcA,sel_srcB,data_addr_sel,mem_data_wr_sel;
 
@@ -80,7 +80,7 @@ controlUnit cu(
 	.wr_to_data_mem(write_enable),
 	.mem_data_wr_sel(mem_data_wr_sel),
 	
-	.wr_from_mem(wr_from_mem),
+	.reg_from_mem(reg_from_mem),
 	.wr_X(wr_X),
 	.wr_Y(wr_Y),
 	.wr_ACC(wr_ACC),
@@ -100,7 +100,7 @@ reg16 Y  (clk,rst,wr_Y,reg_next,Y_reg);
 reg16 ACC(clk,rst,wr_ACC,reg_next,ACC_reg);
 
 always @(*) begin
-	if(wr_from_mem)
+	if(reg_from_mem)
 		reg_next = read_data;
 	else
 		reg_next = res;
@@ -112,16 +112,19 @@ end
 
 /////////////// PC REGISTER ///////////////
 
-wire [9:0] PC_reg;
+wire [9:0] PC_reg,PC_reg_plus_1;
 reg [9:0] PC_next;
 wire [9:0] PC_branch;
+
+assign PC_reg_plus_1 = PC_reg + 1;
+
 reg10 PC(clk,rst,loadPC,PC_next,PC_reg);
 
 assign instr_Addr = PC_reg;
 assign PC_branch = instr[9:0];
 
 always @(*) begin
-	PC_next = PC_reg + 1;
+	PC_next = PC_reg_plus_1;
 	if(ret)
 		PC_next = read_data[9:0];
 	else if(branch)
@@ -174,7 +177,7 @@ always @(*) begin
 		0: write_data = X_reg;
 		1: write_data = Y_reg;
 		2: write_data = ACC_reg;
-		3: write_data = sign_Imm;
+		3: write_data = {6'b0,PC_reg_plus_1};
 	endcase
 
 	case(data_addr_sel)
