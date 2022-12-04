@@ -31,9 +31,9 @@ NGDBUILD Design Results Summary:
   Number of errors:     1
   Number of warnings:   0
 
-Total memory usage is 4392416 kilobytes
+Total memory usage is 4392544 kilobytes
 
-Total REAL time to NGDBUILD completion:  3 sec
+Total REAL time to NGDBUILD completion:  2 sec
 Total CPU time to NGDBUILD completion:   2 sec
 
 One or more errors were found during NGDBUILD.  No NGD file will be written.

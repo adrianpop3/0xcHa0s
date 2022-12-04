@@ -1,77 +1,77 @@
-localparam NOP = 				0;
+`define NOP  			0
 
-localparam PUSH_POP = 		1;
+`define PUSH_POP  	1
 
-localparam LOAD = 			2;
-localparam STORE = 			3;
-localparam LOADB = 			4;
-localparam STOREB = 			5;
+`define LOAD  			2
+`define STORE  		3
+`define LOADB  		4
+`define STOREB  		5
 
-localparam MOVI = 			6;
-localparam MOVR = 			7;
+`define MOVI  			6
+`define MOVR  			7
 
-localparam RAD = 				8;
-localparam POW = 				9;
+`define RAD  			8
+`define POW  			9
 
-localparam BRA = 				16;
-localparam BRE = 				17;
-localparam BNE = 				18;
-localparam BLT = 				19;
-localparam BGT = 				20;
-localparam BLE = 				21;
-localparam BGE = 				22;
-localparam BRC = 				23;
-localparam BRO = 				24;
+`define BRA  			16
+`define BRE  			17
+`define BNE  			18
+`define BLT  			19
+`define BGT  			20
+`define BLE  			21
+`define BGE  			22
+`define BRC  			23
+`define BRO  			24
 
-localparam JMP = 				30;
-localparam RET = 				31;
-
-
-
-localparam ADDRI = 			32;
-localparam ADDAI = 			33;
-localparam ADDXY = 			34;
-localparam ADDRA = 			35;
-
-localparam SUBRI = 			36;
-localparam SUBAI = 			37;
-localparam SUBXY = 			38;
-localparam SUBRA = 			39;
-
-localparam SHIFT = 			40;
-
-localparam INC = 				42;
-localparam DEC = 				43;
-
-localparam MULRA = 			44;
-localparam MULAI = 			45;
-
-localparam DIVRA = 			46;
-localparam DIVAI = 			47;
-
-localparam MODRA = 			48;
-localparam MODAI = 			49;
-
-localparam ANDRA = 			50;
-localparam ANDAI = 			51;
-
-localparam ORRA = 			52;
-localparam ORAI = 			53;
-
-localparam XORRA = 			54;
-localparam XORAI = 			55;
-
-localparam NOT = 				56;
-localparam NEG = 				57;
-
-localparam CMPRI = 			58;
-localparam CMPAI = 			59;
-localparam CMPRR = 			60;
+`define JMP  			30
+`define RET  			31
 
 
-localparam TSTRI = 			61;
-localparam TSTAI = 			62;
-localparam TSTRR = 			63;
+
+`define ADDRI  		32
+`define ADDAI  		33
+`define ADDXY  		34
+`define ADDRA  		35
+
+`define SUBRI 			36
+`define SUBAI 			37
+`define SUBXY 			38
+`define SUBRA 			39
+
+`define SHIFT 			40
+
+`define INC  			42
+`define DEC  			43
+
+`define MULRA 			44
+`define MULAI 			45
+
+`define DIVRA	 		46
+`define DIVAI  		47
+
+`define MODRA  		48
+`define MODAI  		49
+
+`define ANDRA  		50
+`define ANDAI  		51
+
+`define ORRA  			52
+`define ORAI  			53
+
+`define XORRA  		54
+`define XORAI  		55
+
+`define NOT  			56
+`define NEG  			57
+
+`define CMPRI  		58
+`define CMPAI  		59
+`define CMPRR  		60
+
+
+`define TSTRI  		61
+`define TSTAI  		62
+`define TSTRR  		63
 
 
 

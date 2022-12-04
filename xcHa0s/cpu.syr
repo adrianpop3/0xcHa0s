@@ -3,13 +3,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: cpu.prj
@@ -134,67 +134,9 @@ Analyzing hierarchy for module <SignExtend> in library <work>.
 Analyzing hierarchy for module <reg4> in library <work>.
 
 Analyzing hierarchy for module <controlUnit> in library <work> with parameters.
-	ADDAI = "00000000000000000000000000100001"
-	ADDRA = "00000000000000000000000000100011"
-	ADDRI = "00000000000000000000000000100000"
-	ADDXY = "00000000000000000000000000100010"
-	ALU_ADD = "00000000000000000000000000000001"
-	ALU_POW = "00000000000000000000000000010001"
-	ALU_RAD = "00000000000000000000000000010000"
-	ALU_SHIFT = "00000000000000000000000000000011"
-	ALU_SHORT_B = "00000000000000000000000000000000"
-	ALU_SUB = "00000000000000000000000000000010"
-	ANDAI = "00000000000000000000000000110011"
-	ANDRA = "00000000000000000000000000110010"
-	BGE = "00000000000000000000000000010110"
-	BGT = "00000000000000000000000000010100"
-	BLE = "00000000000000000000000000010101"
-	BLT = "00000000000000000000000000010011"
-	BNE = "00000000000000000000000000010010"
-	BRA = "00000000000000000000000000010000"
-	BRC = "00000000000000000000000000010111"
-	BRE = "00000000000000000000000000010001"
-	BRO = "00000000000000000000000000011000"
 	CF = "00000000000000000000000000000001"
-	CMPAI = "00000000000000000000000000111011"
-	CMPRI = "00000000000000000000000000111010"
-	CMPRR = "00000000000000000000000000111100"
-	DEC = "00000000000000000000000000101011"
-	DIVAI = "00000000000000000000000000101111"
-	DIVRA = "00000000000000000000000000101110"
-	INC = "00000000000000000000000000101010"
-	JMP = "00000000000000000000000000011110"
-	LOAD = "00000000000000000000000000000010"
-	LOADB = "00000000000000000000000000000100"
-	MODAI = "00000000000000000000000000110001"
-	MODRA = "00000000000000000000000000110000"
-	MOVI = "00000000000000000000000000000110"
-	MOVR = "00000000000000000000000000000111"
-	MULAI = "00000000000000000000000000101101"
-	MULRA = "00000000000000000000000000101100"
-	NEG = "00000000000000000000000000111001"
 	NF = "00000000000000000000000000000010"
-	NOP = "00000000000000000000000000000000"
-	NOT = "00000000000000000000000000111000"
 	OF = "00000000000000000000000000000000"
-	ORAI = "00000000000000000000000000110101"
-	ORRA = "00000000000000000000000000110100"
-	POW = "00000000000000000000000000001001"
-	PUSH_POP = "00000000000000000000000000000001"
-	RAD = "00000000000000000000000000001000"
-	RET = "00000000000000000000000000011111"
-	SHIFT = "00000000000000000000000000101000"
-	STORE = "00000000000000000000000000000011"
-	STOREB = "00000000000000000000000000000101"
-	SUBAI = "00000000000000000000000000100101"
-	SUBRA = "00000000000000000000000000100111"
-	SUBRI = "00000000000000000000000000100100"
-	SUBXY = "00000000000000000000000000100110"
-	TSTAI = "00000000000000000000000000111110"
-	TSTRI = "00000000000000000000000000111101"
-	TSTRR = "00000000000000000000000000111111"
-	XORAI = "00000000000000000000000000110111"
-	XORRA = "00000000000000000000000000110110"
 	ZF = "00000000000000000000000000000011"
 	sel_ACC = "00000000000000000000000000000010"
 	sel_PC = "00000000000000000000000000000011"
@@ -225,67 +167,9 @@ Analyzing module <reg4> in library <work>.
 Module <reg4> is correct for synthesis.
  
 Analyzing module <controlUnit> in library <work>.
-	ADDAI = 32'sb00000000000000000000000000100001
-	ADDRA = 32'sb00000000000000000000000000100011
-	ADDRI = 32'sb00000000000000000000000000100000
-	ADDXY = 32'sb00000000000000000000000000100010
-	ALU_ADD = 32'sb00000000000000000000000000000001
-	ALU_POW = 32'sb00000000000000000000000000010001
-	ALU_RAD = 32'sb00000000000000000000000000010000
-	ALU_SHIFT = 32'sb00000000000000000000000000000011
-	ALU_SHORT_B = 32'sb00000000000000000000000000000000
-	ALU_SUB = 32'sb00000000000000000000000000000010
-	ANDAI = 32'sb00000000000000000000000000110011
-	ANDRA = 32'sb00000000000000000000000000110010
-	BGE = 32'sb00000000000000000000000000010110
-	BGT = 32'sb00000000000000000000000000010100
-	BLE = 32'sb00000000000000000000000000010101
-	BLT = 32'sb00000000000000000000000000010011
-	BNE = 32'sb00000000000000000000000000010010
-	BRA = 32'sb00000000000000000000000000010000
-	BRC = 32'sb00000000000000000000000000010111
-	BRE = 32'sb00000000000000000000000000010001
-	BRO = 32'sb00000000000000000000000000011000
 	CF = 32'sb00000000000000000000000000000001
-	CMPAI = 32'sb00000000000000000000000000111011
-	CMPRI = 32'sb00000000000000000000000000111010
-	CMPRR = 32'sb00000000000000000000000000111100
-	DEC = 32'sb00000000000000000000000000101011
-	DIVAI = 32'sb00000000000000000000000000101111
-	DIVRA = 32'sb00000000000000000000000000101110
-	INC = 32'sb00000000000000000000000000101010
-	JMP = 32'sb00000000000000000000000000011110
-	LOAD = 32'sb00000000000000000000000000000010
-	LOADB = 32'sb00000000000000000000000000000100
-	MODAI = 32'sb00000000000000000000000000110001
-	MODRA = 32'sb00000000000000000000000000110000
-	MOVI = 32'sb00000000000000000000000000000110
-	MOVR = 32'sb00000000000000000000000000000111
-	MULAI = 32'sb00000000000000000000000000101101
-	MULRA = 32'sb00000000000000000000000000101100
-	NEG = 32'sb00000000000000000000000000111001
 	NF = 32'sb00000000000000000000000000000010
-	NOP = 32'sb00000000000000000000000000000000
-	NOT = 32'sb00000000000000000000000000111000
 	OF = 32'sb00000000000000000000000000000000
-	ORAI = 32'sb00000000000000000000000000110101
-	ORRA = 32'sb00000000000000000000000000110100
-	POW = 32'sb00000000000000000000000000001001
-	PUSH_POP = 32'sb00000000000000000000000000000001
-	RAD = 32'sb00000000000000000000000000001000
-	RET = 32'sb00000000000000000000000000011111
-	SHIFT = 32'sb00000000000000000000000000101000
-	STORE = 32'sb00000000000000000000000000000011
-	STOREB = 32'sb00000000000000000000000000000101
-	SUBAI = 32'sb00000000000000000000000000100101
-	SUBRA = 32'sb00000000000000000000000000100111
-	SUBRI = 32'sb00000000000000000000000000100100
-	SUBXY = 32'sb00000000000000000000000000100110
-	TSTAI = 32'sb00000000000000000000000000111110
-	TSTRI = 32'sb00000000000000000000000000111101
-	TSTRR = 32'sb00000000000000000000000000111111
-	XORAI = 32'sb00000000000000000000000000110111
-	XORRA = 32'sb00000000000000000000000000110110
 	ZF = 32'sb00000000000000000000000000000011
 	sel_ACC = 32'sb00000000000000000000000000000010
 	sel_PC = 32'sb00000000000000000000000000000011
@@ -328,8 +212,12 @@ Synthesizing Unit <controlUnit>.
     Related source file is "controlUnit.v".
 WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <instr<6:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 1-bit xor2 for signal <branch$xor0000> created at line 185.
+WARNING:Xst:647 - Input <instr<0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 4x4-bit ROM for signal <COND_3$rom0000>.
+    Found 64x1-bit ROM for signal <save_flags>.
+    Found 1-bit xor2 for signal <branch$xor0000> created at line 188.
+    Summary:
+	inferred   2 ROM(s).
 Unit <controlUnit> synthesized.
 
 
@@ -368,6 +256,9 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 HDL Synthesis Report
 
 Macro Statistics
+# ROMs                                                 : 2
+ 4x4-bit ROM                                           : 1
+ 64x1-bit ROM                                          : 1
 # Adders/Subtractors                                   : 2
  10-bit adder                                          : 1
  16-bit addsub                                         : 1
@@ -386,15 +277,14 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1710 - FF/Latch <q_0> (without init value) has a constant value of 0 in block <FlagReg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <q_1> (without init value) has a constant value of 0 in block <FlagReg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <q_2> (without init value) has a constant value of 0 in block <FlagReg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <q_3> (without init value) has a constant value of 0 in block <FlagReg>. This FF/Latch will be trimmed during the optimization process.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
+# ROMs                                                 : 2
+ 4x4-bit ROM                                           : 1
+ 64x1-bit ROM                                          : 1
 # Adders/Subtractors                                   : 2
  10-bit adder                                          : 1
  16-bit addsub                                         : 1
@@ -410,12 +300,10 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <FlagReg/q_3> (without init value) has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <FlagReg/q_2> (without init value) has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <FlagReg/q_1> (without init value) has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <FlagReg/q_0> (without init value) has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <cpu> ...
+
+Optimizing unit <controlUnit> ...
 
 Optimizing unit <reg16> ...
 
@@ -423,7 +311,7 @@ Optimizing unit <reg10> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block cpu, actual ratio is 2.
+Found area constraint ratio of 100 (+ 5) on block cpu, actual ratio is 3.
 
 Final Macro Processing ...
 
@@ -431,8 +319,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 74
- Flip-Flops                                            : 74
+# Registers                                            : 78
+ Flip-Flops                                            : 78
 
 =========================================================================
 
@@ -461,19 +349,24 @@ Design Statistics
 # IOs                              : 77
 
 Cell Usage :
-# BELS                             : 319
+# BELS                             : 410
 #      GND                         : 1
 #      INV                         : 1
 #      LUT1                        : 9
-#      LUT2                        : 19
-#      LUT3                        : 130
-#      LUT4                        : 56
+#      LUT2                        : 28
+#      LUT3                        : 157
+#      LUT3_D                      : 1
+#      LUT3_L                      : 8
+#      LUT4                        : 91
+#      LUT4_D                      : 1
+#      LUT4_L                      : 3
 #      MUXCY                       : 24
-#      MUXF5                       : 52
+#      MUXF5                       : 58
+#      MUXF6                       : 1
 #      VCC                         : 1
 #      XORCY                       : 26
-# FlipFlops/Latches                : 74
-#      FDRE                        : 74
+# FlipFlops/Latches                : 78
+#      FDRE                        : 78
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 76
@@ -488,9 +381,9 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                      114  out of   4656     2%  
- Number of Slice Flip Flops:             74  out of   9312     0%  
- Number of 4 input LUTs:                215  out of   9312     2%  
+ Number of Slices:                      161  out of   4656     3%  
+ Number of Slice Flip Flops:             78  out of   9312     0%  
+ Number of 4 input LUTs:                299  out of   9312     3%  
  Number of IOs:                          77
  Number of bonded IOBs:                  77  out of    232    33%  
  Number of GCLKs:                         1  out of     24     4%  
@@ -516,7 +409,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 74    |
+clk                                | BUFGP                  | 78    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -527,10 +420,10 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 5.065ns (Maximum Frequency: 197.433MHz)
-   Minimum input arrival time before clock: 10.157ns
-   Maximum output required time after clock: 8.793ns
-   Maximum combinational path delay: 14.727ns
+   Minimum period: 6.645ns (Maximum Frequency: 150.489MHz)
+   Minimum input arrival time before clock: 10.135ns
+   Maximum output required time after clock: 8.889ns
+   Maximum combinational path delay: 14.705ns
 
 Timing Detail:
 --------------
@@ -538,54 +431,48 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 5.065ns (frequency: 197.433MHz)
-  Total number of paths / destination ports: 311 / 26
+  Clock period: 6.645ns (frequency: 150.489MHz)
+  Total number of paths / destination ports: 412 / 26
 -------------------------------------------------------------------------
-Delay:               5.065ns (Levels of Logic = 11)
-  Source:            PC/q_1 (FF)
-  Destination:       PC/q_9 (FF)
+Delay:               6.645ns (Levels of Logic = 5)
+  Source:            FlagReg/q_1 (FF)
+  Destination:       PC/q_8 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: PC/q_1 to PC/q_9
+  Data Path: FlagReg/q_1 to PC/q_8
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             2   0.591   0.622  PC/q_1 (PC/q_1)
-     LUT1:I0->O            1   0.704   0.000  Madd_PC_reg_plus_1_cy<1>_rt (Madd_PC_reg_plus_1_cy<1>_rt)
-     MUXCY:S->O            1   0.464   0.000  Madd_PC_reg_plus_1_cy<1> (Madd_PC_reg_plus_1_cy<1>)
-     MUXCY:CI->O           1   0.059   0.000  Madd_PC_reg_plus_1_cy<2> (Madd_PC_reg_plus_1_cy<2>)
-     MUXCY:CI->O           1   0.059   0.000  Madd_PC_reg_plus_1_cy<3> (Madd_PC_reg_plus_1_cy<3>)
-     MUXCY:CI->O           1   0.059   0.000  Madd_PC_reg_plus_1_cy<4> (Madd_PC_reg_plus_1_cy<4>)
-     MUXCY:CI->O           1   0.059   0.000  Madd_PC_reg_plus_1_cy<5> (Madd_PC_reg_plus_1_cy<5>)
-     MUXCY:CI->O           1   0.059   0.000  Madd_PC_reg_plus_1_cy<6> (Madd_PC_reg_plus_1_cy<6>)
-     MUXCY:CI->O           1   0.059   0.000  Madd_PC_reg_plus_1_cy<7> (Madd_PC_reg_plus_1_cy<7>)
-     MUXCY:CI->O           0   0.059   0.000  Madd_PC_reg_plus_1_cy<8> (Madd_PC_reg_plus_1_cy<8>)
-     XORCY:CI->O           1   0.804   0.455  Madd_PC_reg_plus_1_xor<9> (PC_reg_plus_1<9>)
-     LUT3:I2->O            1   0.704   0.000  PC_next<9> (PC_next<9>)
-     FDRE:D                    0.308          PC/q_9
+     FDRE:C->Q             1   0.591   0.455  FlagReg/q_1 (FlagReg/q_1)
+     LUT4:I2->O            1   0.704   0.424  cu/branch10 (cu/branch10)
+     LUT4_L:I3->LO         1   0.704   0.104  cu/branch44 (cu/branch44)
+     LUT4:I3->O            2   0.704   0.451  cu/branch137 (cu/branch137)
+     LUT4_D:I3->O          8   0.704   0.792  cu/branch244 (branch)
+     LUT3:I2->O            1   0.704   0.000  PC_next<8> (PC_next<8>)
+     FDRE:D                    0.308          PC/q_8
     ----------------------------------------
-    Total                      5.065ns (3.988ns logic, 1.077ns route)
-                                       (78.7% logic, 21.3% route)
+    Total                      6.645ns (4.419ns logic, 2.226ns route)
+                                       (66.5% logic, 33.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 3328 / 222
+  Total number of paths / destination ports: 3661 / 234
 -------------------------------------------------------------------------
-Offset:              10.157ns (Levels of Logic = 21)
-  Source:            instr<14> (PAD)
+Offset:              10.135ns (Levels of Logic = 21)
+  Source:            instr<11> (PAD)
   Destination:       SP/q_15 (FF)
   Destination Clock: clk rising
 
-  Data Path: instr<14> to SP/q_15
+  Data Path: instr<11> to SP/q_15
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            11   1.218   1.108  instr_14_IBUF (instr_14_IBUF)
-     LUT2:I0->O            8   0.704   0.932  cu/sel_srcB<0>211 (N28)
-     LUT4:I0->O            1   0.704   0.455  cu/push_SW0 (N82)
-     LUT4:I2->O           17   0.704   1.226  cu/push (push)
-     LUT2:I0->O            1   0.704   0.000  Maddsub_SP_next_lut<0> (Maddsub_SP_next_lut<0>)
+     IBUF:I->O            44   1.218   1.441  instr_11_IBUF (instr_11_IBUF)
+     LUT2:I0->O            6   0.704   0.673  cu/opsel<3>11 (cu/N2)
+     LUT4:I3->O            1   0.704   0.455  cu/push_SW0 (N35)
+     LUT4:I2->O           17   0.704   1.130  cu/push (push)
+     LUT2:I1->O            1   0.704   0.000  Maddsub_SP_next_lut<0> (Maddsub_SP_next_lut<0>)
      MUXCY:S->O            1   0.464   0.000  Maddsub_SP_next_cy<0> (Maddsub_SP_next_cy<0>)
      MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<1> (Maddsub_SP_next_cy<1>)
      MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<2> (Maddsub_SP_next_cy<2>)
@@ -604,14 +491,14 @@ Offset:              10.157ns (Levels of Logic = 21)
      XORCY:CI->O           2   0.804   0.000  Maddsub_SP_next_xor<15> (SP_next<15>)
      FDRE:D                    0.308          SP/q_15
     ----------------------------------------
-    Total                     10.157ns (6.436ns logic, 3.721ns route)
-                                       (63.4% logic, 36.6% route)
+    Total                     10.135ns (6.436ns logic, 3.699ns route)
+                                       (63.5% logic, 36.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 417 / 74
+  Total number of paths / destination ports: 421 / 78
 -------------------------------------------------------------------------
-Offset:              8.793ns (Levels of Logic = 19)
+Offset:              8.889ns (Levels of Logic = 19)
   Source:            SP/q_0 (FF)
   Destination:       data_Addr<15> (PAD)
   Source Clock:      clk rising
@@ -620,7 +507,46 @@ Offset:              8.793ns (Levels of Logic = 19)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             2   0.591   0.526  SP/q_0 (SP/q_0)
+     FDRE:C->Q             2   0.591   0.622  SP/q_0 (SP/q_0)
+     LUT2:I0->O            1   0.704   0.000  Maddsub_SP_next_lut<0> (Maddsub_SP_next_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Maddsub_SP_next_cy<0> (Maddsub_SP_next_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<1> (Maddsub_SP_next_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<2> (Maddsub_SP_next_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<3> (Maddsub_SP_next_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<4> (Maddsub_SP_next_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<5> (Maddsub_SP_next_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<6> (Maddsub_SP_next_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<7> (Maddsub_SP_next_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<8> (Maddsub_SP_next_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<9> (Maddsub_SP_next_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<10> (Maddsub_SP_next_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<11> (Maddsub_SP_next_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<12> (Maddsub_SP_next_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<13> (Maddsub_SP_next_cy<13>)
+     MUXCY:CI->O           0   0.059   0.000  Maddsub_SP_next_cy<14> (Maddsub_SP_next_cy<14>)
+     XORCY:CI->O           2   0.804   0.447  Maddsub_SP_next_xor<15> (SP_next<15>)
+     MUXF5:S->O            1   0.739   0.420  Mmux_data_Addr12_f5 (data_Addr_15_OBUF)
+     OBUF:I->O                 3.272          data_Addr_15_OBUF (data_Addr<15>)
+    ----------------------------------------
+    Total                      8.889ns (7.400ns logic, 1.489ns route)
+                                       (83.2% logic, 16.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 7091 / 72
+-------------------------------------------------------------------------
+Delay:               14.705ns (Levels of Logic = 23)
+  Source:            instr<11> (PAD)
+  Destination:       data_Addr<15> (PAD)
+
+  Data Path: instr<11> to data_Addr<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            44   1.218   1.441  instr_11_IBUF (instr_11_IBUF)
+     LUT2:I0->O            6   0.704   0.673  cu/opsel<3>11 (cu/N2)
+     LUT4:I3->O            1   0.704   0.455  cu/push_SW0 (N35)
+     LUT4:I2->O           17   0.704   1.130  cu/push (push)
      LUT2:I1->O            1   0.704   0.000  Maddsub_SP_next_lut<0> (Maddsub_SP_next_lut<0>)
      MUXCY:S->O            1   0.464   0.000  Maddsub_SP_next_cy<0> (Maddsub_SP_next_cy<0>)
      MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<1> (Maddsub_SP_next_cy<1>)
@@ -641,59 +567,20 @@ Offset:              8.793ns (Levels of Logic = 19)
      MUXF5:S->O            1   0.739   0.420  Mmux_data_Addr12_f5 (data_Addr_15_OBUF)
      OBUF:I->O                 3.272          data_Addr_15_OBUF (data_Addr<15>)
     ----------------------------------------
-    Total                      8.793ns (7.400ns logic, 1.393ns route)
-                                       (84.2% logic, 15.8% route)
-
-=========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 3846 / 69
--------------------------------------------------------------------------
-Delay:               14.727ns (Levels of Logic = 23)
-  Source:            instr<14> (PAD)
-  Destination:       data_Addr<15> (PAD)
-
-  Data Path: instr<14> to data_Addr<15>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O            11   1.218   1.108  instr_14_IBUF (instr_14_IBUF)
-     LUT2:I0->O            8   0.704   0.932  cu/sel_srcB<0>211 (N28)
-     LUT4:I0->O            1   0.704   0.455  cu/push_SW0 (N82)
-     LUT4:I2->O           17   0.704   1.226  cu/push (push)
-     LUT2:I0->O            1   0.704   0.000  Maddsub_SP_next_lut<0> (Maddsub_SP_next_lut<0>)
-     MUXCY:S->O            1   0.464   0.000  Maddsub_SP_next_cy<0> (Maddsub_SP_next_cy<0>)
-     MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<1> (Maddsub_SP_next_cy<1>)
-     MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<2> (Maddsub_SP_next_cy<2>)
-     MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<3> (Maddsub_SP_next_cy<3>)
-     MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<4> (Maddsub_SP_next_cy<4>)
-     MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<5> (Maddsub_SP_next_cy<5>)
-     MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<6> (Maddsub_SP_next_cy<6>)
-     MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<7> (Maddsub_SP_next_cy<7>)
-     MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<8> (Maddsub_SP_next_cy<8>)
-     MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<9> (Maddsub_SP_next_cy<9>)
-     MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<10> (Maddsub_SP_next_cy<10>)
-     MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<11> (Maddsub_SP_next_cy<11>)
-     MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<12> (Maddsub_SP_next_cy<12>)
-     MUXCY:CI->O           1   0.059   0.000  Maddsub_SP_next_cy<13> (Maddsub_SP_next_cy<13>)
-     MUXCY:CI->O           0   0.059   0.000  Maddsub_SP_next_cy<14> (Maddsub_SP_next_cy<14>)
-     XORCY:CI->O           2   0.804   0.447  Maddsub_SP_next_xor<15> (SP_next<15>)
-     MUXF5:S->O            1   0.739   0.420  Mmux_data_Addr12_f5 (data_Addr_15_OBUF)
-     OBUF:I->O                 3.272          data_Addr_15_OBUF (data_Addr<15>)
-    ----------------------------------------
-    Total                     14.727ns (10.139ns logic, 4.588ns route)
-                                       (68.8% logic, 31.2% route)
+    Total                     14.705ns (10.139ns logic, 4.566ns route)
+                                       (68.9% logic, 31.1% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.23 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.08 secs
  
 --> 
 
-Total memory usage is 4511284 kilobytes
+Total memory usage is 4513076 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   13 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 
