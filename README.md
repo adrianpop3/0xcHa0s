@@ -82,4 +82,14 @@ ADD, SUB, LSR, LSL, RSR, RSL, MOV, MUL, DIV, MOD</br>AND, OR, XOR, NOT, CMP, TST
 |Branch|6 bit|10 bit|-|
 |ALU|6 bit|1 bit|9 bit|
 
+
+|Task|In progress|Done|Tested|
+|----|-----------|----|------|
+|Top module|x|x| |
+|Control unit|x|x| |
+|ALU| | | |
+|Assembler| | | |
+|ALU/CU tests| | | |
+|Integration test| | | |
+
 **_CALL & JMP push PC on stack, RET pops PC from stack.</br>All procedure parameters are passed using stack.</br>Return value is passed using stack._**</br>**_Only arithmetic and logic instructions should update the Flag register!_**
