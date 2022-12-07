@@ -32,29 +32,29 @@ module controlUnit(
 	input [3:0] flags
 );
 
-localparam ZF = 3;
-localparam NF = 2;
-localparam CF = 1;
-localparam OF = 0;
+`define ZF	3
+`define NF	2
+`define CF	1
+`define OF	0
 
-localparam sel_X = 	0;
-localparam sel_Y = 	1;
-localparam sel_ACC = 2;
-localparam sel_imm = 3;
-localparam sel_PC = 3;
+`define sel_X		0
+`define sel_Y		1
+`define sel_ACC	2
+`define sel_imm	3
+`define sel_PC		3
 
-localparam sel_addr_res = 		0;
-localparam sel_addrimm = 	1;
-localparam sel_SPreg = 		2;
-localparam sel_SPnext = 	3;
+`define sel_addr_res		0
+`define sel_addrimm		1
+`define sel_SPreg			2
+`define sel_SPnext		3
 
 `include "opcodes.v"
 `include "opsel.v"
 
-`define WR_ALU_RES_TO_ACC_WITH_FLAGS  	reg_from_mem = 0; wr_ACC = 1; save_flags = 1;
-`define NO_WR_TO_ACC_WITH_FLAGS      	reg_from_mem = 0; wr_ACC = 0; save_flags = 1;
+`define WR_ALU_RES_TO_ACC_WITH_FLAGS  	reg_from_mem = 0; wr_ACC = ready; save_flags = ready;
+`define NO_WR_TO_ACC_WITH_FLAGS      	reg_from_mem = 0; wr_ACC = 0; save_flags = ready;
 
-`define SEL_A_XY_SEL_B_ACC if(instr[9] == 0)sel_srcA = sel_X;else sel_srcA = sel_Y;  sel_srcB = sel_ACC;
+`define SEL_A_XY_SEL_B_ACC if(instr[9] == 0)sel_srcA = `sel_X;else sel_srcA = `sel_Y;  sel_srcB = `sel_ACC;
 
 always @(*) begin
 
@@ -86,125 +86,125 @@ always @(*) begin
 			if(instr[9]) begin //PUSH
 				push = 1;
 				op_stack = 1;
-				data_addr_sel = sel_SPnext;
+				data_addr_sel = `sel_SPnext;
 				mem_data_wr_sel = instr[8:7];
-				wr_to_data_mem = 1;
+				wr_to_data_mem = ready;
 			end else begin //POP
 				push = 0;
 				op_stack = 1;
-				data_addr_sel = sel_SPreg;
+				data_addr_sel = `sel_SPreg;
 				reg_from_mem = 1;
 				if(instr[8:7] == 0)
-					wr_X = 1;
+					wr_X = ready;
 				else if(instr[8:7] == 1)
-					wr_Y = 1;
+					wr_Y = ready;
 				else
-					wr_ACC = 1;
+					wr_ACC = ready;
 			end
 		end
 		
 		`LOAD: begin
-			data_addr_sel = sel_addrimm;
+			data_addr_sel = `sel_addrimm;
 			reg_from_mem = 1;
 			if(instr[9] == 0)
-				wr_X = 1;
+				wr_X = ready;
 			else
-				wr_Y = 1;
+				wr_Y = ready;
 		end
 		`STORE: begin
-			data_addr_sel = sel_addrimm;
+			data_addr_sel = `sel_addrimm;
 			if(instr[9] == 0)
-				mem_data_wr_sel = sel_X;
+				mem_data_wr_sel = `sel_X;
 			else
-				mem_data_wr_sel = sel_Y;
-			wr_to_data_mem = 1;
+				mem_data_wr_sel = `sel_Y;
+			wr_to_data_mem = ready;
 		end
 		
 		`LOADB: begin
-			data_addr_sel = sel_addr_res;
+			data_addr_sel = `sel_addr_res;
 			opsel = `ALU_ADD;
-			sel_srcB = sel_imm;
+			sel_srcB = `sel_imm;
 			reg_from_mem = 1;
 			if(instr[9] == 0) begin
-				wr_X = 1;
-				sel_srcA = sel_Y;
+				wr_X = ready;
+				sel_srcA = `sel_Y;
 			end else begin
-				wr_Y = 1;
-				sel_srcA = sel_X;
+				wr_Y = ready;
+				sel_srcA = `sel_X;
 			end
 		end
 		`STOREB: begin
-			data_addr_sel = sel_addr_res;
+			data_addr_sel = `sel_addr_res;
 			opsel = `ALU_ADD;
-			sel_srcB = sel_imm;
+			sel_srcB = `sel_imm;
 			if(instr[9] == 0) begin
-				mem_data_wr_sel = sel_X;
-				sel_srcA = sel_Y;
+				mem_data_wr_sel = `sel_X;
+				sel_srcA = `sel_Y;
 			end else begin
-				mem_data_wr_sel = sel_Y;
-				sel_srcA = sel_X;
+				mem_data_wr_sel = `sel_Y;
+				sel_srcA = `sel_X;
 			end
-			wr_to_data_mem = 1;
+			wr_to_data_mem = ready;
 		end
 		
 		`MOVI: begin
 			opsel = `ALU_SHORT_B;
-			sel_srcB = sel_imm;
+			sel_srcB = `sel_imm;
 			reg_from_mem = 0;
 			if(instr[9] == 0)
-				wr_X = 1;
+				wr_X = ready;
 			else
-				wr_Y = 1;
+				wr_Y = ready;
 		end
 		`MOVR: begin
 			opsel = `ALU_SHORT_B;
 			reg_from_mem = 0;
 			if(instr[9] == 0) begin
-				wr_X = 1;
-				sel_srcB = sel_Y;
-				if(instr[8]) sel_srcB = sel_ACC;
+				wr_X = ready;
+				sel_srcB = `sel_Y;
+				if(instr[8]) sel_srcB = `sel_ACC;
 			end else begin
-				wr_Y = 1;
-				sel_srcB = sel_X;
-				if(instr[8]) sel_srcB = sel_ACC;
+				wr_Y = ready;
+				sel_srcB = `sel_X;
+				if(instr[8]) sel_srcB = `sel_ACC;
 			end
 		end
 		
 		`RAD: begin
 			opsel = `ALU_RAD;
-			sel_srcA = sel_ACC;
+			sel_srcA = `sel_ACC;
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 		`POW: begin
 			opsel = `ALU_POW;
-			sel_srcA = sel_ACC;
+			sel_srcA = `sel_ACC;
 			sel_srcB = instr[9:8];
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 	
 		`BRA: branch = 1;
-		`BRE: branch = flags[ZF];
-		`BNE: branch = ~flags[ZF];
-		`BLT: branch = (flags[NF] != flags[OF]);
-		`BGT: branch = ((flags[ZF]==0) && (flags[OF] == flags[NF]));
-		`BLE: branch = ((flags[ZF]==1) || (flags[OF] != flags[NF]));
-		`BGE: branch = (flags[NF] == flags[OF]);
-		`BRC: branch = flags[CF];
-		`BRO: branch = flags[OF];
+		`BRE: branch = flags[`ZF];
+		`BNE: branch = ~flags[`ZF];
+		`BLT: branch = (flags[`NF] != flags[`OF]);
+		`BGT: branch = ((flags[`ZF]==0) && (flags[`OF] == flags[`NF]));
+		`BLE: branch = ((flags[`ZF]==1) || (flags[`OF] != flags[`NF]));
+		`BGE: branch = (flags[`NF] == flags[`OF]);
+		`BRC: branch = flags[`CF];
+		`BRO: branch = flags[`OF];
 		
 		`JMP: begin
 			push = 1;
 			op_stack = 1;
-			data_addr_sel = sel_SPnext;
-			mem_data_wr_sel = sel_PC;
-			wr_to_data_mem = 1;
+			data_addr_sel = `sel_SPnext;
+			mem_data_wr_sel = `sel_PC;
+			wr_to_data_mem = ready;
 			
 			branch = 1;
 		end
 		`RET: begin
 			push = 0;
 			op_stack = 1;
-			data_addr_sel = sel_SPreg;
+			data_addr_sel = `sel_SPreg;
 			ret = 1;
 		end
 		
@@ -213,57 +213,57 @@ always @(*) begin
 		`ADDRI: begin
 			opsel = `ALU_ADD;
 			if(instr[9] == 0)
-				sel_srcA = sel_X;
+				sel_srcA = `sel_X;
 			else
-				sel_srcA = sel_Y;
-			sel_srcB = sel_imm;
+				sel_srcA = `sel_Y;
+			sel_srcB = `sel_imm;
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 		`ADDAI: begin
 			opsel = `ALU_ADD;
-			sel_srcA = sel_ACC;
-			sel_srcB = sel_imm;
+			sel_srcA = `sel_ACC;
+			sel_srcB = `sel_imm;
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 		`ADDXY: begin
 			opsel = `ALU_ADD;
-			sel_srcA = sel_X;
-			sel_srcB = sel_Y;
+			sel_srcA = `sel_X;
+			sel_srcB = `sel_Y;
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 		`ADDRA: begin
 			opsel = `ALU_ADD;
 			if(instr[9] == 0)
-				sel_srcA = sel_X;
+				sel_srcA = `sel_X;
 			else
-				sel_srcA = sel_Y;
-			sel_srcB = sel_ACC;
+				sel_srcA = `sel_Y;
+			sel_srcB = `sel_ACC;
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 		
 		`SUBRI: begin
 			opsel = 	`ALU_SUB;
 			if(instr[9] == 0)
-				sel_srcA = sel_X;
+				sel_srcA = `sel_X;
 			else
-				sel_srcA = sel_Y;
-			sel_srcB = sel_imm;
+				sel_srcA = `sel_Y;
+			sel_srcB = `sel_imm;
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 		`SUBAI: begin
 			opsel = `ALU_SUB;
-			sel_srcA = sel_ACC;
-			sel_srcB = sel_imm;
+			sel_srcA = `sel_ACC;
+			sel_srcB = `sel_imm;
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 		`SUBXY: begin
 			opsel = `ALU_SUB;
 			if(instr[8] == 0) begin
-				sel_srcA = sel_X;
-				sel_srcB = sel_Y;
+				sel_srcA = `sel_X;
+				sel_srcB = `sel_Y;
 			end else begin
-				sel_srcA = sel_Y;
-				sel_srcB = sel_X;
+				sel_srcA = `sel_Y;
+				sel_srcB = `sel_X;
 			end
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
@@ -271,20 +271,20 @@ always @(*) begin
 			opsel = `ALU_SUB;
 			case(instr[9:8])
 				2'b00: begin
-					sel_srcA = sel_X;
-					sel_srcB = sel_ACC;
+					sel_srcA = `sel_X;
+					sel_srcB = `sel_ACC;
 				end
 				2'b01: begin
-					sel_srcA = sel_ACC;
-					sel_srcB = sel_X;
+					sel_srcA = `sel_ACC;
+					sel_srcB = `sel_X;
 				end
 				2'b10: begin
-					sel_srcA = sel_Y;
-					sel_srcB = sel_ACC;
+					sel_srcA = `sel_Y;
+					sel_srcB = `sel_ACC;
 				end
 				2'b11: begin
-					sel_srcA = sel_ACC;
-					sel_srcB = sel_Y;
+					sel_srcA = `sel_ACC;
+					sel_srcB = `sel_Y;
 				end
 			endcase
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
@@ -295,7 +295,7 @@ always @(*) begin
 			sel_srcA = instr[6:5];
 			if(instr[4]==1) begin
 				//immediate shift amount
-				sel_srcB = sel_imm;
+				sel_srcB = `sel_imm;
 			end else begin
 				//shift amount in another register
 				//instr[3:0] = 2'b:reg2/op2 1'b:truncate%16 'bx
@@ -322,7 +322,7 @@ always @(*) begin
 		end
 		`MULAI: begin
 			opsel = `ALU_MUL;
-			sel_srcA = sel_ACC;  sel_srcB = sel_imm;
+			sel_srcA = `sel_ACC;  sel_srcB = `sel_imm;
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 		`DIVRA: begin
@@ -332,7 +332,7 @@ always @(*) begin
 		end
 		`DIVAI: begin
 			opsel = `ALU_DIV;
-			sel_srcA = sel_ACC;  sel_srcB = sel_imm;
+			sel_srcA = `sel_ACC;  sel_srcB = `sel_imm;
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 		`MODRA: begin
@@ -342,7 +342,7 @@ always @(*) begin
 		end
 		`MODAI: begin
 			opsel = `ALU_MOD;
-			sel_srcA = sel_ACC;  sel_srcB = sel_imm;
+			sel_srcA = `sel_ACC;  sel_srcB = `sel_imm;
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 		
@@ -353,7 +353,7 @@ always @(*) begin
 		end
 		`ANDAI: begin
 			opsel = `ALU_AND;
-			sel_srcA = sel_ACC;  sel_srcB = sel_imm;
+			sel_srcA = `sel_ACC;  sel_srcB = `sel_imm;
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 		`ORRA: begin
@@ -363,7 +363,7 @@ always @(*) begin
 		end
 		`ORAI: begin
 			opsel = `ALU_OR;
-			sel_srcA = sel_ACC;  sel_srcB = sel_imm;
+			sel_srcA = `sel_ACC;  sel_srcB = `sel_imm;
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 		`XORRA: begin
@@ -373,7 +373,7 @@ always @(*) begin
 		end
 		`XORAI: begin
 			opsel = `ALU_XOR;
-			sel_srcA = sel_ACC;  sel_srcB = sel_imm;
+			sel_srcA = `sel_ACC;  sel_srcB = `sel_imm;
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 		
@@ -391,16 +391,16 @@ always @(*) begin
 		`CMPRI: begin
 			opsel = 	`ALU_SUB;
 			if(instr[9] == 0)
-				sel_srcA = sel_X;
+				sel_srcA = `sel_X;
 			else
-				sel_srcA = sel_Y;
-			sel_srcB = sel_imm;
+				sel_srcA = `sel_Y;
+			sel_srcB = `sel_imm;
 			`NO_WR_TO_ACC_WITH_FLAGS
 		end
 		`CMPAI: begin
 			opsel = `ALU_SUB;
-			sel_srcA = sel_ACC;
-			sel_srcB = sel_imm;
+			sel_srcA = `sel_ACC;
+			sel_srcB = `sel_imm;
 			`NO_WR_TO_ACC_WITH_FLAGS
 		end
 		`CMPRR: begin
@@ -414,16 +414,16 @@ always @(*) begin
 		`TSTRI: begin
 			opsel = 	`ALU_AND;
 			if(instr[9] == 0)
-				sel_srcA = sel_X;
+				sel_srcA = `sel_X;
 			else
-				sel_srcA = sel_Y;
-			sel_srcB = sel_imm;
+				sel_srcA = `sel_Y;
+			sel_srcB = `sel_imm;
 			`NO_WR_TO_ACC_WITH_FLAGS
 		end
 		`TSTAI: begin
 			opsel = `ALU_AND;
-			sel_srcA = sel_ACC;
-			sel_srcB = sel_imm;
+			sel_srcA = `sel_ACC;
+			sel_srcB = `sel_imm;
 			`NO_WR_TO_ACC_WITH_FLAGS
 		end
 		`TSTRR: begin

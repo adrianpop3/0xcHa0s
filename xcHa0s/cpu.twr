@@ -1,0 +1,547 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+E:\faculta\ISE14.7-Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle
+ise -v 3 -s 4 -n 3 -fastpaths -xml cpu.twx cpu.ncd -o cpu.twr cpu.pcf
+
+Design file:              cpu.ncd
+Physical constraint file: cpu.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+-------------+------------+------------+------------------+--------+
+             |Max Setup to|Max Hold to |                  | Clock  |
+Source       | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+-------------+------------+------------+------------------+--------+
+instr<0>     |   11.846(R)|   -2.550(R)|clk_BUFGP         |   0.000|
+instr<1>     |   17.170(R)|   -2.035(R)|clk_BUFGP         |   0.000|
+instr<2>     |   20.831(R)|   -2.211(R)|clk_BUFGP         |   0.000|
+instr<3>     |   19.283(R)|   -1.812(R)|clk_BUFGP         |   0.000|
+instr<4>     |   20.658(R)|   -1.881(R)|clk_BUFGP         |   0.000|
+instr<5>     |   20.404(R)|   -1.012(R)|clk_BUFGP         |   0.000|
+instr<6>     |   18.685(R)|    0.135(R)|clk_BUFGP         |   0.000|
+instr<7>     |   16.772(R)|    0.022(R)|clk_BUFGP         |   0.000|
+instr<8>     |   19.431(R)|    0.055(R)|clk_BUFGP         |   0.000|
+instr<9>     |   20.121(R)|    0.583(R)|clk_BUFGP         |   0.000|
+instr<10>    |   19.744(R)|    0.893(R)|clk_BUFGP         |   0.000|
+instr<11>    |   21.180(R)|   -0.660(R)|clk_BUFGP         |   0.000|
+instr<12>    |   21.642(R)|   -0.883(R)|clk_BUFGP         |   0.000|
+instr<13>    |   21.250(R)|   -0.895(R)|clk_BUFGP         |   0.000|
+instr<14>    |   21.633(R)|   -0.683(R)|clk_BUFGP         |   0.000|
+instr<15>    |   18.281(R)|   -0.300(R)|clk_BUFGP         |   0.000|
+read_data<0> |    2.629(R)|    0.360(R)|clk_BUFGP         |   0.000|
+read_data<1> |    3.635(R)|    0.501(R)|clk_BUFGP         |   0.000|
+read_data<2> |    3.412(R)|    0.516(R)|clk_BUFGP         |   0.000|
+read_data<3> |    4.213(R)|    0.645(R)|clk_BUFGP         |   0.000|
+read_data<4> |    2.848(R)|    0.507(R)|clk_BUFGP         |   0.000|
+read_data<5> |    2.497(R)|    0.438(R)|clk_BUFGP         |   0.000|
+read_data<6> |    2.254(R)|    0.290(R)|clk_BUFGP         |   0.000|
+read_data<7> |    5.448(R)|    0.195(R)|clk_BUFGP         |   0.000|
+read_data<8> |    2.921(R)|    0.391(R)|clk_BUFGP         |   0.000|
+read_data<9> |    2.909(R)|    0.333(R)|clk_BUFGP         |   0.000|
+read_data<10>|    3.503(R)|   -1.031(R)|clk_BUFGP         |   0.000|
+read_data<11>|    2.563(R)|   -0.297(R)|clk_BUFGP         |   0.000|
+read_data<12>|    2.619(R)|   -0.301(R)|clk_BUFGP         |   0.000|
+read_data<13>|    2.708(R)|   -0.375(R)|clk_BUFGP         |   0.000|
+read_data<14>|    2.562(R)|   -0.050(R)|clk_BUFGP         |   0.000|
+read_data<15>|    2.574(R)|   -0.310(R)|clk_BUFGP         |   0.000|
+rst          |    3.925(R)|    0.377(R)|clk_BUFGP         |   0.000|
+-------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+--------------+------------+------------------+--------+
+              | clk (edge) |                  | Clock  |
+Destination   |   to PAD   |Internal Clock(s) | Phase  |
+--------------+------------+------------------+--------+
+data_Addr<0>  |   18.084(R)|clk_BUFGP         |   0.000|
+data_Addr<1>  |   18.052(R)|clk_BUFGP         |   0.000|
+data_Addr<2>  |   18.155(R)|clk_BUFGP         |   0.000|
+data_Addr<3>  |   18.169(R)|clk_BUFGP         |   0.000|
+data_Addr<4>  |   18.262(R)|clk_BUFGP         |   0.000|
+data_Addr<5>  |   17.677(R)|clk_BUFGP         |   0.000|
+data_Addr<6>  |   18.347(R)|clk_BUFGP         |   0.000|
+data_Addr<7>  |   18.045(R)|clk_BUFGP         |   0.000|
+data_Addr<8>  |   18.873(R)|clk_BUFGP         |   0.000|
+data_Addr<9>  |   18.899(R)|clk_BUFGP         |   0.000|
+data_Addr<10> |   18.992(R)|clk_BUFGP         |   0.000|
+data_Addr<11> |   18.908(R)|clk_BUFGP         |   0.000|
+data_Addr<12> |   19.104(R)|clk_BUFGP         |   0.000|
+data_Addr<13> |   18.574(R)|clk_BUFGP         |   0.000|
+data_Addr<14> |   19.501(R)|clk_BUFGP         |   0.000|
+data_Addr<15> |   19.438(R)|clk_BUFGP         |   0.000|
+instr_Addr<0> |    7.728(R)|clk_BUFGP         |   0.000|
+instr_Addr<1> |    7.502(R)|clk_BUFGP         |   0.000|
+instr_Addr<2> |    8.328(R)|clk_BUFGP         |   0.000|
+instr_Addr<3> |    7.787(R)|clk_BUFGP         |   0.000|
+instr_Addr<4> |    7.509(R)|clk_BUFGP         |   0.000|
+instr_Addr<5> |    7.780(R)|clk_BUFGP         |   0.000|
+instr_Addr<6> |    7.989(R)|clk_BUFGP         |   0.000|
+instr_Addr<7> |    7.509(R)|clk_BUFGP         |   0.000|
+instr_Addr<8> |    7.771(R)|clk_BUFGP         |   0.000|
+instr_Addr<9> |    7.499(R)|clk_BUFGP         |   0.000|
+write_data<0> |   10.614(R)|clk_BUFGP         |   0.000|
+write_data<1> |   10.235(R)|clk_BUFGP         |   0.000|
+write_data<2> |    9.835(R)|clk_BUFGP         |   0.000|
+write_data<3> |    9.824(R)|clk_BUFGP         |   0.000|
+write_data<4> |   10.770(R)|clk_BUFGP         |   0.000|
+write_data<5> |   10.917(R)|clk_BUFGP         |   0.000|
+write_data<6> |   10.259(R)|clk_BUFGP         |   0.000|
+write_data<7> |   10.205(R)|clk_BUFGP         |   0.000|
+write_data<8> |   10.175(R)|clk_BUFGP         |   0.000|
+write_data<9> |   10.765(R)|clk_BUFGP         |   0.000|
+write_data<10>|   10.374(R)|clk_BUFGP         |   0.000|
+write_data<11>|   10.001(R)|clk_BUFGP         |   0.000|
+write_data<12>|   10.672(R)|clk_BUFGP         |   0.000|
+write_data<13>|    9.481(R)|clk_BUFGP         |   0.000|
+write_data<14>|    9.724(R)|clk_BUFGP         |   0.000|
+write_data<15>|    9.989(R)|clk_BUFGP         |   0.000|
+--------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   11.806|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+instr<0>       |data_Addr<0>   |   17.344|
+instr<0>       |data_Addr<1>   |   17.620|
+instr<0>       |data_Addr<2>   |   17.153|
+instr<0>       |data_Addr<3>   |   17.737|
+instr<0>       |data_Addr<4>   |   17.303|
+instr<0>       |data_Addr<5>   |   17.052|
+instr<0>       |data_Addr<6>   |   17.660|
+instr<0>       |data_Addr<7>   |   17.322|
+instr<0>       |data_Addr<8>   |   18.064|
+instr<0>       |data_Addr<9>   |   18.134|
+instr<0>       |data_Addr<10>  |   18.331|
+instr<0>       |data_Addr<11>  |   18.126|
+instr<0>       |data_Addr<12>  |   18.199|
+instr<0>       |data_Addr<13>  |   17.809|
+instr<0>       |data_Addr<14>  |   18.596|
+instr<0>       |data_Addr<15>  |   18.515|
+instr<1>       |data_Addr<0>   |   22.867|
+instr<1>       |data_Addr<1>   |   22.684|
+instr<1>       |data_Addr<2>   |   22.069|
+instr<1>       |data_Addr<3>   |   22.378|
+instr<1>       |data_Addr<4>   |   22.214|
+instr<1>       |data_Addr<5>   |   21.537|
+instr<1>       |data_Addr<6>   |   21.019|
+instr<1>       |data_Addr<7>   |   21.585|
+instr<1>       |data_Addr<8>   |   22.684|
+instr<1>       |data_Addr<9>   |   23.529|
+instr<1>       |data_Addr<10>  |   23.769|
+instr<1>       |data_Addr<11>  |   22.784|
+instr<1>       |data_Addr<12>  |   23.210|
+instr<1>       |data_Addr<13>  |   23.290|
+instr<1>       |data_Addr<14>  |   23.380|
+instr<1>       |data_Addr<15>  |   23.534|
+instr<2>       |data_Addr<0>   |   26.528|
+instr<2>       |data_Addr<1>   |   26.345|
+instr<2>       |data_Addr<2>   |   25.730|
+instr<2>       |data_Addr<3>   |   26.039|
+instr<2>       |data_Addr<4>   |   25.875|
+instr<2>       |data_Addr<5>   |   25.198|
+instr<2>       |data_Addr<6>   |   25.263|
+instr<2>       |data_Addr<7>   |   25.916|
+instr<2>       |data_Addr<8>   |   26.652|
+instr<2>       |data_Addr<9>   |   27.023|
+instr<2>       |data_Addr<10>  |   27.263|
+instr<2>       |data_Addr<11>  |   26.649|
+instr<2>       |data_Addr<12>  |   27.028|
+instr<2>       |data_Addr<13>  |   26.951|
+instr<2>       |data_Addr<14>  |   27.473|
+instr<2>       |data_Addr<15>  |   27.217|
+instr<3>       |data_Addr<0>   |   24.980|
+instr<3>       |data_Addr<1>   |   24.797|
+instr<3>       |data_Addr<2>   |   24.182|
+instr<3>       |data_Addr<3>   |   24.491|
+instr<3>       |data_Addr<4>   |   24.327|
+instr<3>       |data_Addr<5>   |   23.650|
+instr<3>       |data_Addr<6>   |   24.232|
+instr<3>       |data_Addr<7>   |   24.368|
+instr<3>       |data_Addr<8>   |   25.104|
+instr<3>       |data_Addr<9>   |   25.475|
+instr<3>       |data_Addr<10>  |   25.715|
+instr<3>       |data_Addr<11>  |   25.101|
+instr<3>       |data_Addr<12>  |   25.480|
+instr<3>       |data_Addr<13>  |   25.403|
+instr<3>       |data_Addr<14>  |   25.925|
+instr<3>       |data_Addr<15>  |   25.669|
+instr<4>       |data_Addr<0>   |   26.355|
+instr<4>       |data_Addr<1>   |   26.172|
+instr<4>       |data_Addr<2>   |   25.557|
+instr<4>       |data_Addr<3>   |   25.866|
+instr<4>       |data_Addr<4>   |   25.702|
+instr<4>       |data_Addr<5>   |   25.025|
+instr<4>       |data_Addr<6>   |   25.090|
+instr<4>       |data_Addr<7>   |   25.743|
+instr<4>       |data_Addr<8>   |   26.479|
+instr<4>       |data_Addr<9>   |   26.850|
+instr<4>       |data_Addr<10>  |   27.090|
+instr<4>       |data_Addr<11>  |   26.476|
+instr<4>       |data_Addr<12>  |   26.855|
+instr<4>       |data_Addr<13>  |   26.778|
+instr<4>       |data_Addr<14>  |   27.300|
+instr<4>       |data_Addr<15>  |   27.044|
+instr<5>       |data_Addr<0>   |   25.622|
+instr<5>       |data_Addr<1>   |   25.896|
+instr<5>       |data_Addr<2>   |   26.095|
+instr<5>       |data_Addr<3>   |   26.174|
+instr<5>       |data_Addr<4>   |   25.906|
+instr<5>       |data_Addr<5>   |   25.219|
+instr<5>       |data_Addr<6>   |   26.350|
+instr<5>       |data_Addr<7>   |   26.160|
+instr<5>       |data_Addr<8>   |   26.505|
+instr<5>       |data_Addr<9>   |   26.891|
+instr<5>       |data_Addr<10>  |   26.671|
+instr<5>       |data_Addr<11>  |   26.534|
+instr<5>       |data_Addr<12>  |   26.931|
+instr<5>       |data_Addr<13>  |   26.179|
+instr<5>       |data_Addr<14>  |   27.328|
+instr<5>       |data_Addr<15>  |   26.814|
+instr<6>       |data_Addr<0>   |   24.382|
+instr<6>       |data_Addr<1>   |   24.199|
+instr<6>       |data_Addr<2>   |   23.584|
+instr<6>       |data_Addr<3>   |   23.893|
+instr<6>       |data_Addr<4>   |   23.729|
+instr<6>       |data_Addr<5>   |   23.052|
+instr<6>       |data_Addr<6>   |   23.117|
+instr<6>       |data_Addr<7>   |   23.770|
+instr<6>       |data_Addr<8>   |   24.506|
+instr<6>       |data_Addr<9>   |   24.877|
+instr<6>       |data_Addr<10>  |   25.117|
+instr<6>       |data_Addr<11>  |   24.503|
+instr<6>       |data_Addr<12>  |   24.882|
+instr<6>       |data_Addr<13>  |   24.805|
+instr<6>       |data_Addr<14>  |   25.327|
+instr<6>       |data_Addr<15>  |   25.071|
+instr<7>       |data_Addr<0>   |   22.469|
+instr<7>       |data_Addr<1>   |   22.286|
+instr<7>       |data_Addr<2>   |   21.671|
+instr<7>       |data_Addr<3>   |   21.980|
+instr<7>       |data_Addr<4>   |   21.816|
+instr<7>       |data_Addr<5>   |   21.139|
+instr<7>       |data_Addr<6>   |   21.721|
+instr<7>       |data_Addr<7>   |   21.857|
+instr<7>       |data_Addr<8>   |   22.593|
+instr<7>       |data_Addr<9>   |   22.964|
+instr<7>       |data_Addr<10>  |   23.204|
+instr<7>       |data_Addr<11>  |   22.590|
+instr<7>       |data_Addr<12>  |   22.969|
+instr<7>       |data_Addr<13>  |   22.892|
+instr<7>       |data_Addr<14>  |   23.414|
+instr<7>       |data_Addr<15>  |   23.158|
+instr<7>       |write_data<0>  |   11.864|
+instr<7>       |write_data<1>  |   11.584|
+instr<7>       |write_data<2>  |    9.180|
+instr<7>       |write_data<3>  |   11.361|
+instr<7>       |write_data<4>  |   11.563|
+instr<7>       |write_data<5>  |   11.674|
+instr<7>       |write_data<6>  |   11.593|
+instr<7>       |write_data<7>  |   11.746|
+instr<7>       |write_data<8>  |   11.590|
+instr<7>       |write_data<9>  |   12.546|
+instr<7>       |write_data<10> |   10.216|
+instr<7>       |write_data<11> |   10.190|
+instr<7>       |write_data<12> |    9.823|
+instr<7>       |write_data<13> |    9.744|
+instr<7>       |write_data<14> |   10.239|
+instr<7>       |write_data<15> |   10.010|
+instr<8>       |data_Addr<0>   |   24.822|
+instr<8>       |data_Addr<1>   |   24.923|
+instr<8>       |data_Addr<2>   |   25.122|
+instr<8>       |data_Addr<3>   |   25.201|
+instr<8>       |data_Addr<4>   |   24.933|
+instr<8>       |data_Addr<5>   |   24.246|
+instr<8>       |data_Addr<6>   |   25.377|
+instr<8>       |data_Addr<7>   |   25.187|
+instr<8>       |data_Addr<8>   |   25.532|
+instr<8>       |data_Addr<9>   |   25.918|
+instr<8>       |data_Addr<10>  |   25.698|
+instr<8>       |data_Addr<11>  |   25.561|
+instr<8>       |data_Addr<12>  |   25.958|
+instr<8>       |data_Addr<13>  |   25.245|
+instr<8>       |data_Addr<14>  |   26.355|
+instr<8>       |data_Addr<15>  |   25.841|
+instr<9>       |data_Addr<0>   |   25.818|
+instr<9>       |data_Addr<1>   |   25.635|
+instr<9>       |data_Addr<2>   |   25.020|
+instr<9>       |data_Addr<3>   |   25.329|
+instr<9>       |data_Addr<4>   |   25.165|
+instr<9>       |data_Addr<5>   |   24.488|
+instr<9>       |data_Addr<6>   |   24.741|
+instr<9>       |data_Addr<7>   |   25.206|
+instr<9>       |data_Addr<8>   |   25.942|
+instr<9>       |data_Addr<9>   |   26.313|
+instr<9>       |data_Addr<10>  |   26.553|
+instr<9>       |data_Addr<11>  |   25.939|
+instr<9>       |data_Addr<12>  |   26.318|
+instr<9>       |data_Addr<13>  |   26.241|
+instr<9>       |data_Addr<14>  |   26.763|
+instr<9>       |data_Addr<15>  |   26.507|
+instr<9>       |write_data<0>  |   13.747|
+instr<9>       |write_data<1>  |   13.467|
+instr<9>       |write_data<2>  |   11.063|
+instr<9>       |write_data<3>  |   13.244|
+instr<9>       |write_data<4>  |   13.446|
+instr<9>       |write_data<5>  |   13.557|
+instr<9>       |write_data<6>  |   13.476|
+instr<9>       |write_data<7>  |   13.629|
+instr<9>       |write_data<8>  |   13.473|
+instr<9>       |write_data<9>  |   14.429|
+instr<9>       |write_data<10> |   12.099|
+instr<9>       |write_data<11> |   12.073|
+instr<9>       |write_data<12> |   11.706|
+instr<9>       |write_data<13> |   11.627|
+instr<9>       |write_data<14> |   12.122|
+instr<9>       |write_data<15> |   11.893|
+instr<9>       |write_enable   |    8.383|
+instr<10>      |data_Addr<0>   |   25.441|
+instr<10>      |data_Addr<1>   |   25.258|
+instr<10>      |data_Addr<2>   |   25.112|
+instr<10>      |data_Addr<3>   |   25.191|
+instr<10>      |data_Addr<4>   |   24.923|
+instr<10>      |data_Addr<5>   |   24.236|
+instr<10>      |data_Addr<6>   |   25.367|
+instr<10>      |data_Addr<7>   |   25.177|
+instr<10>      |data_Addr<8>   |   25.565|
+instr<10>      |data_Addr<9>   |   25.936|
+instr<10>      |data_Addr<10>  |   26.176|
+instr<10>      |data_Addr<11>  |   25.562|
+instr<10>      |data_Addr<12>  |   25.948|
+instr<10>      |data_Addr<13>  |   25.864|
+instr<10>      |data_Addr<14>  |   26.386|
+instr<10>      |data_Addr<15>  |   26.130|
+instr<10>      |write_data<0>  |   14.431|
+instr<10>      |write_data<1>  |   14.151|
+instr<10>      |write_data<2>  |   11.747|
+instr<10>      |write_data<3>  |   13.928|
+instr<10>      |write_data<4>  |   14.130|
+instr<10>      |write_data<5>  |   14.241|
+instr<10>      |write_data<6>  |   14.160|
+instr<10>      |write_data<7>  |   14.313|
+instr<10>      |write_data<8>  |   14.157|
+instr<10>      |write_data<9>  |   15.113|
+instr<10>      |write_data<10> |   12.783|
+instr<10>      |write_data<11> |   12.757|
+instr<10>      |write_data<12> |   12.390|
+instr<10>      |write_data<13> |   12.311|
+instr<10>      |write_data<14> |   12.806|
+instr<10>      |write_data<15> |   12.577|
+instr<10>      |write_enable   |    7.582|
+instr<11>      |data_Addr<0>   |   26.398|
+instr<11>      |data_Addr<1>   |   26.672|
+instr<11>      |data_Addr<2>   |   26.871|
+instr<11>      |data_Addr<3>   |   26.950|
+instr<11>      |data_Addr<4>   |   26.682|
+instr<11>      |data_Addr<5>   |   25.995|
+instr<11>      |data_Addr<6>   |   27.126|
+instr<11>      |data_Addr<7>   |   26.936|
+instr<11>      |data_Addr<8>   |   27.281|
+instr<11>      |data_Addr<9>   |   27.667|
+instr<11>      |data_Addr<10>  |   27.447|
+instr<11>      |data_Addr<11>  |   27.310|
+instr<11>      |data_Addr<12>  |   27.707|
+instr<11>      |data_Addr<13>  |   26.955|
+instr<11>      |data_Addr<14>  |   28.104|
+instr<11>      |data_Addr<15>  |   27.590|
+instr<11>      |write_data<0>  |   14.433|
+instr<11>      |write_data<1>  |   14.153|
+instr<11>      |write_data<2>  |   11.749|
+instr<11>      |write_data<3>  |   13.930|
+instr<11>      |write_data<4>  |   14.132|
+instr<11>      |write_data<5>  |   14.243|
+instr<11>      |write_data<6>  |   14.162|
+instr<11>      |write_data<7>  |   14.315|
+instr<11>      |write_data<8>  |   14.159|
+instr<11>      |write_data<9>  |   15.115|
+instr<11>      |write_data<10> |   12.785|
+instr<11>      |write_data<11> |   12.759|
+instr<11>      |write_data<12> |   12.392|
+instr<11>      |write_data<13> |   12.313|
+instr<11>      |write_data<14> |   12.808|
+instr<11>      |write_data<15> |   12.579|
+instr<11>      |write_enable   |    8.961|
+instr<12>      |data_Addr<0>   |   26.860|
+instr<12>      |data_Addr<1>   |   27.134|
+instr<12>      |data_Addr<2>   |   27.333|
+instr<12>      |data_Addr<3>   |   27.412|
+instr<12>      |data_Addr<4>   |   27.144|
+instr<12>      |data_Addr<5>   |   26.457|
+instr<12>      |data_Addr<6>   |   27.588|
+instr<12>      |data_Addr<7>   |   27.398|
+instr<12>      |data_Addr<8>   |   27.743|
+instr<12>      |data_Addr<9>   |   28.129|
+instr<12>      |data_Addr<10>  |   27.909|
+instr<12>      |data_Addr<11>  |   27.772|
+instr<12>      |data_Addr<12>  |   28.169|
+instr<12>      |data_Addr<13>  |   27.417|
+instr<12>      |data_Addr<14>  |   28.566|
+instr<12>      |data_Addr<15>  |   28.052|
+instr<12>      |write_data<0>  |   14.712|
+instr<12>      |write_data<1>  |   14.432|
+instr<12>      |write_data<2>  |   12.028|
+instr<12>      |write_data<3>  |   14.209|
+instr<12>      |write_data<4>  |   14.411|
+instr<12>      |write_data<5>  |   14.522|
+instr<12>      |write_data<6>  |   14.441|
+instr<12>      |write_data<7>  |   14.594|
+instr<12>      |write_data<8>  |   14.438|
+instr<12>      |write_data<9>  |   15.394|
+instr<12>      |write_data<10> |   13.064|
+instr<12>      |write_data<11> |   13.038|
+instr<12>      |write_data<12> |   12.671|
+instr<12>      |write_data<13> |   12.592|
+instr<12>      |write_data<14> |   13.087|
+instr<12>      |write_data<15> |   12.858|
+instr<12>      |write_enable   |    9.240|
+instr<13>      |data_Addr<0>   |   26.468|
+instr<13>      |data_Addr<1>   |   26.742|
+instr<13>      |data_Addr<2>   |   26.941|
+instr<13>      |data_Addr<3>   |   27.020|
+instr<13>      |data_Addr<4>   |   26.752|
+instr<13>      |data_Addr<5>   |   26.065|
+instr<13>      |data_Addr<6>   |   27.196|
+instr<13>      |data_Addr<7>   |   27.006|
+instr<13>      |data_Addr<8>   |   27.351|
+instr<13>      |data_Addr<9>   |   27.737|
+instr<13>      |data_Addr<10>  |   27.517|
+instr<13>      |data_Addr<11>  |   27.380|
+instr<13>      |data_Addr<12>  |   27.777|
+instr<13>      |data_Addr<13>  |   27.025|
+instr<13>      |data_Addr<14>  |   28.174|
+instr<13>      |data_Addr<15>  |   27.660|
+instr<13>      |write_data<0>  |   15.010|
+instr<13>      |write_data<1>  |   14.730|
+instr<13>      |write_data<2>  |   12.326|
+instr<13>      |write_data<3>  |   14.507|
+instr<13>      |write_data<4>  |   14.709|
+instr<13>      |write_data<5>  |   14.820|
+instr<13>      |write_data<6>  |   14.739|
+instr<13>      |write_data<7>  |   14.892|
+instr<13>      |write_data<8>  |   14.736|
+instr<13>      |write_data<9>  |   15.692|
+instr<13>      |write_data<10> |   13.362|
+instr<13>      |write_data<11> |   13.336|
+instr<13>      |write_data<12> |   12.969|
+instr<13>      |write_data<13> |   12.890|
+instr<13>      |write_data<14> |   13.385|
+instr<13>      |write_data<15> |   13.156|
+instr<13>      |write_enable   |   11.156|
+instr<14>      |data_Addr<0>   |   26.851|
+instr<14>      |data_Addr<1>   |   27.125|
+instr<14>      |data_Addr<2>   |   27.324|
+instr<14>      |data_Addr<3>   |   27.403|
+instr<14>      |data_Addr<4>   |   27.135|
+instr<14>      |data_Addr<5>   |   26.448|
+instr<14>      |data_Addr<6>   |   27.579|
+instr<14>      |data_Addr<7>   |   27.389|
+instr<14>      |data_Addr<8>   |   27.734|
+instr<14>      |data_Addr<9>   |   28.120|
+instr<14>      |data_Addr<10>  |   27.900|
+instr<14>      |data_Addr<11>  |   27.763|
+instr<14>      |data_Addr<12>  |   28.160|
+instr<14>      |data_Addr<13>  |   27.408|
+instr<14>      |data_Addr<14>  |   28.557|
+instr<14>      |data_Addr<15>  |   28.043|
+instr<14>      |write_data<0>  |   14.462|
+instr<14>      |write_data<1>  |   14.182|
+instr<14>      |write_data<2>  |   11.778|
+instr<14>      |write_data<3>  |   13.959|
+instr<14>      |write_data<4>  |   14.161|
+instr<14>      |write_data<5>  |   14.272|
+instr<14>      |write_data<6>  |   14.191|
+instr<14>      |write_data<7>  |   14.344|
+instr<14>      |write_data<8>  |   14.188|
+instr<14>      |write_data<9>  |   15.144|
+instr<14>      |write_data<10> |   12.814|
+instr<14>      |write_data<11> |   12.788|
+instr<14>      |write_data<12> |   12.421|
+instr<14>      |write_data<13> |   12.342|
+instr<14>      |write_data<14> |   12.837|
+instr<14>      |write_data<15> |   12.608|
+instr<14>      |write_enable   |   10.440|
+instr<15>      |data_Addr<0>   |   23.978|
+instr<15>      |data_Addr<1>   |   23.795|
+instr<15>      |data_Addr<2>   |   23.336|
+instr<15>      |data_Addr<3>   |   23.489|
+instr<15>      |data_Addr<4>   |   23.325|
+instr<15>      |data_Addr<5>   |   22.648|
+instr<15>      |data_Addr<6>   |   23.591|
+instr<15>      |data_Addr<7>   |   23.401|
+instr<15>      |data_Addr<8>   |   24.102|
+instr<15>      |data_Addr<9>   |   24.473|
+instr<15>      |data_Addr<10>  |   24.713|
+instr<15>      |data_Addr<11>  |   24.099|
+instr<15>      |data_Addr<12>  |   24.478|
+instr<15>      |data_Addr<13>  |   24.401|
+instr<15>      |data_Addr<14>  |   24.923|
+instr<15>      |data_Addr<15>  |   24.667|
+instr<15>      |write_data<0>  |   14.396|
+instr<15>      |write_data<1>  |   14.116|
+instr<15>      |write_data<2>  |   11.712|
+instr<15>      |write_data<3>  |   13.893|
+instr<15>      |write_data<4>  |   14.095|
+instr<15>      |write_data<5>  |   14.206|
+instr<15>      |write_data<6>  |   14.125|
+instr<15>      |write_data<7>  |   14.278|
+instr<15>      |write_data<8>  |   14.122|
+instr<15>      |write_data<9>  |   15.078|
+instr<15>      |write_data<10> |   12.748|
+instr<15>      |write_data<11> |   12.722|
+instr<15>      |write_data<12> |   12.355|
+instr<15>      |write_data<13> |   12.276|
+instr<15>      |write_data<14> |   12.771|
+instr<15>      |write_data<15> |   12.542|
+instr<15>      |write_enable   |    8.511|
+---------------+---------------+---------+
+
+
+Analysis completed Thu Dec 08 00:43:55 2022 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4527 MB
+
+
+

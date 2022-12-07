@@ -20,9 +20,18 @@
 //////////////////////////////////////////////////////////////////////////////////
 module ALU_testbench(
     );
-
+/*
 ALU uut(
 
-);
+);*/
+reg [16:0] neg;
+reg [15:0] opa;
+
+initial begin
+	opa = 16'h0001;
+	#32
+	neg = -opa;
+
+end
 
 endmodule
