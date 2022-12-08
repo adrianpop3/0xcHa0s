@@ -307,12 +307,26 @@ always @(*) begin
 		`INC: begin
 			opsel = `ALU_INC;
 			sel_srcA = instr[9:8];
-			`WR_ALU_RES_TO_ACC_WITH_FLAGS
+			if(instr[9:8] == 0)
+				wr_X = ready;
+			else if(instr[9:8] == 1)
+				wr_Y = ready;
+			else
+				wr_ACC = ready;
+			reg_from_mem = 0;
+			save_flags = ready;
 		end
 		`DEC: begin
 			opsel = `ALU_DEC;
 			sel_srcA = instr[9:8];
-			`WR_ALU_RES_TO_ACC_WITH_FLAGS
+			if(instr[9:8] == 0)
+				wr_X = ready;
+			else if(instr[9:8] == 1)
+				wr_Y = ready;
+			else
+				wr_ACC = ready;
+			reg_from_mem = 0;
+			save_flags = ready;
 		end
 		
 		`MULRA: begin

@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: cpu.prj
 
@@ -356,20 +356,20 @@ Design Statistics
 # IOs                              : 77
 
 Cell Usage :
-# BELS                             : 905
+# BELS                             : 913
 #      GND                         : 1
 #      INV                         : 32
 #      LUT1                        : 26
-#      LUT2                        : 64
-#      LUT2_L                      : 2
-#      LUT3                        : 170
-#      LUT3_D                      : 7
-#      LUT3_L                      : 5
-#      LUT4                        : 237
-#      LUT4_D                      : 6
-#      LUT4_L                      : 40
+#      LUT2                        : 66
+#      LUT2_D                      : 1
+#      LUT3                        : 177
+#      LUT3_D                      : 5
+#      LUT3_L                      : 3
+#      LUT4                        : 232
+#      LUT4_D                      : 11
+#      LUT4_L                      : 47
 #      MUXCY                       : 104
-#      MUXF5                       : 101
+#      MUXF5                       : 98
 #      VCC                         : 1
 #      XORCY                       : 109
 # FlipFlops/Latches                : 78
@@ -386,9 +386,9 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                      313  out of   4656     6%  
+ Number of Slices:                      315  out of   4656     6%  
  Number of Slice Flip Flops:             78  out of   9312     0%  
- Number of 4 input LUTs:                589  out of   9312     6%  
+ Number of 4 input LUTs:                600  out of   9312     6%  
  Number of IOs:                          77
  Number of bonded IOBs:                  77  out of    232    33%  
  Number of GCLKs:                         1  out of     24     4%  
@@ -425,10 +425,10 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 12.466ns (Maximum Frequency: 80.219MHz)
-   Minimum input arrival time before clock: 19.903ns
-   Maximum output required time after clock: 14.886ns
-   Maximum combinational path delay: 22.323ns
+   Minimum period: 12.204ns (Maximum Frequency: 81.939MHz)
+   Minimum input arrival time before clock: 20.587ns
+   Maximum output required time after clock: 14.978ns
+   Maximum combinational path delay: 23.299ns
 
 Timing Detail:
 --------------
@@ -436,10 +436,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 12.466ns (frequency: 80.219MHz)
-  Total number of paths / destination ports: 24021 / 78
+  Clock period: 12.204ns (frequency: 81.939MHz)
+  Total number of paths / destination ports: 23213 / 78
 -------------------------------------------------------------------------
-Delay:               12.466ns (Levels of Logic = 14)
+Delay:               12.204ns (Levels of Logic = 13)
   Source:            X/q_0 (FF)
   Destination:       FlagReg/q_3 (FF)
   Source Clock:      clk rising
@@ -450,162 +450,127 @@ Delay:               12.466ns (Levels of Logic = 14)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDRE:C->Q             3   0.591   0.610  X/q_0 (X/q_0)
-     LUT3:I1->O            1   0.704   0.000  Mmux_srcB_2_f5_F (N219)
-     MUXF5:I0->O          34   0.321   1.342  Mmux_srcB_2_f5 (srcB<0>)
+     LUT3:I1->O            1   0.704   0.000  Mmux_srcB_2_f5_F (N179)
+     MUXF5:I0->O          32   0.321   1.341  Mmux_srcB_2_f5 (srcB<0>)
      LUT2:I1->O            1   0.704   0.000  alu/Madd_old_res_ext_4_addsub0000_lut<0> (alu/Madd_old_res_ext_4_addsub0000_lut<0>)
      MUXCY:S->O            1   0.464   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<0> (alu/Madd_old_res_ext_4_addsub0000_cy<0>)
      MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<1> (alu/Madd_old_res_ext_4_addsub0000_cy<1>)
      MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<2> (alu/Madd_old_res_ext_4_addsub0000_cy<2>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<3> (alu/Madd_old_res_ext_4_addsub0000_cy<3>)
-     XORCY:CI->O           1   0.804   0.424  alu/Madd_old_res_ext_4_addsub0000_xor<4> (alu/old_res_ext_4_addsub0000<4>)
-     LUT4_L:I3->LO         1   0.704   0.104  alu/_old_res_ext_8<4>8_SW0 (N363)
-     LUT4:I3->O            1   0.704   0.595  alu/_old_res_ext_8<4>8 (alu/_old_res_ext_8<4>8)
-     LUT4:I0->O            3   0.704   0.566  alu/_old_res_ext_8<4>180 (res<4>)
-     LUT4:I2->O            1   0.704   0.424  alu/flag_next_3_and0000173_SW1_SW0 (N140)
-     LUT4_L:I3->LO         1   0.704   0.104  alu/flag_next_3_and0000173_SW1 (N136)
-     LUT4:I3->O            1   0.704   0.000  alu/flag_next_3_and0000216 (flag_next<3>)
+     XORCY:CI->O           1   0.804   0.424  alu/Madd_old_res_ext_4_addsub0000_xor<3> (alu/old_res_ext_4_addsub0000<3>)
+     LUT4:I3->O            1   0.704   0.424  alu/_old_res_ext_8<3>8_SW0 (N281)
+     LUT4_L:I3->LO         1   0.704   0.104  alu/_old_res_ext_8<3>8 (alu/_old_res_ext_8<3>8)
+     LUT4:I3->O            3   0.704   0.535  alu/_old_res_ext_8<3>264 (res<3>)
+     LUT4:I3->O            1   0.704   0.424  alu/flag_next_3_and0000159_SW0 (N82)
+     LUT4_L:I3->LO         1   0.704   0.104  alu/flag_next_3_and0000166 (alu/flag_next_3_and0000166)
+     LUT4:I3->O            1   0.704   0.000  alu/flag_next_3_and0000218 (flag_next<3>)
      FDRE:D                    0.308          FlagReg/q_3
     ----------------------------------------
-    Total                     12.466ns (8.297ns logic, 4.169ns route)
-                                       (66.6% logic, 33.4% route)
+    Total                     12.204ns (8.238ns logic, 3.966ns route)
+                                       (67.5% logic, 32.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 980472 / 224
+  Total number of paths / destination ports: 1076112 / 224
 -------------------------------------------------------------------------
-Offset:              19.903ns (Levels of Logic = 20)
-  Source:            instr<8> (PAD)
+Offset:              20.587ns (Levels of Logic = 14)
+  Source:            instr<13> (PAD)
   Destination:       FlagReg/q_3 (FF)
   Destination Clock: clk rising
 
-  Data Path: instr<8> to FlagReg/q_3
+  Data Path: instr<13> to FlagReg/q_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            31   1.218   1.437  instr_8_IBUF (instr_8_IBUF)
-     LUT3:I0->O            1   0.704   0.455  cu/sel_srcB<0>87_SW0 (N267)
-     LUT4:I2->O            1   0.704   0.499  cu/sel_srcB<0>87 (cu/sel_srcB<0>87)
-     LUT4:I1->O            1   0.704   0.455  cu/sel_srcB<0>161 (cu/sel_srcB<0>161)
-     LUT3:I2->O            1   0.704   0.000  cu/sel_srcB<0>185_G (N442)
-     MUXF5:I1->O          32   0.321   1.437  cu/sel_srcB<0>185 (sel_srcB<0>)
-     LUT3:I0->O            1   0.704   0.000  Mmux_srcB_2_f5_F (N219)
-     MUXF5:I0->O          34   0.321   1.342  Mmux_srcB_2_f5 (srcB<0>)
-     LUT2:I1->O            1   0.704   0.000  alu/Madd_old_res_ext_4_addsub0000_lut<0> (alu/Madd_old_res_ext_4_addsub0000_lut<0>)
-     MUXCY:S->O            1   0.464   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<0> (alu/Madd_old_res_ext_4_addsub0000_cy<0>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<1> (alu/Madd_old_res_ext_4_addsub0000_cy<1>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<2> (alu/Madd_old_res_ext_4_addsub0000_cy<2>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<3> (alu/Madd_old_res_ext_4_addsub0000_cy<3>)
-     XORCY:CI->O           1   0.804   0.424  alu/Madd_old_res_ext_4_addsub0000_xor<4> (alu/old_res_ext_4_addsub0000<4>)
-     LUT4_L:I3->LO         1   0.704   0.104  alu/_old_res_ext_8<4>8_SW0 (N363)
-     LUT4:I3->O            1   0.704   0.595  alu/_old_res_ext_8<4>8 (alu/_old_res_ext_8<4>8)
-     LUT4:I0->O            3   0.704   0.566  alu/_old_res_ext_8<4>180 (res<4>)
-     LUT4:I2->O            1   0.704   0.424  alu/flag_next_3_and0000173_SW1_SW0 (N140)
-     LUT4_L:I3->LO         1   0.704   0.104  alu/flag_next_3_and0000173_SW1 (N136)
-     LUT4:I3->O            1   0.704   0.000  alu/flag_next_3_and0000216 (flag_next<3>)
+     IBUF:I->O            44   1.218   1.441  instr_13_IBUF (instr_13_IBUF)
+     LUT2:I0->O            2   0.704   0.526  cu/opsel<0>98 (cu/opsel<0>98)
+     LUT4:I1->O            1   0.704   0.595  cu/opsel<0>114 (cu/opsel<0>114)
+     LUT3:I0->O            1   0.704   0.595  cu/opsel<0>128_SW0 (N219)
+     LUT4:I0->O           52   0.704   1.348  cu/opsel<0>128 (opsel<0>)
+     LUT3:I1->O           19   0.704   1.260  alu/flag_next_3_and0000111 (alu/N2)
+     LUT3:I0->O            1   0.704   0.595  alu/_old_res_ext_8<4>12 (alu/_old_res_ext_8<4>12)
+     LUT4_D:I0->O          3   0.704   0.610  alu/_old_res_ext_8<4>116 (alu/_old_res_ext_8<4>116)
+     LUT4:I1->O            9   0.704   0.899  alu/_old_res_ext_8<0>234 (alu/_old_res_ext_8<0>234)
+     LUT4:I1->O            1   0.704   0.455  alu/_old_res_ext_8<0>239 (alu/_old_res_ext_8<0>239)
+     LUT4:I2->O            3   0.704   0.535  alu/_old_res_ext_8<0>263 (res<0>)
+     LUT4:I3->O            1   0.704   0.595  alu/flag_next_3_and0000128 (alu/flag_next_3_and0000128)
+     LUT4:I0->O            1   0.704   0.455  alu/flag_next_3_and0000138 (alu/flag_next_3_and0000138)
+     LUT4:I2->O            1   0.704   0.000  alu/flag_next_3_and0000218 (flag_next<3>)
      FDRE:D                    0.308          FlagReg/q_3
     ----------------------------------------
-    Total                     19.903ns (12.061ns logic, 7.842ns route)
-                                       (60.6% logic, 39.4% route)
+    Total                     20.587ns (10.678ns logic, 9.909ns route)
+                                       (51.9% logic, 48.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 8763 / 42
+  Total number of paths / destination ports: 8577 / 42
 -------------------------------------------------------------------------
-Offset:              14.886ns (Levels of Logic = 25)
-  Source:            X/q_0 (FF)
-  Destination:       data_Addr<15> (PAD)
+Offset:              14.978ns (Levels of Logic = 11)
+  Source:            X/q_1 (FF)
+  Destination:       data_Addr<11> (PAD)
   Source Clock:      clk rising
 
-  Data Path: X/q_0 to data_Addr<15>
+  Data Path: X/q_1 to data_Addr<11>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             3   0.591   0.610  X/q_0 (X/q_0)
-     LUT3:I1->O            1   0.704   0.000  Mmux_srcB_2_f5_F (N219)
-     MUXF5:I0->O          34   0.321   1.342  Mmux_srcB_2_f5 (srcB<0>)
-     LUT2:I1->O            1   0.704   0.000  alu/Madd_old_res_ext_4_addsub0000_lut<0> (alu/Madd_old_res_ext_4_addsub0000_lut<0>)
-     MUXCY:S->O            1   0.464   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<0> (alu/Madd_old_res_ext_4_addsub0000_cy<0>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<1> (alu/Madd_old_res_ext_4_addsub0000_cy<1>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<2> (alu/Madd_old_res_ext_4_addsub0000_cy<2>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<3> (alu/Madd_old_res_ext_4_addsub0000_cy<3>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<4> (alu/Madd_old_res_ext_4_addsub0000_cy<4>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<5> (alu/Madd_old_res_ext_4_addsub0000_cy<5>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<6> (alu/Madd_old_res_ext_4_addsub0000_cy<6>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<7> (alu/Madd_old_res_ext_4_addsub0000_cy<7>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<8> (alu/Madd_old_res_ext_4_addsub0000_cy<8>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<9> (alu/Madd_old_res_ext_4_addsub0000_cy<9>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<10> (alu/Madd_old_res_ext_4_addsub0000_cy<10>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<11> (alu/Madd_old_res_ext_4_addsub0000_cy<11>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<12> (alu/Madd_old_res_ext_4_addsub0000_cy<12>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<13> (alu/Madd_old_res_ext_4_addsub0000_cy<13>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<14> (alu/Madd_old_res_ext_4_addsub0000_cy<14>)
-     XORCY:CI->O           2   0.804   0.451  alu/Madd_old_res_ext_4_addsub0000_xor<15> (alu/old_res_ext_4_addsub0000<15>)
-     LUT4_L:I3->LO         1   0.704   0.104  alu/_old_res_ext_8<15>21 (alu/_old_res_ext_8<15>21)
-     LUT4:I3->O            1   0.704   0.424  alu/_old_res_ext_8<15>27 (alu/_old_res_ext_8<15>27)
-     LUT4:I3->O            5   0.704   0.712  alu/_old_res_ext_8<15>140 (flag_next<2>)
-     LUT4:I1->O            1   0.704   0.000  Mmux_data_Addr122 (Mmux_data_Addr121)
-     MUXF5:I0->O           1   0.321   0.420  Mmux_data_Addr12_f5 (data_Addr_15_OBUF)
-     OBUF:I->O                 3.272          data_Addr_15_OBUF (data_Addr<15>)
+     FDRE:C->Q             3   0.591   0.610  X/q_1 (X/q_1)
+     LUT3:I1->O            1   0.704   0.000  Mmux_srcB_2_f5_6_F (N177)
+     MUXF5:I0->O          38   0.321   1.299  Mmux_srcB_2_f5_6 (srcB<1>)
+     LUT3:I2->O            2   0.704   0.526  alu/Sh1120 (alu/Sh107)
+     LUT4:I1->O            1   0.704   0.424  alu/_old_res_ext_8<11>4 (alu/_old_res_ext_8<11>4)
+     LUT4:I3->O            1   0.704   0.424  alu/_old_res_ext_8<11>26_SW0 (N263)
+     LUT4_L:I3->LO         1   0.704   0.104  alu/_old_res_ext_8<11>26 (alu/_old_res_ext_8<11>26)
+     LUT4:I3->O            1   0.704   0.424  alu/_old_res_ext_8<11>157_SW0 (N66)
+     LUT4_D:I3->O          3   0.704   0.610  alu/_old_res_ext_8<11>157 (res<11>)
+     LUT4:I1->O            1   0.704   0.000  Mmux_data_Addr42 (Mmux_data_Addr41)
+     MUXF5:I0->O           1   0.321   0.420  Mmux_data_Addr4_f5 (data_Addr_11_OBUF)
+     OBUF:I->O                 3.272          data_Addr_11_OBUF (data_Addr<11>)
     ----------------------------------------
-    Total                     14.886ns (10.823ns logic, 4.063ns route)
-                                       (72.7% logic, 27.3% route)
+    Total                     14.978ns (10.137ns logic, 4.841ns route)
+                                       (67.7% logic, 32.3% route)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 351630 / 33
+  Total number of paths / destination ports: 389880 / 33
 -------------------------------------------------------------------------
-Delay:               22.323ns (Levels of Logic = 31)
-  Source:            instr<8> (PAD)
-  Destination:       data_Addr<15> (PAD)
+Delay:               23.299ns (Levels of Logic = 17)
+  Source:            instr<11> (PAD)
+  Destination:       data_Addr<11> (PAD)
 
-  Data Path: instr<8> to data_Addr<15>
+  Data Path: instr<11> to data_Addr<11>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            31   1.218   1.437  instr_8_IBUF (instr_8_IBUF)
-     LUT3:I0->O            1   0.704   0.455  cu/sel_srcB<0>87_SW0 (N267)
-     LUT4:I2->O            1   0.704   0.499  cu/sel_srcB<0>87 (cu/sel_srcB<0>87)
-     LUT4:I1->O            1   0.704   0.455  cu/sel_srcB<0>161 (cu/sel_srcB<0>161)
-     LUT3:I2->O            1   0.704   0.000  cu/sel_srcB<0>185_G (N442)
-     MUXF5:I1->O          32   0.321   1.437  cu/sel_srcB<0>185 (sel_srcB<0>)
-     LUT3:I0->O            1   0.704   0.000  Mmux_srcB_2_f5_F (N219)
-     MUXF5:I0->O          34   0.321   1.342  Mmux_srcB_2_f5 (srcB<0>)
-     LUT2:I1->O            1   0.704   0.000  alu/Madd_old_res_ext_4_addsub0000_lut<0> (alu/Madd_old_res_ext_4_addsub0000_lut<0>)
-     MUXCY:S->O            1   0.464   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<0> (alu/Madd_old_res_ext_4_addsub0000_cy<0>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<1> (alu/Madd_old_res_ext_4_addsub0000_cy<1>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<2> (alu/Madd_old_res_ext_4_addsub0000_cy<2>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<3> (alu/Madd_old_res_ext_4_addsub0000_cy<3>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<4> (alu/Madd_old_res_ext_4_addsub0000_cy<4>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<5> (alu/Madd_old_res_ext_4_addsub0000_cy<5>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<6> (alu/Madd_old_res_ext_4_addsub0000_cy<6>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<7> (alu/Madd_old_res_ext_4_addsub0000_cy<7>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<8> (alu/Madd_old_res_ext_4_addsub0000_cy<8>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<9> (alu/Madd_old_res_ext_4_addsub0000_cy<9>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<10> (alu/Madd_old_res_ext_4_addsub0000_cy<10>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<11> (alu/Madd_old_res_ext_4_addsub0000_cy<11>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<12> (alu/Madd_old_res_ext_4_addsub0000_cy<12>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<13> (alu/Madd_old_res_ext_4_addsub0000_cy<13>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Madd_old_res_ext_4_addsub0000_cy<14> (alu/Madd_old_res_ext_4_addsub0000_cy<14>)
-     XORCY:CI->O           2   0.804   0.451  alu/Madd_old_res_ext_4_addsub0000_xor<15> (alu/old_res_ext_4_addsub0000<15>)
-     LUT4_L:I3->LO         1   0.704   0.104  alu/_old_res_ext_8<15>21 (alu/_old_res_ext_8<15>21)
-     LUT4:I3->O            1   0.704   0.424  alu/_old_res_ext_8<15>27 (alu/_old_res_ext_8<15>27)
-     LUT4:I3->O            5   0.704   0.712  alu/_old_res_ext_8<15>140 (flag_next<2>)
-     LUT4:I1->O            1   0.704   0.000  Mmux_data_Addr122 (Mmux_data_Addr121)
-     MUXF5:I0->O           1   0.321   0.420  Mmux_data_Addr12_f5 (data_Addr_15_OBUF)
-     OBUF:I->O                 3.272          data_Addr_15_OBUF (data_Addr<15>)
+     IBUF:I->O            38   1.218   1.439  instr_11_IBUF (instr_11_IBUF)
+     LUT2:I0->O            4   0.704   0.666  cu/wr_X311 (cu/N85)
+     LUT4:I1->O            1   0.704   0.424  cu/wr_X32 (cu/N27)
+     LUT4:I3->O            2   0.704   0.526  cu/sel_srcA_or0005 (cu/sel_srcA_or0005)
+     LUT4:I1->O            1   0.704   0.455  cu/sel_srcA<0>25 (cu/sel_srcA<0>25)
+     LUT4:I2->O           32   0.704   1.437  cu/sel_srcA<0>123 (sel_srcA<0>)
+     LUT3:I0->O            1   0.704   0.000  Mmux_srcA_2_f5_3_F (N147)
+     MUXF5:I0->O          12   0.321   1.136  Mmux_srcA_2_f5_3 (srcA<13>)
+     LUT3:I0->O            2   0.704   0.526  alu/Sh1120 (alu/Sh107)
+     LUT4:I1->O            1   0.704   0.424  alu/_old_res_ext_8<11>4 (alu/_old_res_ext_8<11>4)
+     LUT4:I3->O            1   0.704   0.424  alu/_old_res_ext_8<11>26_SW0 (N263)
+     LUT4_L:I3->LO         1   0.704   0.104  alu/_old_res_ext_8<11>26 (alu/_old_res_ext_8<11>26)
+     LUT4:I3->O            1   0.704   0.424  alu/_old_res_ext_8<11>157_SW0 (N66)
+     LUT4_D:I3->O          3   0.704   0.610  alu/_old_res_ext_8<11>157 (res<11>)
+     LUT4:I1->O            1   0.704   0.000  Mmux_data_Addr42 (Mmux_data_Addr41)
+     MUXF5:I0->O           1   0.321   0.420  Mmux_data_Addr4_f5 (data_Addr_11_OBUF)
+     OBUF:I->O                 3.272          data_Addr_11_OBUF (data_Addr<11>)
     ----------------------------------------
-    Total                     22.323ns (14.587ns logic, 7.736ns route)
-                                       (65.3% logic, 34.7% route)
+    Total                     23.299ns (14.284ns logic, 9.015ns route)
+                                       (61.3% logic, 38.7% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.73 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.98 secs
  
 --> 
 
-Total memory usage is 4523380 kilobytes
+Total memory usage is 4524404 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    8 (   0 filtered)
