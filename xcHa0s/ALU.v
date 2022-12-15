@@ -8,7 +8,7 @@ module ALU(
 	output [15:0] res,
 	input [4:0] opsel,
 	output reg ready,
-	input [3:0] flags,
+	input Cflag,Oflag,
 	output reg [3:0] flag_next
     );
 
@@ -25,10 +25,11 @@ assign res = res_ext[15:0];
 always @(*) begin
 	res_ext = 0;
 	ready = 1;
-	flag_next = flags;
+	flag_next[`CF] = Cflag;
+	flag_next[`OF] = Oflag;
 	
 	case(opsel)
-		`ALU_SHORT_B: res_ext = {1'b0,srcB};
+		//`ALU_SHORT_B: res_ext = {1'b0,srcB};
 		`ALU_ADD: begin
 			res_ext = srcA + srcB;
 			flag_next[`CF] = res_ext[16];

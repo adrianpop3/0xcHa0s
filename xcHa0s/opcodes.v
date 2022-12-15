@@ -30,35 +30,33 @@
 
 `define ADDRI  		32
 `define ADDAI  		33
-`define ADDXY  		34
-`define ADDRA  		35
+`define ADDRR  		34
 
 `define SUBRI 			36
 `define SUBAI 			37
-`define SUBXY 			38
-`define SUBRA 			39
+`define SUBRR 			38
 
 `define SHIFT 			40
 
 `define INC  			42
 `define DEC  			43
 
-`define MULRA 			44
+`define MULRR 			44
 `define MULAI 			45
 
-`define DIVRA	 		46
+`define DIVRR	 		46
 `define DIVAI  		47
 
-`define MODRA  		48
+`define MODRR  		48
 `define MODAI  		49
 
-`define ANDRA  		50
+`define ANDRR  		50
 `define ANDAI  		51
 
-`define ORRA  			52
+`define ORRR  			52
 `define ORAI  			53
 
-`define XORRA  		54
+`define XORRR  		54
 `define XORAI  		55
 
 `define NOT  			56

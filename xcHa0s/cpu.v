@@ -4,7 +4,7 @@ module cpu(
 	input clk,rst,
 	output [9:0] instr_Addr,
 	input [15:0] instr,
-	output reg [15:0] data_Addr,
+	output reg [8:0] data_Addr,
 	output reg [15:0] write_data,
 	input [15:0] read_data,
 	output write_enable
@@ -33,7 +33,7 @@ SignExtend sgex(
 wire [3:0] flag_reg,flag_next;
 wire save_flags;
 
-reg4 FlagReg(clk,rst,save_flags,flag_next,flag_reg);
+register #(4) FlagReg(clk,rst,save_flags,flag_next,flag_reg);
 
 
 
@@ -44,8 +44,8 @@ wire [15:0] res;
 
 //// SP DECLARE ////
 
-reg [15:0] SP_next;
-wire [15:0] SP_reg;
+reg [8:0] SP_next;
+wire [8:0] SP_reg;
 
 
 
@@ -60,8 +60,6 @@ wire ready;
 
 
 controlUnit cu(
-	.clk(clk), .rst(rst),
-	
 	.instr(instr),
 	
 	.branch(branch),
@@ -95,9 +93,9 @@ controlUnit cu(
 
 wire [15:0] X_reg,Y_reg,ACC_reg;
 reg [15:0] reg_next;
-reg16 X  (clk,rst,wr_X,reg_next,X_reg);
-reg16 Y  (clk,rst,wr_Y,reg_next,Y_reg);
-reg16 ACC(clk,rst,wr_ACC,reg_next,ACC_reg);
+register X  (clk,rst,wr_X,reg_next,X_reg);
+register Y  (clk,rst,wr_Y,reg_next,Y_reg);
+register ACC(clk,rst,wr_ACC,reg_next,ACC_reg);
 
 always @(*) begin
 	if(reg_from_mem)
@@ -118,7 +116,7 @@ wire [9:0] PC_branch;
 
 assign PC_reg_plus_1 = PC_reg + 1;
 
-reg10 PC(clk,rst,loadPC,PC_next,PC_reg);
+register #(10) PC(clk,rst,loadPC,PC_next,PC_reg);
 
 assign instr_Addr = PC_reg;
 assign PC_branch = instr[9:0];
@@ -144,7 +142,8 @@ ALU alu(
 	.res(res),
 	.opsel(opsel),
 	.ready(ready),
-	.flags(flag_reg),
+	.Cflag(flag_reg[1]),
+	.Oflag(flag_reg[0]),
 	.flag_next(flag_next)
 );
 
@@ -180,21 +179,22 @@ always @(*) begin
 		3: write_data = {6'b0,PC_reg_plus_1};
 	endcase
 
-	case(data_addr_sel)
-		0: data_Addr = res;
-		1: data_Addr = {7'b0000000,instr[8:0]};
-		2: data_Addr = SP_reg;
-		3: data_Addr = SP_next;
-	endcase
-
+	//compute SP_next before attributing it to data_Addr
 	if(push)
 		SP_next = SP_reg - 1;
 	else
 		SP_next = SP_reg + 1;
+	
+	case(data_addr_sel)
+		0: data_Addr = res[8:0];
+		1: data_Addr = instr[8:0];
+		2: data_Addr = SP_reg;
+		3: data_Addr = SP_next;
+	endcase
 
 end
 
-reg16 SP (clk,rst,op_stack,SP_next,SP_reg);
+register #(9) SP (clk,rst,op_stack,SP_next,SP_reg);
 
 
 endmodule

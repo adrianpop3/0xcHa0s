@@ -1,0 +1,14 @@
+[Inputs]
+clk
+rst
+=instr[15:0]=
+=read_data[15:0]=
+[Outputs]
+write_enable
+=instr_Addr[9:0]=
+=data_Addr[8:0]=
+=write_data[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel cpu
+

@@ -3,3 +3,5 @@ ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 controlUnit
 map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o controlUnit_map.ncd controlUnit.ngd controlUnit.pcf 
 par -w -intstyle ise -ol high -t 1 controlUnit_map.ncd controlUnit.ncd controlUnit.pcf 
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml controlUnit.twx controlUnit.ncd -o controlUnit.twr controlUnit.pcf 
+vhdtdtfi -lib work E:/faculta/FIC/0xcHa0s/xcHa0s/controlUnit.v -lang verilog -prj xcHa0s -o controlUnit.spl -module controlUnit -template E:/faculta/ISE14.7-Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e controlUnit.spl E:/faculta/FIC/0xcHa0s/xcHa0s/controlUnit.sym 

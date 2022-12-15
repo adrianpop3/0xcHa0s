@@ -8,46 +8,15 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/faculta/FIC/0xcHa0s/xcHa0s/ALU.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/faculta/FIC/0xcHa0s/xcHa0s/ALU.v</arg>&quot; Line <arg fmt="%d" index="2">15</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/faculta/FIC/0xcHa0s/xcHa0s/opsel.v&apos; in file &quot;E:/faculta/FIC/0xcHa0s/xcHa0s/ALU.v&quot; line 15
-</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/faculta/FIC/0xcHa0s/xcHa0s/ALU_testbench.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/faculta/FIC/0xcHa0s/xcHa0s/SignExtend.v&quot; into library work</arg>
-</msg>
-
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/faculta/FIC/0xcHa0s/xcHa0s/controlUnit.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/faculta/FIC/0xcHa0s/xcHa0s/controlUnit.v</arg>&quot; Line <arg fmt="%d" index="2">51</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/faculta/FIC/0xcHa0s/xcHa0s/opcodes.v&apos; in file &quot;E:/faculta/FIC/0xcHa0s/xcHa0s/controlUnit.v&quot; line 51
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/faculta/FIC/0xcHa0s/xcHa0s/controlUnit.v</arg>&quot; Line <arg fmt="%d" index="2">48</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/faculta/FIC/0xcHa0s/xcHa0s/opcodes.v&apos; in file &quot;E:/faculta/FIC/0xcHa0s/xcHa0s/controlUnit.v&quot; line 48
 </arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/faculta/FIC/0xcHa0s/xcHa0s/controlUnit.v</arg>&quot; Line <arg fmt="%d" index="2">52</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/faculta/FIC/0xcHa0s/xcHa0s/opsel.v&apos; in file &quot;E:/faculta/FIC/0xcHa0s/xcHa0s/controlUnit.v&quot; line 52
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/faculta/FIC/0xcHa0s/xcHa0s/controlUnit.v</arg>&quot; Line <arg fmt="%d" index="2">49</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/faculta/FIC/0xcHa0s/xcHa0s/opsel.v&apos; in file &quot;E:/faculta/FIC/0xcHa0s/xcHa0s/controlUnit.v&quot; line 49
 </arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/faculta/FIC/0xcHa0s/xcHa0s/controlUnit_testbench.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/faculta/FIC/0xcHa0s/xcHa0s/cpu.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/faculta/FIC/0xcHa0s/xcHa0s/cpu_testbench.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/faculta/FIC/0xcHa0s/xcHa0s/reg10.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/faculta/FIC/0xcHa0s/xcHa0s/reg16.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/faculta/FIC/0xcHa0s/xcHa0s/reg4.v&quot; into library work</arg>
 </msg>
 
 </messages>

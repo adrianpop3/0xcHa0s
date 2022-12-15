@@ -1,13 +1,15 @@
 `timescale 1ns / 1ps
 
-module reg16(
-    input clk,
-    input rst,
-	 input en,
-    input [15:0] d,
-    output reg [15:0] q
-    );
+module reg16(clk,rst,en,,d,q);
 
+	parameter WIDTH = 16;
+
+	input clk;
+	input rst;
+	input en;
+	input [WIDTH-1:0] d;
+	output reg [WIDTH-1:0] q;
+	 
 always @(posedge clk) begin
 	if(rst)
 		q <= 0;

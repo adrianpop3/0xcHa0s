@@ -1,9 +1,6 @@
 `timescale 1ns / 1ps
 
 module controlUnit(
-	input clk,
-	input rst,
-	
 	input [15:0] instr,
 	
 	output reg branch,
@@ -21,7 +18,7 @@ module controlUnit(
 	
 	output reg [1:0] data_addr_sel,
 	output reg wr_to_data_mem,
-	output reg mem_data_wr_sel,
+	output reg [1:0] mem_data_wr_sel,
 	
 	output reg reg_from_mem,
 	output reg wr_X,
@@ -54,7 +51,7 @@ module controlUnit(
 `define WR_ALU_RES_TO_ACC_WITH_FLAGS  	reg_from_mem = 0; wr_ACC = ready; save_flags = ready;
 `define NO_WR_TO_ACC_WITH_FLAGS      	reg_from_mem = 0; wr_ACC = 0; save_flags = ready;
 
-`define SEL_A_XY_SEL_B_ACC if(instr[9] == 0)sel_srcA = `sel_X;else sel_srcA = `sel_Y;  sel_srcB = `sel_ACC;
+//`define SEL_A_XY_SEL_B_ACC if(instr[9] == 0)sel_srcA = `sel_X;else sel_srcA = `sel_Y;  sel_srcB = `sel_ACC;
 
 always @(*) begin
 
@@ -159,14 +156,13 @@ always @(*) begin
 		`MOVR: begin
 			opsel = `ALU_SHORT_B;
 			reg_from_mem = 0;
-			if(instr[9] == 0) begin
+			sel_srcB = instr[7:6];
+			if(instr[9:8] == 2'b00) begin
 				wr_X = ready;
-				sel_srcB = `sel_Y;
-				if(instr[8]) sel_srcB = `sel_ACC;
-			end else begin
+			end else if (instr[9:8] == 2'b01) begin
 				wr_Y = ready;
-				sel_srcB = `sel_X;
-				if(instr[8]) sel_srcB = `sel_ACC;
+			end else begin
+				wr_ACC = ready;
 			end
 		end
 		
@@ -225,19 +221,10 @@ always @(*) begin
 			sel_srcB = `sel_imm;
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
-		`ADDXY: begin
+		`ADDRR: begin
 			opsel = `ALU_ADD;
-			sel_srcA = `sel_X;
-			sel_srcB = `sel_Y;
-			`WR_ALU_RES_TO_ACC_WITH_FLAGS
-		end
-		`ADDRA: begin
-			opsel = `ALU_ADD;
-			if(instr[9] == 0)
-				sel_srcA = `sel_X;
-			else
-				sel_srcA = `sel_Y;
-			sel_srcB = `sel_ACC;
+			sel_srcA = instr[9:8];
+			sel_srcB = instr[7:6];
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 		
@@ -256,42 +243,15 @@ always @(*) begin
 			sel_srcB = `sel_imm;
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
-		`SUBXY: begin
+		`SUBRR: begin
 			opsel = `ALU_SUB;
-			if(instr[8] == 0) begin
-				sel_srcA = `sel_X;
-				sel_srcB = `sel_Y;
-			end else begin
-				sel_srcA = `sel_Y;
-				sel_srcB = `sel_X;
-			end
-			`WR_ALU_RES_TO_ACC_WITH_FLAGS
-		end
-		`SUBRA: begin
-			opsel = `ALU_SUB;
-			case(instr[9:8])
-				2'b00: begin
-					sel_srcA = `sel_X;
-					sel_srcB = `sel_ACC;
-				end
-				2'b01: begin
-					sel_srcA = `sel_ACC;
-					sel_srcB = `sel_X;
-				end
-				2'b10: begin
-					sel_srcA = `sel_Y;
-					sel_srcB = `sel_ACC;
-				end
-				2'b11: begin
-					sel_srcA = `sel_ACC;
-					sel_srcB = `sel_Y;
-				end
-			endcase
+			sel_srcA = instr[9:8];
+			sel_srcB = instr[7:6];
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 		
 		`SHIFT: begin // 6'b:instr  3'b:operation 2'b:op1 1'b:imm 4'b:immval/op2
-			opsel = {1'b1,instr[4] | instr[1],instr[9:7]};
+			opsel = {1'b1,instr[4] | instr[1] | instr[0],instr[9:7]};
 			sel_srcA = instr[6:5];
 			if(instr[4]==1) begin
 				//immediate shift amount
@@ -307,9 +267,9 @@ always @(*) begin
 		`INC: begin
 			opsel = `ALU_INC;
 			sel_srcA = instr[9:8];
-			if(instr[9:8] == 0)
+			if(instr[9:8] == 2'b00)
 				wr_X = ready;
-			else if(instr[9:8] == 1)
+			else if(instr[9:8] == 2'b01)
 				wr_Y = ready;
 			else
 				wr_ACC = ready;
@@ -319,9 +279,9 @@ always @(*) begin
 		`DEC: begin
 			opsel = `ALU_DEC;
 			sel_srcA = instr[9:8];
-			if(instr[9:8] == 0)
+			if(instr[9:8] == 2'b00)
 				wr_X = ready;
-			else if(instr[9:8] == 1)
+			else if(instr[9:8] == 2'b01)
 				wr_Y = ready;
 			else
 				wr_ACC = ready;
@@ -329,9 +289,10 @@ always @(*) begin
 			save_flags = ready;
 		end
 		
-		`MULRA: begin
+		`MULRR: begin
 			opsel = `ALU_MUL;
-			`SEL_A_XY_SEL_B_ACC
+			sel_srcA = instr[9:8];
+			sel_srcB = instr[7:6];
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 		`MULAI: begin
@@ -339,9 +300,10 @@ always @(*) begin
 			sel_srcA = `sel_ACC;  sel_srcB = `sel_imm;
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
-		`DIVRA: begin
+		`DIVRR: begin
 			opsel = `ALU_DIV;
-			`SEL_A_XY_SEL_B_ACC
+			sel_srcA = instr[9:8];
+			sel_srcB = instr[7:6];
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 		`DIVAI: begin
@@ -349,9 +311,10 @@ always @(*) begin
 			sel_srcA = `sel_ACC;  sel_srcB = `sel_imm;
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
-		`MODRA: begin
+		`MODRR: begin
 			opsel = `ALU_MOD;
-			`SEL_A_XY_SEL_B_ACC
+			sel_srcA = instr[9:8];
+			sel_srcB = instr[7:6];
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 		`MODAI: begin
@@ -360,9 +323,10 @@ always @(*) begin
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 		
-		`ANDRA: begin
+		`ANDRR: begin
 			opsel = `ALU_AND;
-			`SEL_A_XY_SEL_B_ACC
+			sel_srcA = instr[9:8];
+			sel_srcB = instr[7:6];
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 		`ANDAI: begin
@@ -370,9 +334,10 @@ always @(*) begin
 			sel_srcA = `sel_ACC;  sel_srcB = `sel_imm;
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
-		`ORRA: begin
+		`ORRR: begin
 			opsel = `ALU_OR;
-			`SEL_A_XY_SEL_B_ACC
+			sel_srcA = instr[9:8];
+			sel_srcB = instr[7:6];
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 		`ORAI: begin
@@ -380,9 +345,10 @@ always @(*) begin
 			sel_srcA = `sel_ACC;  sel_srcB = `sel_imm;
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
-		`XORRA: begin
+		`XORRR: begin
 			opsel = `ALU_XOR;
-			`SEL_A_XY_SEL_B_ACC
+			sel_srcA = instr[9:8];
+			sel_srcB = instr[7:6];
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 		`XORAI: begin
