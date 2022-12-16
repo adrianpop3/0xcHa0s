@@ -46,7 +46,6 @@ initial begin
 	
 	#400
 	rst=0;
-	rst=0;
 	
 	
 	

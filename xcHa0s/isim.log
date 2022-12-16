@@ -1,5 +1,5 @@
 ISim log file
-Running: E:\faculta\FIC\0xcHa0s\xcHa0s\ALU_testbench_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb E:/faculta/FIC/0xcHa0s/xcHa0s/ALU_testbench_isim_beh.wdb 
+Running: E:\faculta\FIC\0xcHa0s\xcHa0s\top_module_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb E:/faculta/FIC/0xcHa0s/xcHa0s/top_module_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 ----------------------------------------------------------------------
 WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
@@ -13,3 +13,18 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# restart
+# run 10.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 10.00us
+# run 10.00us
+# run 10.00us

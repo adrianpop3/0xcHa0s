@@ -1,3 +1,5 @@
+verilog isim_temp "multiplier.v"
+verilog isim_temp "divider.v"
 verilog isim_temp "SignExtend.v"
 verilog isim_temp "register.v"
 verilog isim_temp "controlUnit.v"
