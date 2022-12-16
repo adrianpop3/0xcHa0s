@@ -682,7 +682,7 @@ uint16_t execute_store(char line[4096], int nr_line) {
                 return 0b0000110000000000 | adr_target;
             }
         }
-        printf("Error at line %d! Undeclared variable '%s'.\n", nr_line,params[1]);
+        printf("Error %d at line %d! Undeclared variable '%s'.\n",nr_variables, nr_line,params[1]);
         fail_exit();
         return 1;
     }
