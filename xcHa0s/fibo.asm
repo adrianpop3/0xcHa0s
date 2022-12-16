@@ -1,0 +1,23 @@
+DATA REZULTAT
+DATA N
+
+MOV X 5
+STORE X N
+MOV X 0
+MOV Y 1
+FIBLOOP:
+    ADD X y
+    LOAD X N
+    CMP X 0
+    BRE OUT
+    DEC X
+    STORE X N
+    MOV X Y
+    MOV Y ACC
+    BRA FIBLOOP
+    
+OUT:
+    MOV X ACC
+    STORE X N
+    LOOP4EVER:
+        BRA LOOP4EVER
