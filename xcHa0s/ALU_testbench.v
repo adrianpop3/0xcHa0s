@@ -24,13 +24,16 @@ module ALU_testbench(
 ALU uut(
 
 );*/
-reg [16:0] neg;
-reg [15:0] opa;
+reg [31:0] mul;
+reg [15:0] opa,opb;
 
 initial begin
-	opa = 16'h0001;
+	opa = 16'b1000000000000000;
+	opb = 16'b1000000000000000;
+	opa=-3;
+	opb=-42;
 	#32
-	neg = -opa;
+	 mul = opa*opb;
 
 end
 

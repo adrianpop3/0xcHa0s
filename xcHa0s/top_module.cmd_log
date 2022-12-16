@@ -1,0 +1,14 @@
+xst -intstyle ise -ifn "E:/faculta/FIC/0xcHa0s/xcHa0s/top_module.xst" -ofn "E:/faculta/FIC/0xcHa0s/xcHa0s/top_module.syr" 
+xst -intstyle ise -ifn "E:/faculta/FIC/0xcHa0s/xcHa0s/top_module.xst" -ofn "E:/faculta/FIC/0xcHa0s/xcHa0s/top_module.syr" 
+xst -intstyle ise -ifn "E:/faculta/FIC/0xcHa0s/xcHa0s/top_module.xst" -ofn "E:/faculta/FIC/0xcHa0s/xcHa0s/top_module.syr" 
+xst -intstyle ise -ifn "E:/faculta/FIC/0xcHa0s/xcHa0s/top_module.xst" -ofn "E:/faculta/FIC/0xcHa0s/xcHa0s/top_module.syr" 
+xst -intstyle ise -ifn "E:/faculta/FIC/0xcHa0s/xcHa0s/top_module.xst" -ofn "E:/faculta/FIC/0xcHa0s/xcHa0s/top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 top_module.ngc top_module.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o top_module_map.ncd top_module.ngd top_module.pcf 
+xst -intstyle ise -ifn "E:/faculta/FIC/0xcHa0s/xcHa0s/top_module.xst" -ofn "E:/faculta/FIC/0xcHa0s/xcHa0s/top_module.syr" 
+xst -intstyle ise -ifn "E:/faculta/FIC/0xcHa0s/xcHa0s/top_module.xst" -ofn "E:/faculta/FIC/0xcHa0s/xcHa0s/top_module.syr" 
+xst -intstyle ise -ifn "E:/faculta/FIC/0xcHa0s/xcHa0s/top_module.xst" -ofn "E:/faculta/FIC/0xcHa0s/xcHa0s/top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 top_module.ngc top_module.ngd  
+xst -intstyle ise -ifn "E:/faculta/FIC/0xcHa0s/xcHa0s/top_module.xst" -ofn "E:/faculta/FIC/0xcHa0s/xcHa0s/top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 top_module.ngc top_module.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o top_module_map.ncd top_module.ngd top_module.pcf 

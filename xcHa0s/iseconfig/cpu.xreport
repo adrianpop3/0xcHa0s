@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2022-12-16T03:05:39</DateModified>
+  <DateModified>2022-12-15T02:03:03</DateModified>
   <ModuleName>cpu</ModuleName>
-  <SummaryTimeStamp>2022-12-03T12:27:41</SummaryTimeStamp>
+  <SummaryTimeStamp>2022-12-14T03:18:16</SummaryTimeStamp>
   <SavedFilePath>E:/faculta/FIC/0xcHa0s/xcHa0s/iseconfig/cpu.xreport</SavedFilePath>
   <ImplementationReportsDirectory>E:/faculta/FIC/0xcHa0s/xcHa0s\</ImplementationReportsDirectory>
-  <DateInitialized>2022-12-03T12:53:37</DateInitialized>
+  <DateInitialized>2022-12-13T23:00:16</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

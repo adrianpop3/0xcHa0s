@@ -5,14 +5,14 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Thu Dec 08 02:18:32 2022">
+  <application stringID="Xst" timeStamp="Thu Dec 15 02:09:28 2022">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="E:\faculta\ISE14.7-Xilinx\14.7\ISE_DS\ISE\\lib\nt64;E:\faculta\ISE14.7-Xilinx\14.7\ISE_DS\ISE\\bin\nt64;C:\Program Files\Java\jdk-17\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\PROGRA~2\TABLEC~1.01;E:\faculta\fizica\TableCurve2Dv5.01;C:\Program Files (x86)\Wiimm\SZS;E:\faculta\Matlab\bin;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Users\Dutu\IdeaProjects\apache-maven-3.8.5\bin;C:\Program Files (x86)\dBI\QDD\Drivers;E:\Atmel Studio\Comp-istall\bin;E:\faculta\CFLP\ocaml\Objective Caml\bin;C:\Program Files (x86)\dotnet\;C:\Program Files\CMake\bin;C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;E:\faculta\WINCUPL\EXE;E:\faculta\WINCUPL\FITTERS;C:\Users\Dutu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Dutu\.dotnet\tools;E:\faculta\CFLP\Lisp\clisp-2.48;E:\PhoenixSuit_V1.10\;E:\CodeBlocks\MinGW\bin;C:\Users\Dutu\AppData\Local\GitHubDesktop\bin"/>
+          <item stringID="value" value="E:\faculta\ISE14.7-Xilinx\14.7\ISE_DS\ISE\\lib\nt64;E:\faculta\ISE14.7-Xilinx\14.7\ISE_DS\ISE\\bin\nt64;C:\Program Files\Java\jdk-17\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\PROGRA~2\TABLEC~1.01;E:\faculta\fizica\TableCurve2Dv5.01;C:\Program Files (x86)\Wiimm\SZS;E:\faculta\Matlab\bin;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Users\Dutu\IdeaProjects\apache-maven-3.8.5\bin;C:\Program Files (x86)\dBI\QDD\Drivers;E:\Atmel Studio\Comp-istall\bin;E:\faculta\CFLP\ocaml\Objective Caml\bin;C:\Program Files (x86)\dotnet\;C:\Program Files\CMake\bin;E:\CodeBlocks\MinGW\bin;C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;E:\faculta\WINCUPL\EXE;E:\faculta\WINCUPL\FITTERS;C:\Users\Dutu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Dutu\.dotnet\tools;E:\faculta\CFLP\Lisp\clisp-2.48;E:\PhoenixSuit_V1.10\;C:\Users\Dutu\AppData\Local\GitHubDesktop\bin"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -93,105 +93,10 @@
       <item DEFAULT="YES" label="-equivalent_register_removal" stringID="XST_EQUIVALENTREGISTERREMOVAL" value="YES"/>
       <item DEFAULT="0%" label="-slice_utilization_ratio_maxmargin" stringID="XST_SLICEUTILIZATIONRATIOMAXMARGIN" value="5"/>
     </section>
-    <section stringID="XST_HDL_SYNTHESIS_REPORT">
-      <item dataType="int" stringID="XST_ROMS" value="1"></item>
-      <item dataType="int" stringID="XST_ADDERSSUBTRACTORS" value="7">
-        <item dataType="int" stringID="XST_10BIT_ADDER" value="1"/>
-      </item>
-      <item dataType="int" stringID="XST_REGISTERS" value="6">
-        <item dataType="int" stringID="XST_10BIT_REGISTER" value="1"/>
-        <item dataType="int" stringID="XST_16BIT_REGISTER" value="4"/>
-        <item dataType="int" stringID="XST_4BIT_REGISTER" value="1"/>
-      </item>
-      <item dataType="int" stringID="XST_MULTIPLEXERS" value="4">
-        <item dataType="int" stringID="XST_16BIT_4TO1_MULTIPLEXER" value="4"/>
-      </item>
-      <item dataType="int" stringID="XST_XORS" value="2">
-        <item dataType="int" stringID="XST_1BIT_XOR2" value="1"/>
-      </item>
-    </section>
-    <section stringID="XST_ADVANCED_HDL_SYNTHESIS_REPORT">
-      <item dataType="int" stringID="XST_ROMS" value="1"></item>
-      <item dataType="int" stringID="XST_ADDERSSUBTRACTORS" value="7">
-        <item dataType="int" stringID="XST_10BIT_ADDER" value="1"/>
-      </item>
-      <item dataType="int" stringID="XST_REGISTERS" value="78">
-        <item dataType="int" stringID="XST_FLIPFLOPS" value="78"/>
-      </item>
-      <item dataType="int" stringID="XST_MULTIPLEXERS" value="4">
-        <item dataType="int" stringID="XST_16BIT_4TO1_MULTIPLEXER" value="4"/>
-      </item>
-      <item dataType="int" stringID="XST_XORS" value="2">
-        <item dataType="int" stringID="XST_1BIT_XOR2" value="1"/>
-      </item>
-    </section>
-    <section stringID="XST_FINAL_REGISTER_REPORT">
-      <item dataType="int" stringID="XST_REGISTERS" value="78">
-        <item dataType="int" stringID="XST_FLIPFLOPS" value="78"/>
-      </item>
-    </section>
-    <section stringID="XST_PARTITION_REPORT">
-      <section stringID="XST_PARTITION_IMPLEMENTATION_STATUS">
-        <section stringID="XST_NO_PARTITIONS_WERE_FOUND_IN_THIS_DESIGN"/>
-      </section>
-    </section>
-    <section stringID="XST_FINAL_REPORT">
-      <section stringID="XST_FINAL_RESULTS">
-        <item stringID="XST_RTL_TOP_LEVEL_OUTPUT_FILE_NAME" value="cpu.ngr"/>
-        <item stringID="XST_TOP_LEVEL_OUTPUT_FILE_NAME" value="cpu"/>
-        <item stringID="XST_OUTPUT_FORMAT" value="NGC"/>
-        <item stringID="XST_OPTIMIZATION_GOAL" value="Speed"/>
-        <item stringID="XST_KEEP_HIERARCHY" value="No"/>
-      </section>
-      <section stringID="XST_DESIGN_STATISTICS">
-        <item stringID="XST_IOS" value="77"/>
-      </section>
-      <section stringID="XST_CELL_USAGE">
-        <item dataType="int" stringID="XST_BELS" value="913">
-          <item dataType="int" stringID="XST_GND" value="1"/>
-          <item dataType="int" stringID="XST_INV" value="32"/>
-          <item dataType="int" stringID="XST_LUT1" value="26"/>
-          <item dataType="int" stringID="XST_LUT2" value="66"/>
-          <item dataType="int" stringID="XST_LUT2D" value="1"/>
-          <item dataType="int" stringID="XST_LUT3" value="177"/>
-          <item dataType="int" stringID="XST_LUT3D" value="5"/>
-          <item dataType="int" stringID="XST_LUT3L" value="3"/>
-          <item dataType="int" stringID="XST_LUT4" value="232"/>
-          <item dataType="int" stringID="XST_LUT4D" value="11"/>
-          <item dataType="int" stringID="XST_LUT4L" value="47"/>
-          <item dataType="int" stringID="XST_MUXCY" value="104"/>
-          <item dataType="int" stringID="XST_MUXF5" value="98"/>
-          <item dataType="int" stringID="XST_VCC" value="1"/>
-          <item dataType="int" stringID="XST_XORCY" value="109"/>
-        </item>
-        <item dataType="int" stringID="XST_FLIPFLOPSLATCHES" value="78">
-          <item dataType="int" stringID="XST_FDRE" value="78"/>
-        </item>
-        <item dataType="int" stringID="XST_CLOCK_BUFFERS" value="1">
-          <item dataType="int" stringID="XST_BUFGP" value="1"/>
-        </item>
-        <item dataType="int" stringID="XST_IO_BUFFERS" value="76">
-          <item dataType="int" stringID="XST_IBUF" value="33"/>
-          <item dataType="int" stringID="XST_OBUF" value="43"/>
-        </item>
-      </section>
-    </section>
-    <section stringID="XST_DEVICE_UTILIZATION_SUMMARY">
-      <item stringID="XST_SELECTED_DEVICE" value="3s500efg320-4"/>
-      <item AVAILABLE="4656" dataType="int" label="Number of Slices" stringID="XST_NUMBER_OF_SLICES" value="315"/>
-      <item AVAILABLE="9312" dataType="int" label="Number of Slice Flip Flops" stringID="XST_NUMBER_OF_SLICE_FLIP_FLOPS" value="78"/>
-      <item AVAILABLE="9312" dataType="int" label="Number of 4 input LUTs" stringID="XST_NUMBER_OF_4_INPUT_LUTS" value="600"/>
-      <item dataType="int" label="Number of IOs" stringID="XST_NUMBER_OF_IOS" value="77"/>
-      <item AVAILABLE="232" dataType="int" label="Number of bonded IOBs" stringID="XST_NUMBER_OF_BONDED_IOBS" value="77"/>
-      <item AVAILABLE="24" dataType="int" label="Number of GCLKs" stringID="XST_NUMBER_OF_GCLKS" value="1"/>
-    </section>
-    <section stringID="XST_PARTITION_RESOURCE_SUMMARY">
-      <section stringID="XST_NO_PARTITIONS_WERE_FOUND_IN_THIS_DESIGN"/>
-    </section>
     <section stringID="XST_ERRORS_STATISTICS">
-      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_ERRORS" value="0"/>
-      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="8"/>
-      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="1"/>
+      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_ERRORS" value="1"/>
+      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="0"/>
+      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="0"/>
     </section>
   </application>
 
