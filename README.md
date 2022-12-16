@@ -1,5 +1,8 @@
 # Pocket Calculator w/ GPP - Team: 0xcHa0s - FIC PROIECT 2022      
 
+## HW Design:
+<img width="959" alt="hw_design" src="https://user-images.githubusercontent.com/33669868/208077558-36198e58-7971-4c10-a25e-44203eb86dfb.png">
+
 ## Members:
 * Ploscaru Carla
 * Podean Roxana-Andreea
