@@ -21,6 +21,10 @@ module ALU(
 
 reg [16:0] res_ext;
 assign res = res_ext[15:0];
+wire [15:0] mul_result,div_result;
+
+multiplier mul(srcA,srcB,mul_result);
+divider    div(srcA,srcB,div_result);
 
 always @(*) begin
 	res_ext = 0;
@@ -29,7 +33,7 @@ always @(*) begin
 	flag_next[`OF] = Oflag;
 	
 	case(opsel)
-		//`ALU_SHORT_B: res_ext = {1'b0,srcB};
+		`ALU_SHORT_B: res_ext = {1'b0,srcB};
 		`ALU_ADD: begin
 			res_ext = srcA + srcB;
 			flag_next[`CF] = res_ext[16];
@@ -66,9 +70,14 @@ always @(*) begin
 			res_ext = {1'b0, ~srcA};
 		end
 		`ALU_NEG: begin
-			res_ext = -srcA;
+			res_ext = {1'b0,-srcA};
 		end
-		
+		`ALU_MUL: begin
+			res_ext = {1'b0,mul_result};
+		end
+		`ALU_DIV: begin
+			res_ext = {1'b0,div_result};
+		end
 		
 		/*
 		

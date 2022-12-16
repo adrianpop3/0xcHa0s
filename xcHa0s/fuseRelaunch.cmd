@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "E:/faculta/FIC/0xcHa0s/xcHa0s/ALU_testbench_isim_beh.exe" -prj "E:/faculta/FIC/0xcHa0s/xcHa0s/ALU_testbench_beh.prj" "ALU_testbench" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "E:/faculta/FIC/0xcHa0s/xcHa0s/top_module_isim_beh.exe" -prj "E:/faculta/FIC/0xcHa0s/xcHa0s/top_module_beh.prj" "work.top_module" "work.glbl" 
