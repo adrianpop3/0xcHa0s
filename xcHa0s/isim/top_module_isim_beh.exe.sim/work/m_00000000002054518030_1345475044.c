@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "E:/faculta/FIC/0xcHa0s/xcHa0s/divider.v";
+static const char *ng0 = "E:/faculta/FIC/0xcHa0s/xcHa0s/multiplier.v";
 
 
 
@@ -342,15 +342,7 @@ static void Cont_14_2(char *t0)
     char *t7;
     char *t8;
     char *t9;
-    unsigned int t10;
-    unsigned int t11;
-    char *t12;
-    unsigned int t13;
-    unsigned int t14;
-    char *t15;
-    unsigned int t16;
-    unsigned int t17;
-    char *t18;
+    char *t10;
 
 LAB0:    t1 = (t0 + 3504U);
     t2 = *((char **)t1);
@@ -365,28 +357,16 @@ LAB2:    xsi_set_current_line(14, ng0);
     t2 = (t0 + 1848U);
     t4 = *((char **)t2);
     memset(t5, 0, 8);
-    xsi_vlog_unsigned_divide(t5, 16, t3, 16, t4, 16);
+    xsi_vlog_unsigned_multiply(t5, 32, t3, 16, t4, 16);
     t2 = (t0 + 4328);
     t6 = (t2 + 56U);
     t7 = *((char **)t6);
     t8 = (t7 + 56U);
     t9 = *((char **)t8);
-    memset(t9, 0, 8);
-    t10 = 65535U;
-    t11 = t10;
-    t12 = (t5 + 4);
-    t13 = *((unsigned int *)t5);
-    t10 = (t10 & t13);
-    t14 = *((unsigned int *)t12);
-    t11 = (t11 & t14);
-    t15 = (t9 + 4);
-    t16 = *((unsigned int *)t9);
-    *((unsigned int *)t9) = (t16 | t10);
-    t17 = *((unsigned int *)t15);
-    *((unsigned int *)t15) = (t17 | t11);
-    xsi_driver_vfirst_trans(t2, 0, 15);
-    t18 = (t0 + 4104);
-    *((int *)t18) = 1;
+    memcpy(t9, t5, 8);
+    xsi_driver_vfirst_trans(t2, 0, 31);
+    t10 = (t0 + 4104);
+    *((int *)t10) = 1;
 
 LAB1:    return;
 }
@@ -453,15 +433,7 @@ static void Cont_15_3(char *t0)
     char *t58;
     char *t59;
     char *t60;
-    unsigned int t61;
-    unsigned int t62;
-    char *t63;
-    unsigned int t64;
-    unsigned int t65;
-    char *t66;
-    unsigned int t67;
-    unsigned int t68;
-    char *t69;
+    char *t61;
 
 LAB0:    t1 = (t0 + 3752U);
     t2 = *((char **)t1);
@@ -554,22 +526,10 @@ LAB19:    t50 = (t0 + 4392);
     t58 = *((char **)t57);
     t59 = (t58 + 56U);
     t60 = *((char **)t59);
-    memset(t60, 0, 8);
-    t61 = 65535U;
-    t62 = t61;
-    t63 = (t3 + 4);
-    t64 = *((unsigned int *)t3);
-    t61 = (t61 & t64);
-    t65 = *((unsigned int *)t63);
-    t62 = (t62 & t65);
-    t66 = (t60 + 4);
-    t67 = *((unsigned int *)t60);
-    *((unsigned int *)t60) = (t67 | t61);
-    t68 = *((unsigned int *)t66);
-    *((unsigned int *)t66) = (t68 | t62);
-    xsi_driver_vfirst_trans(t50, 0, 15);
-    t69 = (t0 + 4120);
-    *((int *)t69) = 1;
+    memcpy(t60, t3, 8);
+    xsi_driver_vfirst_trans(t50, 0, 31);
+    t61 = (t0 + 4120);
+    *((int *)t61) = 1;
 
 LAB1:    return;
 LAB4:    t36 = *((unsigned int *)t24);
@@ -588,14 +548,14 @@ LAB9:    t44 = (t4 + 4);
 LAB11:    t50 = (t0 + 1528U);
     t51 = *((char **)t50);
     memset(t49, 0, 8);
-    xsi_vlog_unsigned_unary_minus(t49, 16, t51, 16);
+    xsi_vlog_unsigned_unary_minus(t49, 32, t51, 32);
     goto LAB12;
 
 LAB13:    t50 = (t0 + 1528U);
     t56 = *((char **)t50);
     goto LAB14;
 
-LAB15:    xsi_vlog_unsigned_bit_combine(t3, 16, t49, 16, t56, 16);
+LAB15:    xsi_vlog_unsigned_bit_combine(t3, 32, t49, 32, t56, 32);
     goto LAB19;
 
 LAB17:    memcpy(t3, t49, 8);
@@ -604,9 +564,9 @@ LAB17:    memcpy(t3, t49, 8);
 }
 
 
-extern void work_m_00000000002857019399_1279674626_init()
+extern void work_m_00000000002054518030_1345475044_init()
 {
 	static char *pe[] = {(void *)Cont_11_0,(void *)Cont_12_1,(void *)Cont_14_2,(void *)Cont_15_3};
-	xsi_register_didat("work_m_00000000002857019399_1279674626", "isim/top_module_isim_beh.exe.sim/work/m_00000000002857019399_1279674626.didat");
+	xsi_register_didat("work_m_00000000002054518030_1345475044", "isim/top_module_isim_beh.exe.sim/work/m_00000000002054518030_1345475044.didat");
 	xsi_register_executes(pe);
 }

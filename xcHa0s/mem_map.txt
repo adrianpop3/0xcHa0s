@@ -1,0 +1,5 @@
+       FIRSTNUM @ 0
+      SECONDNUM @ 1
+           REST @ 2
+
+      LOOP4EVER & 18

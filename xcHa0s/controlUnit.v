@@ -21,6 +21,7 @@ module controlUnit(
 	output reg [1:0] mem_data_wr_sel,
 	
 	output reg reg_from_mem,
+	output reg extra_write_X,
 	output reg wr_X,
 	output reg wr_Y,
 	output reg wr_ACC,
@@ -71,6 +72,7 @@ always @(*) begin
 	mem_data_wr_sel = 0;
 	
 	reg_from_mem = 0;
+	extra_write_X = 0;
 	wr_X = 0;
 	wr_Y = 0;
 	wr_ACC = 0;
@@ -293,22 +295,30 @@ always @(*) begin
 			opsel = `ALU_MUL;
 			sel_srcA = instr[9:8];
 			sel_srcB = instr[7:6];
+			wr_X = 1;
+			extra_write_X = 1;
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 		`MULAI: begin
 			opsel = `ALU_MUL;
 			sel_srcA = `sel_ACC;  sel_srcB = `sel_imm;
+			wr_X = 1;
+			extra_write_X = 1;
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 		`DIVRR: begin
 			opsel = `ALU_DIV;
 			sel_srcA = instr[9:8];
 			sel_srcB = instr[7:6];
+			wr_X = 1;
+			extra_write_X = 1;
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 		`DIVAI: begin
 			opsel = `ALU_DIV;
 			sel_srcA = `sel_ACC;  sel_srcB = `sel_imm;
+			wr_X = 1;
+			extra_write_X = 1;
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 		`MODRR: begin

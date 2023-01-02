@@ -40,7 +40,7 @@ register #(4) FlagReg(clk,rst,save_flags,flag_next,flag_reg);
 //// ALU DECLARE ////
 
 reg [15:0] srcA,srcB;
-wire [15:0] res;
+wire [15:0] res,extra_res;
 
 //// SP DECLARE ////
 
@@ -52,7 +52,7 @@ wire [8:0] SP_reg;
 /////////////// CONTROL UNIT ///////////////
 
 wire branch,ret,loadPC,reg_from_mem;
-wire push,op_stack,wr_X,wr_Y,wr_ACC;
+wire push,op_stack,wr_X,wr_Y,wr_ACC,extra_write_X;
 wire [1:0] sel_srcA,sel_srcB,data_addr_sel,mem_data_wr_sel;
 
 wire [4:0] opsel;
@@ -79,6 +79,7 @@ controlUnit cu(
 	.mem_data_wr_sel(mem_data_wr_sel),
 	
 	.reg_from_mem(reg_from_mem),
+	.extra_write_X(extra_write_X),
 	.wr_X(wr_X),
 	.wr_Y(wr_Y),
 	.wr_ACC(wr_ACC),
@@ -93,7 +94,7 @@ controlUnit cu(
 
 wire [15:0] X_reg,Y_reg,ACC_reg;
 reg [15:0] reg_next;
-register X  (clk,rst,wr_X,reg_next,X_reg);
+register X  (clk,rst,wr_X, extra_write_X?extra_res:reg_next  ,X_reg);
 register Y  (clk,rst,wr_Y,reg_next,Y_reg);
 register ACC(clk,rst,wr_ACC,reg_next,ACC_reg);
 
@@ -139,7 +140,9 @@ ALU alu(
 	.clk(clk),.rst(rst),
 	.srcA(srcA),
 	.srcB(srcB),
+	.extra_X(X_reg),
 	.res(res),
+	.extra_res(extra_res),
 	.opsel(opsel),
 	.ready(ready),
 	.Cflag(flag_reg[1]),

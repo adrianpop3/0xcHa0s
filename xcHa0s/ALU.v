@@ -5,7 +5,9 @@ module ALU(
 	input rst,
 	input [15:0] srcA,
 	input [15:0] srcB,
+	input [15:0] extra_X,
 	output [15:0] res,
+	output reg [15:0] extra_res,
 	input [4:0] opsel,
 	output reg ready,
 	input Cflag,Oflag,
@@ -21,12 +23,15 @@ module ALU(
 
 reg [16:0] res_ext;
 assign res = res_ext[15:0];
-wire [15:0] mul_result,div_result;
+wire [31:0] mul_result;
+wire [31:0] div_result;
+wire [15:0] mod_result;
 
 multiplier mul(srcA,srcB,mul_result);
-divider    div(srcA,srcB,div_result);
+divider    div({extra_X,srcA},srcB,div_result,mod_result);
 
 always @(*) begin
+	extra_res = 0;
 	res_ext = 0;
 	ready = 1;
 	flag_next[`CF] = Cflag;
@@ -38,45 +43,80 @@ always @(*) begin
 			res_ext = srcA + srcB;
 			flag_next[`CF] = res_ext[16];
 			flag_next[`OF] = (srcA[15]&srcB[15]&(~res_ext[15]))|((~srcA[15])&(~srcB[15])&res_ext[15]);
+			flag_next[`ZF] = (res_ext == 0);
+			flag_next[`NF] = res_ext[15];
 		end
 		`ALU_SUB: begin
 			res_ext = srcA - srcB;
 			flag_next[`CF] = res_ext[16];
 			flag_next[`OF] = (srcA[15]&(~srcB[15])&(~res_ext[15]))|((~srcA[15])&srcB[15]&res_ext[15]);
+			flag_next[`ZF] = (res_ext == 0);
+			flag_next[`NF] = res_ext[15];
 		end
 		
 		`ALU_INC: begin
 			res_ext = srcA + 1;
 			flag_next[`CF] = res_ext[16];
 			flag_next[`OF] = (~srcA[15])&res_ext[15];
+			flag_next[`ZF] = (res_ext == 0);
+			flag_next[`NF] = res_ext[15];
 		end
 		`ALU_DEC: begin
 			res_ext = srcA - 1;
 			flag_next[`CF] = res_ext[16];
 			flag_next[`OF] = srcA[15]&(~res_ext[15]);
+			flag_next[`ZF] = (res_ext == 0);
+			flag_next[`NF] = res_ext[15];
 		end
 	
 
 		`ALU_AND: begin
 			res_ext = {1'b0, srcA & srcB};
+			flag_next[`ZF] = (res_ext == 0);
+			flag_next[`NF] = res_ext[15];
 		end
 		`ALU_OR: begin
 			res_ext = {1'b0, srcA | srcB};
+			flag_next[`ZF] = (res_ext == 0);
+			flag_next[`NF] = res_ext[15];
 		end
 		`ALU_XOR: begin
 			res_ext = {1'b0, srcA ^ srcB};
+			flag_next[`ZF] = (res_ext == 0);
+			flag_next[`NF] = res_ext[15];
 		end
 		`ALU_NOT: begin
 			res_ext = {1'b0, ~srcA};
+			flag_next[`ZF] = (res_ext == 0);
+			flag_next[`NF] = res_ext[15];
 		end
 		`ALU_NEG: begin
 			res_ext = {1'b0,-srcA};
+			flag_next[`ZF] = (res_ext == 0);
+			flag_next[`NF] = res_ext[15];
 		end
 		`ALU_MUL: begin
-			res_ext = {1'b0,mul_result};
+			res_ext = {1'b0,mul_result[15:0]};
+			extra_res = mul_result[31:16];
+			flag_next[`ZF] = (mul_result == 0);
+			flag_next[`NF] = mul_result[31];
+			flag_next[`OF] = (mul_result[31:15] == 0) || (mul_result[31:15] == 17'h1ffff);
+			flag_next[`CF] = (mul_result[31:15] == 0) || (mul_result[31:15] == 17'h1ffff);
 		end
 		`ALU_DIV: begin
-			res_ext = {1'b0,div_result};
+			res_ext = {1'b0,div_result[15:0]};
+			extra_res = div_result[31:16];
+			flag_next[`ZF] = (div_result == 0);
+			flag_next[`NF] = div_result[31];
+			flag_next[`OF] = ({extra_X,srcA} == 32'h80000000) && (srcB  == 16'hffff);
+			flag_next[`CF] = (srcB == 0);
+		end
+		`ALU_MOD: begin
+			res_ext = {1'b0,mod_result};
+			flag_next[`ZF] = (mod_result == 0);
+			flag_next[`NF] = mod_result[31];
+			flag_next[`OF] = ({extra_X,srcA} == 32'h80000000) && (srcB  == 16'hffff);
+			flag_next[`CF] = (srcB == 0);
 		end
 		
 		/*
@@ -111,8 +151,6 @@ always @(*) begin
 		
 	endcase
 	
-	flag_next[`ZF] = (res_ext == 0);
-	flag_next[`NF] = res_ext[15];
 	
 end
 

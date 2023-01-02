@@ -41,7 +41,7 @@ void print_binary(uint16_t bin) {
 
 
 char line[4096];
-int nr_lines=0; 
+int nr_lines=0;
 
 void passfile(int finalpass){
     while(fgets(line, 4096, read_file)) {
@@ -52,8 +52,8 @@ void passfile(int finalpass){
             s=line;
             while(*s){*s=*(s+1);s++;}
         }
-        
-        
+
+
         if(line[0] < 'A' || line[0] > 'Z') {
             continue;
         }
@@ -63,8 +63,8 @@ void passfile(int finalpass){
         char word[256];
         sscanf(line, "%s", word);
 
-        int found_instr = 0; 
-		
+        int found_instr = 0;
+
 		if(strchr(word,' ')==NULL && strchr(word,'\t')==NULL && strchr(word,'\r')==NULL){
 		    //no spaces
 		    if(word[strlen(word)-1] == ':'){
@@ -82,12 +82,12 @@ void passfile(int finalpass){
 		        nr_labels++;
 		        continue;
 		    }
-		    
+
 		}
-		
+
 		if(strcmp(word, "DATA") == 0){
 		    if(!finalpass) continue;
-		    
+
 			analize_arguments(line);
 			for(int i=0; i<nr_variables; i++){
 			    if(strcmp(variables[i].name,params[0])==0){
@@ -95,7 +95,7 @@ void passfile(int finalpass){
                     fail_exit();
 			    }
 			}
-			
+
 			variables[nr_variables].address = cr_data_addr;
 			strcpy(variables[nr_variables].name,params[0]);
 			nr_variables++;
@@ -118,12 +118,12 @@ void passfile(int finalpass){
 			}
 			continue;
 		}
-		
+
         for(int i=0; ;i++) {
             if(instructions[i].decode_instruction == NULL) {
                 break;
             }
-			
+
             if(strcmp(instructions[i].name, word) == 0) {
                 found_instr = 1;
                 if(nr_op >= 1024){
@@ -167,6 +167,7 @@ int main(int argc, char *argv[])
 
     passfile(0);
     nr_op=0;
+    nr_lines=0;
     fseek(read_file, 0, SEEK_SET);
     passfile(1);
 
@@ -174,8 +175,8 @@ int main(int argc, char *argv[])
     for(i=0; i<1024; i++) {
         print_binary(result[i]);
     }
-    
-    
+
+
 	FILE *mapfile = fopen("mem_map.txt","wt");
 	if(mapfile != NULL){
     	for(i=0;i<nr_variables;i++){
