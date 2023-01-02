@@ -1,5 +1,5 @@
-           VAR1 @ 0
-           VAR2 @ 1
-           VAR3 @ 2
-           VAR4 @ 3
+          FIB10 @ 0
 
+      LOOP4EVER & 5
+           FIBO & 6
+        CALCREC & 16

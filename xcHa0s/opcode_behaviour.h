@@ -837,8 +837,8 @@ uint16_t execute_branch (char line[4096], int nr_line) {
     sscanf(line, "%s", word);
 
     analize_arguments(line);
-    if(nr_params != 1) {
-        printf("Error at line %d! %s takes 1 parameter!\n", nr_line, word);
+    if( ((strcmp(word, "RET") == 0) && nr_params != 0) || ((strcmp(word, "RET") != 0) && nr_params != 1) ) {
+        printf("Error at line %d! %s takes %d parameter(s)!\n", nr_line, word,(strcmp(word, "RET") == 0)?0:1);
         fail_exit();
     }
 
@@ -857,7 +857,10 @@ uint16_t execute_branch (char line[4096], int nr_line) {
     else if(strcmp(word, "BRO") == 0)   opcode = 0b011000;
     
     else if(strcmp(word, "JMP") == 0)   opcode = 0b011110;
-    else if(strcmp(word, "RET") == 0)   opcode = 0b011111;
+    else if(strcmp(word, "RET") == 0){
+		opcode = 0b011111;
+		return (opcode<<10);
+	}
     
     int adr_target=-1;
     for(int i=0; i<nr_labels; i++){

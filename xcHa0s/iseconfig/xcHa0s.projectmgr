@@ -83,6 +83,7 @@
          <ClosedNode>/controlUnit_testbench E:|faculta|FIC|0xcHa0s|xcHa0s|controlUnit_testbench.v</ClosedNode>
          <ClosedNode>/cpu_testbench E:|faculta|FIC|0xcHa0s|xcHa0s|cpu_testbench.v</ClosedNode>
          <ClosedNode>/cpu_testbench E:|faculta|FIC|0xcHa0s|xcHa0s|cpu_testbench.v/uut - cpu/alu - ALU</ClosedNode>
+         <ClosedNode>/top_module E:|faculta|FIC|0xcHa0s|xcHa0s|top_module.v/procesor - cpu</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
          <SelectedItem>top_module (E:/faculta/FIC/0xcHa0s/xcHa0s/top_module.v)</SelectedItem>
@@ -99,13 +100,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000122000000010000000100000000000000000000000064ffffffff000000810000000000000001000001220000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
       <ClosedNodes>
