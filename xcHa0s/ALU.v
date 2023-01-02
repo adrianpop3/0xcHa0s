@@ -22,10 +22,15 @@ module ALU(
 `define OF	0
 
 reg [16:0] res_ext;
+reg [16:0] shift_aid;
+reg [15:0] shift_amount;
+wire [16:0] sign_srcA;
 assign res = res_ext[15:0];
 wire [31:0] mul_result;
 wire [31:0] div_result;
 wire [15:0] mod_result;
+
+assign sign_srcA = {16{srcA[15]}};
 
 multiplier mul(srcA,srcB,mul_result);
 divider    div({extra_X,srcA},srcB,div_result,mod_result);
@@ -36,6 +41,9 @@ always @(*) begin
 	ready = 1;
 	flag_next[`CF] = Cflag;
 	flag_next[`OF] = Oflag;
+	shift_amount = srcB;
+	if(opsel[3] == 1)
+		shift_amount = srcB & 16'h000f;
 	
 	case(opsel)
 		`ALU_SHORT_B: res_ext = {1'b0,srcB};
@@ -120,27 +128,83 @@ always @(*) begin
 		end
 		
 		/*
-		
-`define ALU_RSL_M  	16
-`define ALU_LSL_M  	17
-`define ALU_RSA_M  	18
-`define ALU_LSA_M  	19
-`define ALU_RSR_M  	20
-`define ALU_LSR_M  	21
-`define ALU_RSC_M  	22
-`define ALU_LSC_M  	23
+`define ALU_RSL	16
+`define ALU_LSL  	17
+`define ALU_RSA  	18
+`define ALU_LSA  	19
+`define ALU_RSR  	20
+`define ALU_LSR  	21
+`define ALU_RSC  	22
+`define ALU_LSC  	23
 
-`define ALU_RSL  		24
-`define ALU_LSL  		25
-`define ALU_RSA  		26
-`define ALU_LSA  		27
-`define ALU_RSR  		28
-`define ALU_LSR  		29
-`define ALU_RSC  		30
-`define ALU_LSC  		31
+`define ALU_RSL_M 24
+`define ALU_LSL_M 25
+`define ALU_RSA_M 26
+`define ALU_LSA_M 27
+`define ALU_RSR_M 28
+`define ALU_LSR_M 29
+`define ALU_RSC_M 30
+`define ALU_LSC_M 31
 		*/
-		`ALU_RSL: begin ///FA-LEEE!!!!!!!!!!!
-			res_ext = (srcA>>srcB);
+		`ALU_RSL, `ALU_RSL_M: begin
+			shift_aid = ({srcA,1'b0}>>shift_amount);
+			res_ext = shift_aid[16:1];
+			flag_next[`ZF] = (res_ext == 0);
+			flag_next[`NF] = res_ext[15];
+			flag_next[`OF] = (res_ext[15] != srcA[15]);
+			flag_next[`CF] = shift_aid[0];
+		end
+		`ALU_LSL, `ALU_LSL_M: begin
+			shift_aid = ({1'b0,srcA}<<shift_amount);
+			res_ext = shift_aid[15:0];
+			flag_next[`ZF] = (res_ext == 0);
+			flag_next[`NF] = res_ext[15];
+			flag_next[`OF] = (res_ext[15] != srcA[15]);
+			flag_next[`CF] = shift_aid[16];
+		end
+		`ALU_RSA, `ALU_RSA_M: begin
+			shift_aid = ({srcA,1'b0}>>shift_amount) | (sign_srcA<<(16-shift_amount));
+			res_ext = shift_aid[16:1];
+			flag_next[`ZF] = (res_ext == 0);
+			flag_next[`NF] = res_ext[15];
+			flag_next[`OF] = (res_ext[15] != srcA[15]);
+			flag_next[`CF] = shift_aid[0];
+		end
+		`ALU_LSA, `ALU_LSA_M: begin
+			shift_aid = ({1'b0,srcA}<<shift_amount) | (sign_srcA>>(16-shift_amount));
+			res_ext = shift_aid[15:0];
+			flag_next[`ZF] = (res_ext == 0);
+			flag_next[`NF] = res_ext[15];
+			flag_next[`OF] = (res_ext[15] != srcA[15]);
+			flag_next[`CF] = shift_aid[16];
+		end
+		`ALU_RSR, `ALU_RSR_M: begin
+			res_ext = {1'b0,(srcA>>shift_amount)|(srcA<<(16-shift_amount))};
+			flag_next[`ZF] = (res_ext == 0);
+			flag_next[`NF] = res_ext[15];
+			flag_next[`OF] = (res_ext[15] != srcA[15]);
+			flag_next[`CF] = res_ext[15];
+		end
+		`ALU_LSR, `ALU_LSR_M: begin
+			res_ext = {1'b0,(srcA<<shift_amount)|(srcA>>(16-shift_amount))};
+			flag_next[`ZF] = (res_ext == 0);
+			flag_next[`NF] = res_ext[15];
+			flag_next[`OF] = (res_ext[15] != srcA[15]);
+			flag_next[`CF] = res_ext[0];
+		end
+		`ALU_RSC, `ALU_RSC_M: begin
+			res_ext = ({Cflag,srcA}>>shift_amount) | ({Cflag,srcA}<<(17-shift_amount));
+			flag_next[`CF] = res_ext[16];
+			flag_next[`ZF] = (res_ext[15:0] == 0);
+			flag_next[`NF] = res_ext[15];
+			flag_next[`OF] = (res_ext[15] != srcA[15]);
+		end
+		`ALU_LSC, `ALU_LSC_M: begin
+			res_ext = ({Cflag,srcA}<<shift_amount) | ({Cflag,srcA}>>(17-shift_amount));
+			flag_next[`CF] = res_ext[16];
+			flag_next[`ZF] = (res_ext[15:0] == 0);
+			flag_next[`NF] = res_ext[15];
+			flag_next[`OF] = (res_ext[15] != srcA[15]);
 		end
 		
 		

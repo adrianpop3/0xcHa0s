@@ -23,7 +23,7 @@ Compiling module register
 Compiling module register(WIDTH=10)
 Compiling module multiplier
 Compiling module divider
-WARNING:HDLCompiler:1007 - "E:/faculta/FIC/0xcHa0s/xcHa0s/ALU.v" Line 117: Element index 31 into mod_result is out of bounds
+WARNING:HDLCompiler:1007 - "E:/faculta/FIC/0xcHa0s/xcHa0s/ALU.v" Line 125: Element index 31 into mod_result is out of bounds
 Compiling module ALU
 Compiling module register(WIDTH=9)
 Compiling module cpu
@@ -35,5 +35,5 @@ Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
 Compiled 14 Verilog Units
 Built simulation executable E:/faculta/FIC/0xcHa0s/xcHa0s/top_module_isim_beh.exe
-Fuse Memory Usage: 30836 KB
-Fuse CPU Usage: 452 ms
+Fuse Memory Usage: 31968 KB
+Fuse CPU Usage: 483 ms

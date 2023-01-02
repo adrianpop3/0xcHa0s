@@ -1,5 +1,5 @@
-       FIRSTNUM @ 0
-      SECONDNUM @ 1
-           REST @ 2
+           VAR1 @ 0
+           VAR2 @ 1
+           VAR3 @ 2
+           VAR4 @ 3
 
-      LOOP4EVER & 18

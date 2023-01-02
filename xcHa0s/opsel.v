@@ -21,21 +21,21 @@
 
 // shifts 1,QMod16,op
 
-`define ALU_RSL_M  	16
-`define ALU_LSL_M  	17
-`define ALU_RSA_M  	18
-`define ALU_LSA_M  	19
-`define ALU_RSR_M  	20
-`define ALU_LSR_M  	21
-`define ALU_RSC_M  	22
-`define ALU_LSC_M  	23
+`define ALU_RSL  		16
+`define ALU_LSL  		17
+`define ALU_RSA  		18
+`define ALU_LSA  		19
+`define ALU_RSR  		20
+`define ALU_LSR  		21
+`define ALU_RSC  		22
+`define ALU_LSC  		23
 
-`define ALU_RSL  		24
-`define ALU_LSL  		25
-`define ALU_RSA  		26
-`define ALU_LSA  		27
-`define ALU_RSR  		28
-`define ALU_LSR  		29
-`define ALU_RSC  		30
-`define ALU_LSC  		31
+`define ALU_RSL_M  	24
+`define ALU_LSL_M  	25
+`define ALU_RSA_M  	26
+`define ALU_LSA_M  	27
+`define ALU_RSR_M  	28
+`define ALU_LSR_M  	29
+`define ALU_RSC_M  	30
+`define ALU_LSC_M  	31
 
