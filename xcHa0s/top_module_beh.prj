@@ -1,3 +1,4 @@
+verilog work "pow.v"
 verilog work "multiplier.v"
 verilog work "divider.v"
 verilog work "SignExtend.v"

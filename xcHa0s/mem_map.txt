@@ -1,5 +1,4 @@
-          FIB10 @ 0
+       FIRSTNUM @ 0
+      SECONDNUM @ 1
 
-      LOOP4EVER & 5
-           FIBO & 6
-        CALCREC & 16
+      LOOP4EVER & 7

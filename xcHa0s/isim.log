@@ -1,5 +1,6 @@
 ISim log file
 Running: E:\faculta\FIC\0xcHa0s\xcHa0s\top_module_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb E:/faculta/FIC/0xcHa0s/xcHa0s/top_module_isim_beh.wdb 
+INFO: There is another simulation running in the same directory. Using database file name isim1.wdb.
 ISim P.20131013 (signature 0x7708f090)
 ----------------------------------------------------------------------
 WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
@@ -13,7 +14,80 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
 # run 100.00us
+# run 100.00us
+# run 100.00us
+# run 100.00us
+INFO: There is another simulation running in the same directory. Using database file name isim1.wdb.
+ISim P.20131013 (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 100.00us
+# run 100.00us
+# run 100.00us
+INFO: There is another simulation running in the same directory. Using database file name isim1.wdb.
 ISim P.20131013 (signature 0x7708f090)
 ----------------------------------------------------------------------
 WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
@@ -26,6 +100,86 @@ Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 # run 10.00us
 # run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 10.00us
+# run 100.00us
+# run 100.00us
+INFO: There is another simulation running in the same directory. Using database file name isim1.wdb.
+ISim P.20131013 (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 1.00us
+# run 1.00us
+# restart
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 133262500 ns : File "E:/faculta/FIC/0xcHa0s/xcHa0s/register.v" Line 16
+# run all
+Stopped at time : 273002300 ns : File "E:/faculta/FIC/0xcHa0s/xcHa0s/pow.v" Line 29
+# restart
+# run 1.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 1.00us
+# restart
+# run 1.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 1.00us
+ISim P.20131013 (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+WARNING:  For instance alu/p/, width 1 of formal port start is not equal to width 32 of actual constant.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 1.00us
+ISim P.20131013 (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 1.00us
+ISim P.20131013 (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# restart
+# run 10.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
 ISim P.20131013 (signature 0x7708f090)
 ----------------------------------------------------------------------
 WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
@@ -38,47 +192,3 @@ Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 # run 10.00us
 # run 10.00us
-ISim P.20131013 (signature 0x7708f090)
-----------------------------------------------------------------------
-WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
-
-
-----------------------------------------------------------------------
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# run 10.00us
-# run 10.00us
-# run 10.00us
-# run 10.00us
-# run 10.00us
-# run 10.00us
-# run 10.00us
-# run 10.00us
-# run 10.00us
-# run 10.00us
-# run 10.00us
-# run 10.00us
-# run 10.00us
-# run 10.00us
-# run 10.00us
-# run 10.00us
-# run 10.00us
-# run 10.00us
-# run 10.00us
-# run 10.00us
-# run 10.00us
-# run 10.00us
-# run 10.00us
-# run 10.00us
-# run 10.00us
-# run 10.00us
-# run 100.00us
-# run 100.00us
-# run 100.00us
-# run 100.00us
-# run 100.00us
-# run 100.00us
-# run 100.00us
-# run 100.00us

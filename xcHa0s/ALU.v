@@ -35,6 +35,16 @@ assign sign_srcA = {16{srcA[15]}};
 multiplier mul(srcA,srcB,mul_result);
 divider    div({extra_X,srcA},srcB,div_result,mod_result);
 
+wire pow_ready,pow_C,pow_O;
+wire [31:0] pow_result;
+pow p(.clk(clk), .rst(rst), 
+	.start(opsel == `ALU_POW),
+	.ready(pow_ready),
+	.base(srcA),.expo(srcB),
+	.result(pow_result),
+	.Cflag(pow_C),
+	.Oflag(pow_O));
+
 always @(*) begin
 	extra_res = 0;
 	res_ext = 0;
@@ -122,9 +132,19 @@ always @(*) begin
 		`ALU_MOD: begin
 			res_ext = {1'b0,mod_result};
 			flag_next[`ZF] = (mod_result == 0);
-			flag_next[`NF] = mod_result[31];
+			flag_next[`NF] = mod_result[15];
 			flag_next[`OF] = ({extra_X,srcA} == 32'h80000000) && (srcB  == 16'hffff);
 			flag_next[`CF] = (srcB == 0);
+		end
+		`ALU_POW: begin
+			ready = pow_ready;
+			res_ext = {1'b0,pow_result[15:0]};
+			extra_res = pow_result[31:16];
+			
+			flag_next[`ZF] = (pow_result == 0);
+			flag_next[`NF] = pow_result[31];
+			flag_next[`OF] = pow_O;
+			flag_next[`CF] = pow_C;
 		end
 		
 		/*

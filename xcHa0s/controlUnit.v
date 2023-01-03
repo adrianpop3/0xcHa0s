@@ -177,6 +177,8 @@ always @(*) begin
 			opsel = `ALU_POW;
 			sel_srcA = `sel_ACC;
 			sel_srcB = instr[9:8];
+			wr_X = 1;
+			extra_write_X = 1;
 			`WR_ALU_RES_TO_ACC_WITH_FLAGS
 		end
 	

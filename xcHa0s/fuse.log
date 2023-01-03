@@ -3,6 +3,7 @@ ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
+Analyzing Verilog file "E:/faculta/FIC/0xcHa0s/xcHa0s/pow.v" into library work
 Analyzing Verilog file "E:/faculta/FIC/0xcHa0s/xcHa0s/multiplier.v" into library work
 Analyzing Verilog file "E:/faculta/FIC/0xcHa0s/xcHa0s/divider.v" into library work
 Analyzing Verilog file "E:/faculta/FIC/0xcHa0s/xcHa0s/SignExtend.v" into library work
@@ -23,7 +24,7 @@ Compiling module register
 Compiling module register(WIDTH=10)
 Compiling module multiplier
 Compiling module divider
-WARNING:HDLCompiler:1007 - "E:/faculta/FIC/0xcHa0s/xcHa0s/ALU.v" Line 125: Element index 31 into mod_result is out of bounds
+Compiling module pow
 Compiling module ALU
 Compiling module register(WIDTH=9)
 Compiling module cpu
@@ -32,7 +33,8 @@ Compiling module instr_mem
 Compiling module top_module
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Compiled 14 Verilog Units
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 15 Verilog Units
 Built simulation executable E:/faculta/FIC/0xcHa0s/xcHa0s/top_module_isim_beh.exe
-Fuse Memory Usage: 31104 KB
-Fuse CPU Usage: 515 ms
+Fuse Memory Usage: 31308 KB
+Fuse CPU Usage: 530 ms

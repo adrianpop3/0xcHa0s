@@ -25,7 +25,7 @@ static const char *ng0 = "E:/faculta/FIC/0xcHa0s/xcHa0s/multiplier.v";
 
 
 
-static void Cont_10_0(char *t0)
+static void Cont_11_0(char *t0)
 {
     char t3[8];
     char t4[8];
@@ -73,14 +73,14 @@ static void Cont_10_0(char *t0)
     unsigned int t44;
     char *t45;
 
-LAB0:    t1 = (t0 + 3168U);
+LAB0:    t1 = (t0 + 3008U);
     t2 = *((char **)t1);
     if (t2 == 0)
         goto LAB2;
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(10, ng0);
+LAB2:    xsi_set_current_line(11, ng0);
     t2 = (t0 + 1048U);
     t5 = *((char **)t2);
     memset(t6, 0, 8);
@@ -129,7 +129,7 @@ LAB13:    if (*((unsigned int *)t4) > 0)
 
 LAB15:    memcpy(t3, t32, 8);
 
-LAB16:    t26 = (t0 + 4624);
+LAB16:    t26 = (t0 + 4200);
     t33 = (t26 + 56U);
     t34 = *((char **)t33);
     t35 = (t34 + 56U);
@@ -148,7 +148,7 @@ LAB16:    t26 = (t0 + 4624);
     t44 = *((unsigned int *)t42);
     *((unsigned int *)t42) = (t44 | t38);
     xsi_driver_vfirst_trans(t26, 0, 15);
-    t45 = (t0 + 4480);
+    t45 = (t0 + 4072);
     *((int *)t45) = 1;
 
 LAB1:    return;
@@ -178,7 +178,7 @@ LAB14:    memcpy(t3, t25, 8);
 
 }
 
-static void Cont_11_1(char *t0)
+static void Cont_12_1(char *t0)
 {
     char t3[8];
     char t4[8];
@@ -226,14 +226,14 @@ static void Cont_11_1(char *t0)
     unsigned int t44;
     char *t45;
 
-LAB0:    t1 = (t0 + 3416U);
+LAB0:    t1 = (t0 + 3256U);
     t2 = *((char **)t1);
     if (t2 == 0)
         goto LAB2;
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(11, ng0);
+LAB2:    xsi_set_current_line(12, ng0);
     t2 = (t0 + 1208U);
     t5 = *((char **)t2);
     memset(t6, 0, 8);
@@ -282,7 +282,7 @@ LAB13:    if (*((unsigned int *)t4) > 0)
 
 LAB15:    memcpy(t3, t32, 8);
 
-LAB16:    t26 = (t0 + 4688);
+LAB16:    t26 = (t0 + 4264);
     t33 = (t26 + 56U);
     t34 = *((char **)t33);
     t35 = (t34 + 56U);
@@ -301,7 +301,7 @@ LAB16:    t26 = (t0 + 4688);
     t44 = *((unsigned int *)t42);
     *((unsigned int *)t42) = (t44 | t38);
     xsi_driver_vfirst_trans(t26, 0, 15);
-    t45 = (t0 + 4496);
+    t45 = (t0 + 4088);
     *((int *)t45) = 1;
 
 LAB1:    return;
@@ -331,7 +331,7 @@ LAB14:    memcpy(t3, t25, 8);
 
 }
 
-static void Cont_13_2(char *t0)
+static void Cont_14_2(char *t0)
 {
     char t5[8];
     char *t1;
@@ -344,34 +344,34 @@ static void Cont_13_2(char *t0)
     char *t9;
     char *t10;
 
-LAB0:    t1 = (t0 + 3664U);
+LAB0:    t1 = (t0 + 3504U);
     t2 = *((char **)t1);
     if (t2 == 0)
         goto LAB2;
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(13, ng0);
-    t2 = (t0 + 1848U);
+LAB2:    xsi_set_current_line(14, ng0);
+    t2 = (t0 + 1688U);
     t3 = *((char **)t2);
-    t2 = (t0 + 2008U);
+    t2 = (t0 + 1848U);
     t4 = *((char **)t2);
     memset(t5, 0, 8);
     xsi_vlog_unsigned_multiply(t5, 32, t3, 16, t4, 16);
-    t2 = (t0 + 4752);
+    t2 = (t0 + 4328);
     t6 = (t2 + 56U);
     t7 = *((char **)t6);
     t8 = (t7 + 56U);
     t9 = *((char **)t8);
     memcpy(t9, t5, 8);
     xsi_driver_vfirst_trans(t2, 0, 31);
-    t10 = (t0 + 4512);
+    t10 = (t0 + 4104);
     *((int *)t10) = 1;
 
 LAB1:    return;
 }
 
-static void Cont_14_3(char *t0)
+static void Cont_15_3(char *t0)
 {
     char t3[8];
     char t4[8];
@@ -435,14 +435,14 @@ static void Cont_14_3(char *t0)
     char *t60;
     char *t61;
 
-LAB0:    t1 = (t0 + 3912U);
+LAB0:    t1 = (t0 + 3752U);
     t2 = *((char **)t1);
     if (t2 == 0)
         goto LAB2;
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(14, ng0);
+LAB2:    xsi_set_current_line(15, ng0);
     t2 = (t0 + 1048U);
     t5 = *((char **)t2);
     memset(t6, 0, 8);
@@ -521,14 +521,14 @@ LAB16:    if (*((unsigned int *)t4) > 0)
 
 LAB18:    memcpy(t3, t56, 8);
 
-LAB19:    t50 = (t0 + 4816);
+LAB19:    t50 = (t0 + 4392);
     t57 = (t50 + 56U);
     t58 = *((char **)t57);
     t59 = (t58 + 56U);
     t60 = *((char **)t59);
     memcpy(t60, t3, 8);
     xsi_driver_vfirst_trans(t50, 0, 31);
-    t61 = (t0 + 4528);
+    t61 = (t0 + 4120);
     *((int *)t61) = 1;
 
 LAB1:    return;
@@ -563,86 +563,10 @@ LAB17:    memcpy(t3, t49, 8);
 
 }
 
-static void Cont_15_4(char *t0)
+
+extern void work_m_00000000002054518030_1345475044_init()
 {
-    char t3[8];
-    char *t1;
-    char *t2;
-    char *t4;
-    char *t5;
-    unsigned int t6;
-    unsigned int t7;
-    unsigned int t8;
-    unsigned int t9;
-    unsigned int t10;
-    unsigned int t11;
-    char *t12;
-    char *t13;
-    char *t14;
-    char *t15;
-    char *t16;
-    unsigned int t17;
-    unsigned int t18;
-    char *t19;
-    unsigned int t20;
-    unsigned int t21;
-    char *t22;
-    unsigned int t23;
-    unsigned int t24;
-    char *t25;
-
-LAB0:    t1 = (t0 + 4160U);
-    t2 = *((char **)t1);
-    if (t2 == 0)
-        goto LAB2;
-
-LAB3:    goto *t2;
-
-LAB2:    xsi_set_current_line(15, ng0);
-    t2 = (t0 + 1688U);
-    t4 = *((char **)t2);
-    memset(t3, 0, 8);
-    t2 = (t3 + 4);
-    t5 = (t4 + 4);
-    t6 = *((unsigned int *)t4);
-    t7 = (t6 >> 0);
-    *((unsigned int *)t3) = t7;
-    t8 = *((unsigned int *)t5);
-    t9 = (t8 >> 0);
-    *((unsigned int *)t2) = t9;
-    t10 = *((unsigned int *)t3);
-    *((unsigned int *)t3) = (t10 & 65535U);
-    t11 = *((unsigned int *)t2);
-    *((unsigned int *)t2) = (t11 & 65535U);
-    t12 = (t0 + 4880);
-    t13 = (t12 + 56U);
-    t14 = *((char **)t13);
-    t15 = (t14 + 56U);
-    t16 = *((char **)t15);
-    memset(t16, 0, 8);
-    t17 = 65535U;
-    t18 = t17;
-    t19 = (t3 + 4);
-    t20 = *((unsigned int *)t3);
-    t17 = (t17 & t20);
-    t21 = *((unsigned int *)t19);
-    t18 = (t18 & t21);
-    t22 = (t16 + 4);
-    t23 = *((unsigned int *)t16);
-    *((unsigned int *)t16) = (t23 | t17);
-    t24 = *((unsigned int *)t22);
-    *((unsigned int *)t22) = (t24 | t18);
-    xsi_driver_vfirst_trans(t12, 0, 15);
-    t25 = (t0 + 4544);
-    *((int *)t25) = 1;
-
-LAB1:    return;
-}
-
-
-extern void work_m_00000000001841329777_1345475044_init()
-{
-	static char *pe[] = {(void *)Cont_10_0,(void *)Cont_11_1,(void *)Cont_13_2,(void *)Cont_14_3,(void *)Cont_15_4};
-	xsi_register_didat("work_m_00000000001841329777_1345475044", "isim/multiplier_isim_beh.exe.sim/work/m_00000000001841329777_1345475044.didat");
+	static char *pe[] = {(void *)Cont_11_0,(void *)Cont_12_1,(void *)Cont_14_2,(void *)Cont_15_3};
+	xsi_register_didat("work_m_00000000002054518030_1345475044", "isim/multiplier_isim_beh.exe.sim/work/m_00000000002054518030_1345475044.didat");
 	xsi_register_executes(pe);
 }
