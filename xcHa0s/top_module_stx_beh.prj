@@ -1,3 +1,4 @@
+verilog isim_temp "sqrt.v"
 verilog isim_temp "pow.v"
 verilog isim_temp "multiplier.v"
 verilog isim_temp "divider.v"

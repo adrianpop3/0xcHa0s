@@ -44,6 +44,16 @@ pow p(.clk(clk), .rst(rst),
 	.result(pow_result),
 	.Cflag(pow_C),
 	.Oflag(pow_O));
+	
+wire sqrt_ready,sqrt_C,sqrt_O;
+wire [15:0] sqrt_result;
+sqrt sq(.clk(clk), .rst(rst), 
+	.start(opsel == `ALU_RAD),
+	.ready(sqrt_ready),
+	.initial_nr({extra_X,srcA}),
+	.result(sqrt_result),
+	.Cflag(sqrt_C),
+	.Oflag(sqrt_O));
 
 always @(*) begin
 	extra_res = 0;
@@ -145,6 +155,15 @@ always @(*) begin
 			flag_next[`NF] = pow_result[31];
 			flag_next[`OF] = pow_O;
 			flag_next[`CF] = pow_C;
+		end
+		`ALU_RAD: begin
+			ready = sqrt_ready;
+			res_ext = {1'b0,sqrt_result};
+			
+			flag_next[`ZF] = (sqrt_result == 0);
+			flag_next[`NF] = sqrt_result[15];
+			flag_next[`OF] = sqrt_O;
+			flag_next[`CF] = sqrt_C;
 		end
 		
 		/*

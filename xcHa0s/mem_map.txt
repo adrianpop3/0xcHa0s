@@ -1,4 +1,3 @@
-       FIRSTNUM @ 0
-      SECONDNUM @ 1
+         RADVAL @ 0
 
       LOOP4EVER & 7
