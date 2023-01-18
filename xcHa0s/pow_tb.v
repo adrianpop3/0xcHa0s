@@ -43,7 +43,7 @@ module pow_tb;
 		#55;
 		rst=0;
 		#40;
-		base = 5;
+		base = 0;
 		expo = 5;
 		#20
 		start=1;

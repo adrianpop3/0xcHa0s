@@ -1,3 +1,15 @@
-         RADVAL @ 0
+         VECTOR @ 0
+      SPATIUGOL @ 10
+              N @ 24
+              I @ 25
+              J @ 26
+         MIN_ID @ 27
+           TEMP @ 28
 
-      LOOP4EVER & 7
+      LOOP4EVER & 33
+     SELECTSORT & 34
+        SORTFOR & 36
+      SEARCHMIN & 44
+        NOTLESS & 57
+   OUTSEARCHMIN & 61
+     OUTSORTFOR & 75

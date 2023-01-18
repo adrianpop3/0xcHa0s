@@ -80,16 +80,15 @@
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
-         <ClosedNode>/controlUnit_testbench E:|faculta|FIC|0xcHa0s|xcHa0s|controlUnit_testbench.v</ClosedNode>
          <ClosedNode>/cpu_testbench E:|faculta|FIC|0xcHa0s|xcHa0s|cpu_testbench.v</ClosedNode>
-         <ClosedNode>/cpu_testbench E:|faculta|FIC|0xcHa0s|xcHa0s|cpu_testbench.v/uut - cpu/alu - ALU</ClosedNode>
          <ClosedNode>/pow_tb E:|faculta|FIC|0xcHa0s|xcHa0s|pow_tb.v</ClosedNode>
          <ClosedNode>/sqrt_tb E:|faculta|FIC|0xcHa0s|xcHa0s|sqrt_tb.v</ClosedNode>
+         <ClosedNode>/top_module E:|faculta|FIC|0xcHa0s|xcHa0s|top_module.v/procesor - cpu</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
          <SelectedItem>top_module (E:/faculta/FIC/0xcHa0s/xcHa0s/top_module.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >5</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >4</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000142000000020000000000000000000000000200000064ffffffff000000810000000300000002000001420000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>

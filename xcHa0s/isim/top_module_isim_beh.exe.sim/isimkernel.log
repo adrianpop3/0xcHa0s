@@ -2,14 +2,14 @@ Command line:
    top_module_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  55010
+     -socket  56141
 
-Wed Jan 04 00:57:21 2023
+Wed Jan 18 20:23:08 2023
 
 
- Elaboration Time: 0.015625 sec
+ Elaboration Time: 0.046875 sec
 
- Current Memory Usage: 5160.24 Meg
+ Current Memory Usage: 5160.26 Meg
 
  Total Signals          : 137
  Total Nets             : 737
@@ -20,9 +20,9 @@ Wed Jan 04 00:57:21 2023
  Total Traceable Variables  : 88
  Total Scalar Nets and Variables : 26243
 
- Total Simulation Time: 1.09375 sec
+ Total Simulation Time: 9.875 sec
 
- Current Memory Usage: 5002.95 Meg
+ Current Memory Usage: 4688.4 Meg
 
-Wed Jan 04 00:59:49 2023
+Wed Jan 18 21:50:05 2023
 

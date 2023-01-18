@@ -1,0 +1,3 @@
+verilog work "pow.v"
+verilog work "pow_tb.v"
+verilog work "E:/faculta/ISE14.7-Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
