@@ -35,13 +35,13 @@ Sesiunea 3 - S6 (2p):
 - [X] Bibliografie
 
 Sesiunea 6 - S12 (maxim nota 7):
-- [ ] Design Hardware & Documentatie GP (2p)
-- [ ] Implementare General Purpose Processor (2p)
-- [ ] Testare General Purpose Processor (1p)
+- [X] Design Hardware & Documentatie GP (2p)
+- [X] Implementare General Purpose Processor (2p)
+- [X] Testare General Purpose Processor (1p)
 
 Sesiunea 7 - S14 (maxim nota 10):
-- [ ] Design & Implementare GP processor + ASIP; (1p)
-- [ ] Testare ASIP (1p)
+- [X] Design & Implementare GP processor + ASIP; (1p)
+- [X] Testare ASIP (1p)
 - [ ] Prezentarea finala a proiectului - prezentare, documentatie (1p)
 
 ## Important general aspects:
