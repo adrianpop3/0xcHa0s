@@ -1,7 +1,7 @@
 # Pocket Calculator w/ GPP - Team: 0xcHa0s - FIC PROIECT 2022      
 
 ## HW Design:
-<img width="959" alt="hw_design" src="https://user-images.githubusercontent.com/33669868/208077558-36198e58-7971-4c10-a25e-44203eb86dfb.png">
+![Captură de ecran din 2023-01-19 la 22 41 28](https://user-images.githubusercontent.com/33669868/213580387-d91c486d-c5ce-4990-abe1-efb3ca0bb965.png)
 
 ## Members:
 * Ploscaru Carla
@@ -42,7 +42,7 @@ Sesiunea 6 - S12 (maxim nota 7):
 Sesiunea 7 - S14 (maxim nota 10):
 - [X] Design & Implementare GP processor + ASIP; (1p)
 - [X] Testare ASIP (1p)
-- [ ] Prezentarea finala a proiectului - prezentare, documentatie (1p)
+- [X] Prezentarea finala a proiectului - prezentare, documentatie (1p)
 
 ## Important general aspects:
 Registers:
@@ -53,6 +53,7 @@ Registers:
 * Program Counter
 
 Instruction size: 16-bit (6-bit opcode & 1-bit Register address & 9-bit Immediate size)</br>Word size: 16-bit</br>Stack grows inverse in memory.
+</br>CALL & JMP push PC on stack while RET pops PC from stack.</br>All procedure parameters and return values are passed using stack.</br>Only arithmetic and logic instructions should update the Flag register!
 
 ## Minimum required CPU Components:
 * 2 general purpose registers: X, Y, and one accumulator A
@@ -84,15 +85,3 @@ ADD, SUB, LSR, LSL, RSR, RSL, MOV, MUL, DIV, MOD</br>AND, OR, XOR, NOT, CMP, TST
 |Memory|6 bit|1 bit|9 bit|
 |Branch|6 bit|10 bit|-|
 |ALU|6 bit|1 bit|9 bit|
-
-
-|Task|In progress|Done|Tested|
-|----|-----------|----|------|
-|Top module|x|x|-|
-|Control unit|x|x| |
-|ALU|x|x| |
-|Assembler|x|x|-|
-|Integration test|x| | |
-|Documentation| | |-|
-
-**_CALL & JMP push PC on stack, RET pops PC from stack.</br>All procedure parameters are passed using stack.</br>Return value is passed using stack._**</br>**_Only arithmetic and logic instructions should update the Flag register!_**
